@@ -34,14 +34,14 @@
 
 
             <ImageView
-                android:id="@+id/realizado"
+                android:id="@+id/realizado1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/realizado_icon"
                 android:visibility="gone"/>
 
             <ImageView
-                android:id="@+id/pendiente"
+                android:id="@+id/pendiente1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/pendiente_icon"
@@ -61,7 +61,7 @@
         app:layout_constraintVertical_bias="0.170">
 
         <Button
-            android:id="@+id/buttonAC"
+            android:id="@+id/buttonAgCa"
             android:layout_width="245dp"
             android:layout_height="48dp"
             android:backgroundTint="#313D8E"
@@ -75,14 +75,14 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/realizado2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/realizado_icon"
                 android:visibility="gone"/>
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/pendiente2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/pendiente_icon"
@@ -115,14 +115,14 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/realizado3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/realizado_icon"
                 android:visibility="gone"/>
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/pendiente3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/pendiente_icon"
@@ -156,14 +156,14 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/realizado4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/realizado_icon"
                 android:visibility="gone"/>
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/pendiente4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/pendiente_icon"
@@ -210,14 +210,14 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView12"
+                android:id="@+id/realizado6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/realizado_icon"
                 android:visibility="gone"/>
 
             <ImageView
-                android:id="@+id/imageView13"
+                android:id="@+id/pendiente6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/pendiente_icon"
@@ -250,57 +250,19 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/realizado5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/realizado_icon"
                 android:visibility="gone"/>
 
             <ImageView
-                android:id="@+id/imageView9"
+                android:id="@+id/pendiente5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/pendiente_icon"
                 android:visibility="gone"/>
         </LinearLayout>
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="230dp"
-        android:layout_height="75dp"
-        android:background="#FFFFFF"
-        android:text="Ingresa tu nombre:"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.143"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
-
-    <EditText
-        android:id="@+id/Nomencargado"
-        android:layout_width="229dp"
-        android:layout_height="48dp"
-        android:backgroundTint="#000000"
-        android:backgroundTintMode="src_in"
-        android:bufferType="normal"
-        android:capitalize="words"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:fontFamily="sans-serif-black"
-        android:inputType="text"
-        android:text="Nombre de encargado"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#8C8C8C"
-        app:barrierMargin="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

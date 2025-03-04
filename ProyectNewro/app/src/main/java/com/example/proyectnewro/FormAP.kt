@@ -1,12 +1,16 @@
 package com.example.proyectnewro
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.os.Environment
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Button
-import android.widget.CheckBox
 import android.widget.EditText
-import android.widget.TextView
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
@@ -14,7 +18,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.proyectnewro.databinding.ActivityMainBinding
-import com.google.zxing.client.android.Intents.Scan
 
 import com.journeyapps.barcodescanner.ScanContract //scan qr
 import com.journeyapps.barcodescanner.ScanOptions  //scan qr
@@ -22,63 +25,51 @@ import com.journeyapps.barcodescanner.ScanOptions  //scan qr
 import org.apache.poi.ss.usermodel.*
 import org.apache.poi.xssf.usermodel.XSSFWorkbook
 import java.io.File
+import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.text.SimpleDateFormat
 import java.util.*
 
 class FormAP : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private lateinit var spinnerBomba1: Spinner
+    private lateinit var spinnerBomba2: Spinner
+    private lateinit var spinnerBomba1Osmosis: Spinner
+    private lateinit var spinnerBomba2Osmosis: Spinner
+    private lateinit var spinnerBomba1AF: Spinner
+    private lateinit var spinnerBomba2AF: Spinner
+    private lateinit var spinnerBomba1AP: Spinner
+    private lateinit var spinnerBomba2AP: Spinner
 
     @SuppressLint("MissingInflatedId", "SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding =  ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(R.layout.activity_form_ap)
-        //nombre actividad
-        val nombreActPorwc = findViewById<TextView>(R.id.textView4)
+
+
+
         val porWC = findViewById<EditText>(R.id.NivelWC)
-        //nombre actividad
-        val nombreActPorAPlu = findViewById<TextView>(R.id.textView5)
         val porAPlu = findViewById<EditText>(R.id.NivelAPlu)
-        //nombre actividad
-        val nombreActpreAWC = findViewById<TextView>(R.id.textView6)
         val preAWC = findViewById<EditText>(R.id.PresionAWC)
-        //nombre actividad
-        val nombreActFunbomtrat1 = findViewById<TextView>(R.id.textView7)
-        val nombreActFunbomtrat2 = findViewById<TextView>(R.id.textView8)
-        val funBom1AguaTratBox = findViewById<CheckBox>(R.id.FunBomAT1) //check box
-        val funBom2AguaTratBox = findViewById<CheckBox>(R.id.FunBomAT2) //check box
-        //nombre actividad
-        val nombreActporCarAC = findViewById<TextView>(R.id.textView9)
-        val nombreAcrcRLAgua = findViewById<TextView>(R.id.textView10)
+        spinnerBomba1 = findViewById(R.id.spinnerFunAguaTrat)
+        spinnerBomba2 = findViewById(R.id.spinnerFunAguaTrat2)
         val porCarAC = findViewById<EditText>(R.id.NivelCarAC)
         val cRLAgua = findViewById<EditText>(R.id.CRLCarAC)
-        //
-        val nombreActporAOs = findViewById<TextView>(R.id.textView11)
         val porAOs = findViewById<EditText>(R.id.NivelAOs)
-        val nombreActpreAOs = findViewById<TextView>(R.id.textView12)
         val preAOs = findViewById<EditText>(R.id.PresionAOs)
-        //
-        val nombreActFunLIOS1 = findViewById<TextView>(R.id.textView13)
-        val funBom1LiOs = findViewById<CheckBox>(R.id.funcBomAO1) //check box
-        val nombreActFunLIOS2 = findViewById<TextView>(R.id.textView14)
-        val funBom2LiOs = findViewById<CheckBox>(R.id.funcBomAO2) //check box
-        //
-        val nombreActporSisAF = findViewById<TextView>(R.id.textView16)
+        spinnerBomba1Osmosis = findViewById(R.id.spinnerBomba1Osmosis)
+        spinnerBomba2Osmosis = findViewById(R.id.spinnerBomba2Osmosis)
         val porSisAF = findViewById<EditText>(R.id.NivelSisAF)
-        val nombreActpreLinAF = findViewById<TextView>(R.id.textView17)
         val preLinAF = findViewById<EditText>(R.id.PresionLAF)
-        val nombreActfunBomb1AF = findViewById<TextView>(R.id.textView18)
-        val funBom1AF = findViewById<CheckBox>(R.id.funBF1) //check box
-        val nombreActfunBomb2AF = findViewById<TextView>(R.id.textView19)
-        val funBom2AF = findViewById<CheckBox>(R.id.funBF2) //check box
-
+        spinnerBomba1AF = findViewById(R.id.spinnerBomba1AF)
+        spinnerBomba2AF = findViewById(R.id.spinnerBomba2AF)
         val pH = findViewById<EditText>(R.id.PHaguafil)
         val preAP = findViewById<EditText>(R.id.PresionAP)
-        val funBom1AP = findViewById<CheckBox>(R.id.FunBomAP1) //check box
-        val funBom2AP = findViewById<CheckBox>(R.id.FunBomAP2) //check box
-
+        spinnerBomba1AP = findViewById(R.id.spinnerBomba1AP)
+        spinnerBomba2AP = findViewById(R.id.spinnerBomba2AP)
+        val etHallazgosAp = findViewById<EditText>(R.id.etHaAP)
         val btSend = findViewById<Button>(R.id.btSend) //boton enviar
         //botones de scaner qr
         val btnScanQR1 = findViewById<Button>(R.id.btnScanQrNWC)
@@ -92,43 +83,34 @@ class FormAP : AppCompatActivity() {
         val btnScanQR9 = findViewById<Button>(R.id.btnScanQrpH)
         val btnScanQR10 = findViewById<Button>(R.id.btnScanQrpreAP)
 
-
-        var qrCodeText1: String? = null
-        var qrCodeText2: String? = null
-        var qrCodeText3: String? = null
-        var qrCodeText4: String? = null
-        var qrCodeText5: String? = null
-        var qrCodeText6: String? = null
-        var qrCodeText7: String? = null
-        var qrCodeText8: String? = null
-        var qrCodeText9: String? = null
-        var qrCodeText10: String? = null
-
-
-
-        //checkbox inicializados funcionando
-        funBom1AguaTratBox.isChecked = true
-        funBom2AguaTratBox.isChecked = true
-        funBom1LiOs.isChecked = true
-        funBom2LiOs.isChecked = true
-        funBom1AF.isChecked = true
-        funBom2AF.isChecked = true
-        funBom1AP.isChecked = true
-        funBom2AP.isChecked = true
+        var qrCodeText1: String?
+        var qrCodeText2: String?
+        var qrCodeText3: String?
+        var qrCodeText4: String?
+        var qrCodeText5: String?
+        var qrCodeText6: String?
+        var qrCodeText7: String?
+        var qrCodeText8: String?
+        var qrCodeText9: String?
+        var qrCodeText10: String?
 
 // campo de porcentaje de wc
-        porWC.isEnabled = false
-        //Iniciar el escáner y obtener el resultado
+        porWC.isEnabled = true // Deshabilitar el campo por defecto
+// Iniciar el escáner y obtener el resultado
         val qrLauncher = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {
-                qrCodeText1 = result.contents //obtenemos el texto escaneado
-                porWC.isEnabled = true // Habilitar el campo solo si se escanea correctamente
-                Toast.makeText(this, "Codigo del Area: $qrCodeText1", Toast.LENGTH_SHORT).show()
+                qrCodeText1 = result.contents // Obtenemos el texto escaneado
+                if (qrCodeText1 == "NS-QR-MTTO-D-001") {
+                    porWC.isEnabled = true // Habilitar el campo si el código es correcto
+                    Toast.makeText(this, "Código del Área: $qrCodeText1", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
+                }
             } else {
                 Toast.makeText(this, "No se escaneó ningún código QR", Toast.LENGTH_SHORT).show()
             }
         }
-        // abrir scaner
+// Abrir escáner
         btnScanQR1.setOnClickListener {
             val options = ScanOptions()
             options.setPrompt("Escanea el código QR")
@@ -136,9 +118,8 @@ class FormAP : AppCompatActivity() {
             options.setBarcodeImageEnabled(true)
             qrLauncher.launch(options) // Inicia el escaneo
         }
-        //validaciones
+// Validaciones
         porWC.setOnFocusChangeListener { _, hasFocus ->
-            //val nombreAct = "prodis" como mando el nombre de la actividad predeterminada por mi
             if (!hasFocus) {
                 val value = porWC.text.toString().toDoubleOrNull()
                 if (value != null) {
@@ -166,8 +147,12 @@ class FormAP : AppCompatActivity() {
         val qrLauncher1 = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {
                 qrCodeText2 = result.contents
-                porAPlu.isEnabled = true
-                Toast.makeText(this,"Codigo del Area: $qrCodeText2",Toast.LENGTH_SHORT).show()
+                if (qrCodeText2 == "NS-QR-MTTO-D-002") {
+                    porAPlu.isEnabled = true
+                    Toast.makeText(this, "Codigo del Area: $qrCodeText2", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
+                }
             }
 
         }
@@ -181,15 +166,17 @@ class FormAP : AppCompatActivity() {
         }
         // validaciones
         porAPlu.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus){
+            if (!hasFocus) {
                 val value = porAPlu.text.toString().toDoubleOrNull()
-                if (value != null){
-                    if (value < 20 || value > 70){
+                if (value != null) {
+                    if (value < 20 || value > 70) {
                         val alertDialog = AlertDialog.Builder(this@FormAP)
                             .setTitle("Advertencia nivel de agua pluvial")
-                            .setMessage("El porcentaje de agua plucial está por fuera del rango.\n Realiza lo siguiente:\n" +
-                                    "REALIZAR TRASVASE DE AGUA")
-                            .setPositiveButton("Aceptar"){dialog, _ ->
+                            .setMessage(
+                                "El porcentaje de agua pluvial está por fuera del rango.\nRealiza lo siguiente:\n" +
+                                        "REALIZAR TRASVASE DE AGUA"
+                            )
+                            .setPositiveButton("Aceptar") { dialog, _ ->
                                 dialog.dismiss()
                             }
                             .create()
@@ -202,10 +189,16 @@ class FormAP : AppCompatActivity() {
         preAWC.isEnabled = false
         //
         val qrLauncher2 = registerForActivityResult(ScanContract()) { result ->
-            if (result.contents != null){
+            if (result.contents != null) {
                 qrCodeText3 = result.contents
-                preAWC.isEnabled = true
-                Toast.makeText(this,"Codigo del Area: $qrCodeText3",Toast.LENGTH_SHORT).show()
+                if (qrCodeText3 == "NS-QR-MTTO-D-003") {
+                    preAWC.isEnabled = true
+                    spinnerBomba1.isEnabled = true
+                    spinnerBomba2.isEnabled = true
+                    Toast.makeText(this, "Codigo del Area: $qrCodeText3", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
+                }
             }
         }
         //
@@ -218,62 +211,100 @@ class FormAP : AppCompatActivity() {
         }
         //
         preAWC.setOnFocusChangeListener { _, hasFocus ->
-                if (!hasFocus){
-                    val value = preAWC.text.toString().toDoubleOrNull()
-                    if (value != null){
-                        if (value < 4 || value > 6.0){
-                            val alertDialog = AlertDialog.Builder(this@FormAP)
-                                .setTitle("Advertencia presion de agua WC")
-                                .setMessage("La presion ingresada esta por fuera del rango permitido.\n Realiza lo siguiente:\n" +
+            if (!hasFocus) {
+                val value = preAWC.text.toString().toDoubleOrNull()
+                if (value != null) {
+                    if (value < 4 || value > 6.0) {
+                        val alertDialog = AlertDialog.Builder(this@FormAP)
+                            .setTitle("Advertencia presión de agua WC")
+                            .setMessage(
+                                "La presión ingresada esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
                                         "REVISAR SUMINISTRO ELÉCRICO E INTERRUPTORES INDIVIDUALES DE TABLEREO BOMBAS \n" +
-                                        "PURGAR BOMBAS \nREVISAR FUGAS EN SELLO MECÁNICO Y PICHANCHA")
-                                .setPositiveButton("Aceptar"){dialog, _ ->
-                                    dialog.dismiss()
-                                }
-                                .create()
-                            alertDialog.show()
-                        }
+                                        "PURGAR BOMBAS \nREVISAR FUGAS EN SELLO MECÁNICO Y PICHANCHA"
+                            )
+                            .setPositiveButton("Aceptar") { dialog, _ ->
+                                dialog.dismiss()
+                            }
+                            .create()
+                        alertDialog.show()
                     }
                 }
             }
+        }
+
+
+        val opciones = resources.getStringArray(R.array.opciones_bomba)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, opciones)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        spinnerBomba1.adapter = adapter
+        spinnerBomba2.adapter = adapter
 
 //funcionamiento bomba 1 agua trat
-        funBom1AguaTratBox.setOnCheckedChangeListener { _, isChecked ->
-            if (!isChecked) {
-                // Si el CheckBox no está seleccionado, mostramos la advertencia
-                val alertDialog = AlertDialog.Builder(this@FormAP)
-                    .setTitle("Advertencia bomba 1 de agua tratada")
-                    .setMessage("Verifica que todo esté funcionando correctamente.")
-                    .setPositiveButton("Aceptar") { dialog, _ ->
-                        dialog.dismiss()
-                    }
-                    .create()
-                alertDialog.show()
+        spinnerBomba1.isEnabled = false
+        spinnerBomba1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val seleccion = parent.getItemAtPosition(position).toString()
+                if (seleccion == "NO") {
+                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
+                    val alertDialog = AlertDialog.Builder(this@FormAP)
+                        .setTitle("Advertencia bomba 1 de agua tratada")
+                        .setMessage("REVISA EL INTERRUPTOR INDIVIDUAL DE BOMBA \nPURGA LA BOMBA \nREVISA FUGAS EN SELLO MÉCANICO Y PICHANCHA.")
+                        .setPositiveButton("Aceptar") { dialog, _ ->
+                            dialog.dismiss()
+                        }
+                        .create()
+                    alertDialog.show()
+                }
             }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {}
         }
+
 //funcionamiento bomba 2 agua trat
-        funBom2AguaTratBox.setOnCheckedChangeListener { _, isChecked ->
-            if (!isChecked){
-                val alertDialog = AlertDialog.Builder(this@FormAP)
-                    .setTitle("Advertencia bomba 2 de agua tratada")
-                    .setMessage("Verifica que todo este funcionando correctamente")
-                    .setPositiveButton("Aceptar") { dialog, _ ->
-                        dialog.dismiss()
-                    }
-                    .create()
-                alertDialog.show()
+        spinnerBomba2.isEnabled = false
+        spinnerBomba2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val seleccion = parent.getItemAtPosition(position).toString()
+                if (seleccion == "NO") {
+                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
+                    val alertDialog = AlertDialog.Builder(this@FormAP)
+                        .setTitle("Advertencia bomba 2 de agua tratada")
+                        .setMessage("REVISA EL INTERRUPTOR INDIVIDUAL DE BOMBA \nPURGA LA BOMBA \nREVISA FUGAS EN SELLO MÉCANICO Y PICHANCHA.")
+                        .setPositiveButton("Aceptar") { dialog, _ ->
+                            dialog.dismiss()
+                        }
+                        .create()
+                    alertDialog.show()
+                }
             }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {}
         }
 
 // campo nivel carcamo agua cruda
         porCarAC.isEnabled = false
         //
-        val qrLauncher3 = registerForActivityResult(ScanContract()){ result ->
-            if (result.contents != null){
+        val qrLauncher3 = registerForActivityResult(ScanContract()) { result ->
+            if (result.contents != null) {
                 qrCodeText4 = result.contents
-                porCarAC.isEnabled = true
-                cRLAgua.isEnabled = true
-                Toast.makeText(this,"Codigo del Area: $qrCodeText4", Toast.LENGTH_SHORT).show()
+                if (qrCodeText4 == "NS-QR-MTTO-D-004") {
+                    porCarAC.isEnabled = true
+                    cRLAgua.isEnabled = true
+                    Toast.makeText(this, "Codigo del Area: $qrCodeText4", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
+                }
             }
         }
         //
@@ -286,16 +317,18 @@ class FormAP : AppCompatActivity() {
         }
         //
         porCarAC.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus){
+            if (!hasFocus) {
                 val value = porCarAC.text.toString().toDoubleOrNull()
-                if (value != null){
-                    if (value < 90 || value > 100){
+                if (value != null) {
+                    if (value < 90 || value > 100) {
                         val alertDialog = AlertDialog.Builder(this@FormAP)
-                            .setTitle("Advertencia nivel de carcamo agua cruda")
-                            .setMessage("El porcentaje ingresado esta por fuera del rango permitido.\n Realiza lo siguiente:\n" +
-                                    "REVISAR NIVELES DE CISTERNAS DE AGUA CRUDA Y\n" +
-                                    "SUMINISTRO DE CEA")
-                            .setPositiveButton("Aceptar"){dialog, _ ->
+                            .setTitle("Advertencia nivel de cárcamo agua cruda")
+                            .setMessage(
+                                "El porcentaje ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
+                                        "REVISAR NIVELES DE CISTERNAS DE AGUA CRUDA Y\n" +
+                                        "SUMINISTRO DE CEA"
+                            )
+                            .setPositiveButton("Aceptar") { dialog, _ ->
                                 dialog.dismiss()
                             }
                             .create()
@@ -308,16 +341,18 @@ class FormAP : AppCompatActivity() {
         cRLAgua.isEnabled = false
         // utiliza el QR de carcamo de agua
         cRLAgua.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus){
+            if (!hasFocus) {
                 val value = cRLAgua.text.toString().toDoubleOrNull()
-                if (value != null){
-                    if (value < 0.20 || value > 1.5){
+                if (value != null) {
+                    if (value < 0.20 || value > 1.5) {
                         val alertDialog = AlertDialog.Builder(this@FormAP)
                             .setTitle("Advertencia C.R.L. de agua cruda (PPM)")
-                            .setMessage("El registro ingresado esta por fuera del rango permitido.\n Realiza lo siguiente:\n" +
-                                    "SI ES MENOR A .20 COLOCAR PASTILLA DE CLORO EN CARCAMO Y REVISAR CLORO EN CISTERNAS DE AGUA CRUDA\n" +
-                                    "SI ES MAYOR A 1.5 MEDIR CLORO DE AGUA FILTRADA")
-                            .setPositiveButton("Aceptar"){dialog, _ ->
+                            .setMessage(
+                                "El registro ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
+                                        "SI ES MENOR A .20 COLOCAR PASTILLA DE CLORO EN CARCAMO Y REVISAR CLORO EN CISTERNAS DE AGUA CRUDA\n" +
+                                        "SI ES MAYOR A 1.5 MEDIR CLORO DE AGUA FILTRADA"
+                            )
+                            .setPositiveButton("Aceptar") { dialog, _ ->
                                 dialog.dismiss()
                             }
                             .create()
@@ -329,33 +364,40 @@ class FormAP : AppCompatActivity() {
 // nivel agua de osmosis
         porAOs.isEnabled = false
         //
-        val qrLauncher4 = registerForActivityResult(ScanContract()){result ->
-            if (result.contents != null){
+        val qrLauncher4 = registerForActivityResult(ScanContract()) { result ->
+            if (result.contents != null) {
                 qrCodeText5 = result.contents
-                porAOs.isEnabled = true
-                Toast.makeText(this,"Codigo del Area: $qrCodeText5", Toast.LENGTH_SHORT).show()
+                if (qrCodeText5 == "NS-QR-MTTO-D-005") {
+                    porAOs.isEnabled = true
+                    Toast.makeText(this, "Codigo del Area: $qrCodeText5", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
+                }
+
             }
         }
         //
         btnScanQR5.setOnClickListener {
             val options4 = ScanOptions()
-            options4.setPrompt("Escanea el codigo QR0")
+            options4.setPrompt("Escanea el codigo QR")
             options4.setBeepEnabled(true)
             options4.setBarcodeImageEnabled(true)
             qrLauncher4.launch(options4)
         }
         //
         porAOs.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus){
+            if (!hasFocus) {
                 val value = porAOs.text.toString().toDoubleOrNull()
-                if (value != null){
-                    if (value < 50 || value > 100){
+                if (value != null) {
+                    if (value < 50 || value > 100) {
                         val alertDialog = AlertDialog.Builder(this@FormAP)
                             .setTitle("Advertencia Nivel de agua de osmosis")
-                            .setMessage("El porcentaje ingresado esta por fuera del rango permitido.\n Realiza lo siguiente:\n" +
-                                    "REALIZAR EL LLENADO DE TINACO DE OSMOSIS Y\n" +
-                                    "FUNCIONAMIENTO DE FLOTADORES")
-                            .setPositiveButton("Aceptar"){dialog, _ ->
+                            .setMessage(
+                                "El porcentaje ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
+                                        "REALIZAR EL LLENADO DE TINACO DE OSMOSIS Y\n" +
+                                        "FUNCIONAMIENTO DE FLOTADORES"
+                            )
+                            .setPositiveButton("Aceptar") { dialog, _ ->
                                 dialog.dismiss()
                             }
                             .create()
@@ -367,11 +409,17 @@ class FormAP : AppCompatActivity() {
 // presion de linea de osmosis
         preAOs.isEnabled = false
         //
-        val qrLauncher5 = registerForActivityResult(ScanContract()){ result ->
-            if (result.contents!=null){
+        val qrLauncher5 = registerForActivityResult(ScanContract()) { result ->
+            if (result.contents != null) {
                 qrCodeText6 = result.contents
-                preAOs.isEnabled = true
-                Toast.makeText(this,"Codigo del Area: $qrCodeText6", Toast.LENGTH_SHORT).show()
+                if (qrCodeText6 == "NS-QR-MTTO-D-006") {
+                    preAOs.isEnabled = true
+                    spinnerBomba1Osmosis.isEnabled = true
+                    spinnerBomba2Osmosis.isEnabled = true
+                    Toast.makeText(this, "Codigo del Area: $qrCodeText6", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
+                }
             }
         }
         //
@@ -384,16 +432,18 @@ class FormAP : AppCompatActivity() {
         }
         //
         preAOs.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus){
+            if (!hasFocus) {
                 val value = preAOs.text.toString().toDoubleOrNull()
-                if (value != null){
-                    if (value < 4 || value > 7 ){
+                if (value != null) {
+                    if (value < 4 || value > 7) {
                         val alertDialog = AlertDialog.Builder(this@FormAP)
-                            .setTitle("Advertencia Presion de linea de osmosis")
-                            .setMessage("La presion ingresada esta por fuera del rango permitido.\n Realiza lo siguiente:\n" +
-                                    "REVISAR EL SIMINISTRO ELECTRICO\n" +
-                                    "INTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS")
-                            .setPositiveButton("Aceptar"){dialog, _ ->
+                            .setTitle("Advertencia Presión de línea de osmosis")
+                            .setMessage(
+                                "La presión ingresada esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
+                                        "REVISAR EL SIMINISTRO ELECTRICO\n" +
+                                        "INTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS"
+                            )
+                            .setPositiveButton("Aceptar") { dialog, _ ->
                                 dialog.dismiss()
                             }
                             .create()
@@ -404,40 +454,72 @@ class FormAP : AppCompatActivity() {
         }
 
 //funcionamiento bomba 1 linea osmosis
-        funBom1LiOs.setOnCheckedChangeListener { _, isChecked ->
-            if (!isChecked){
-                val alertDialog = AlertDialog.Builder(this@FormAP)
-                    .setTitle("Advertencia bomba 1 de agua de osmosis")
-                    .setMessage("Verifica que todo este funcionando correctamente")
-                    .setPositiveButton("Aceptar") { dialog, _ ->
-                        dialog.dismiss()
-                    }
-                    .create()
-                alertDialog.show()
+        // Configurar validaciones para Spinner de Bomba 1
+        spinnerBomba1Osmosis.isEnabled = false
+        spinnerBomba1Osmosis.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val seleccion = parent.getItemAtPosition(position).toString()
+                if (seleccion == "NO") {
+                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
+                    val alertDialog = AlertDialog.Builder(this@FormAP)
+                        .setTitle("Advertencia bomba 1 de agua de osmosis")
+                        .setMessage("REVISAR SUMINISTRO ELECTRICO E \n INTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS.")
+                        .setPositiveButton("Aceptar") { dialog, _ ->
+                            dialog.dismiss()
+                        }
+                        .create()
+                    alertDialog.show()
+                }
             }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {}
         }
+
 //funcionamiento bomba 2 linea osmosis
-        funBom1LiOs.setOnCheckedChangeListener { _, isChecked ->
-            if (!isChecked){
-                val alertDialog = AlertDialog.Builder(this@FormAP)
-                    .setTitle("Advertencia bomba 2 de agua de osmosis")
-                    .setMessage("Verifica que todo este funcionando correctamente")
-                    .setPositiveButton("Aceptar") { dialog, _ ->
-                        dialog.dismiss()
-                    }
-                    .create()
-                alertDialog.show()
+        // Configurar validaciones para Spinner de Bomba 2
+        spinnerBomba2Osmosis.isEnabled = false
+        spinnerBomba2Osmosis.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val seleccion = parent.getItemAtPosition(position).toString()
+                if (seleccion == "NO") {
+                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
+                    val alertDialog = AlertDialog.Builder(this@FormAP)
+                        .setTitle("Advertencia bomba 2 de agua de ósmosis")
+                        .setMessage("REVISAR SUMINISTRO ELECTRICO E \n INTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS.")
+                        .setPositiveButton("Aceptar") { dialog, _ ->
+                            dialog.dismiss()
+                        }
+                        .create()
+                    alertDialog.show()
+                }
             }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {}
         }
+
 
 // nivel cisterna agua filtrada
         porSisAF.isEnabled = false
         //
         val qrLauncher6 = registerForActivityResult(ScanContract()) { result ->
-            if (result.contents!=null){
+            if (result.contents != null) {
                 qrCodeText7 = result.contents
-                porSisAF.isEnabled = true
-                Toast.makeText(this,"Codigo del Area: $qrCodeText7", Toast.LENGTH_SHORT).show()
+                if (qrCodeText7 == "NS-QR-MTTO-D-007") {
+                    porSisAF.isEnabled = true
+                    Toast.makeText(this, "Codigo del Area: $qrCodeText7", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
+                }
             }
         }
         //
@@ -450,16 +532,18 @@ class FormAP : AppCompatActivity() {
         }
         //
         porSisAF.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus){
+            if (!hasFocus) {
                 val value = porSisAF.text.toString().toDoubleOrNull()
-                if (value != null){
-                    if (value < 90 || value > 100 ){
+                if (value != null) {
+                    if (value < 90 || value > 100) {
                         val alertDialog = AlertDialog.Builder(this@FormAP)
                             .setTitle("Advertencia Nivel cisterna Agua Filtrada")
-                            .setMessage("El porcentaje ingresado esta por fuera del rango permitido.\n Realiza lo siguiente:\n" +
-                                    "REVISAR LLAVES DE PASO DE TUBERÍA ABIERTAS\nSUMINISTRO ELECTRICO E INTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS AGUA CRUDA" +
-                                    "REVISAR FUNCIONAMIENTO EN MANUAL DE BOMBAS DE AGUA CRUDA")
-                            .setPositiveButton("Aceptar"){dialog, _ ->
+                            .setMessage(
+                                "El porcentaje ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
+                                        "REVISAR LLAVES DE PASO DE TUBERÍA ABIERTAS\nSUMINISTRO ELECTRICO E INTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS AGUA CRUDA" +
+                                        "REVISAR FUNCIONAMIENTO EN MANUAL DE BOMBAS DE AGUA CRUDA"
+                            )
+                            .setPositiveButton("Aceptar") { dialog, _ ->
                                 dialog.dismiss()
                             }
                             .create()
@@ -471,11 +555,18 @@ class FormAP : AppCompatActivity() {
 //presion linea agua filtrada
         preLinAF.isEnabled = false
         //
-        val qrLauncher7 = registerForActivityResult(ScanContract()){ result ->
-            if (result.contents!=null){
+        val qrLauncher7 = registerForActivityResult(ScanContract()) { result ->
+            if (result.contents != null) {
                 qrCodeText8 = result.contents
-                preLinAF.isEnabled = true
-                Toast.makeText(this, "Codigo del Area: $qrCodeText8", Toast.LENGTH_SHORT).show()
+                if (qrCodeText8 == "NS-QR-MTTO-D-008") {
+                    preLinAF.isEnabled = true
+                    spinnerBomba1AF.isEnabled = true
+                    spinnerBomba2AF.isEnabled = true
+                    Toast.makeText(this, "Codigo del Area: $qrCodeText8", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
+                }
+
             }
         }
         //
@@ -488,16 +579,18 @@ class FormAP : AppCompatActivity() {
         }
         //
         preLinAF.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus){
+            if (!hasFocus) {
                 val value = preLinAF.text.toString().toDoubleOrNull()
-                if (value != null){
-                    if (value < 4 || value > 7.5 ){
+                if (value != null) {
+                    if (value < 4 || value > 7.5) {
                         val alertDialog = AlertDialog.Builder(this@FormAP)
-                            .setTitle("Advertencia Presion linea agua filtrada")
-                            .setMessage("El porcentaje ingresado esta por fuera del rango permitido.\n Realiza lo siguiente:\n" +
-                                    "REVISAR SUMINISTRO ELECTRICO E INTERRUPTORES INDIVIDUALES EN TABLERO BOMBAS\n" +
-                                    "FUNCIONAMIENTO DE BOMBAS")
-                            .setPositiveButton("Aceptar"){dialog, _ ->
+                            .setTitle("Advertencia Presión linea agua filtrada")
+                            .setMessage(
+                                "El porcentaje ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
+                                        "REVISAR SUMINISTRO ELECTRICO E INTERRUPTORES INDIVIDUALES EN TABLERO BOMBAS\n" +
+                                        "FUNCIONAMIENTO DE BOMBAS"
+                            )
+                            .setPositiveButton("Aceptar") { dialog, _ ->
                                 dialog.dismiss()
                             }
                             .create()
@@ -508,40 +601,67 @@ class FormAP : AppCompatActivity() {
         }
 
 //funconamiento bomba 1 agua filtrada
-        funBom1AF.setOnCheckedChangeListener { _, isChecked ->
-            if (!isChecked){
-                val alertDialog = AlertDialog.Builder(this@FormAP)
-                    .setTitle("Advertencia bomba 1 de agua filtrada")
-                    .setMessage("Verifica que todo este funcionando correctamente")
-                    .setPositiveButton("Aceptar") { dialog, _ ->
-                        dialog.dismiss()
-                    }
-                    .create()
-                alertDialog.show()
+        spinnerBomba1AF.isEnabled = false
+        spinnerBomba1AF.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val seleccion = parent.getItemAtPosition(position).toString()
+                if (seleccion == "NO") {
+                    val alertDialog = AlertDialog.Builder(this@FormAP)
+                        .setTitle("Advertencia bomba 1 de agua filtrada")
+                        .setMessage("REVISAR SUMINISTRO ELECTRICO E \nINTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS.")
+                        .setPositiveButton("Aceptar") { dialog, _ ->
+                            dialog.dismiss()
+                        }
+                        .create()
+                    alertDialog.show()
+                }
             }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {}
         }
 //funconamiento bomba 2 agua filtrada
-        funBom2AF.setOnCheckedChangeListener { _, isChecked ->
-            if (!isChecked){
-                val alertDialog = AlertDialog.Builder(this@FormAP)
-                    .setTitle("Advertencia bomba 2 de agua filtrada")
-                    .setMessage("Verifica que todo este funcionando correctamente")
-                    .setPositiveButton("Aceptar") { dialog, _ ->
-                        dialog.dismiss()
-                    }
-                    .create()
-                alertDialog.show()
+        // Configurar validaciones para Spinner de Bomba 2 de Agua Filtrada
+        spinnerBomba2AF.isEnabled = false
+        spinnerBomba2AF.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val seleccion = parent.getItemAtPosition(position).toString()
+                if (seleccion == "NO") {
+                    val alertDialog = AlertDialog.Builder(this@FormAP)
+                        .setTitle("Advertencia bomba 2 de agua filtrada")
+                        .setMessage("REVISAR SUMINISTRO ELECTRICO E \nINTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS.")
+                        .setPositiveButton("Aceptar") { dialog, _ ->
+                            dialog.dismiss()
+                        }
+                        .create()
+                    alertDialog.show()
+                }
             }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {}
         }
 
 //pH agua filtrada
         pH.isEnabled = false
         //
-        val qrLauncher8 = registerForActivityResult(ScanContract()){ result ->
-            if (result.contents!=null){
+        val qrLauncher8 = registerForActivityResult(ScanContract()) { result ->
+            if (result.contents != null) {
                 qrCodeText9 = result.contents
-                pH.isEnabled = true
-                Toast.makeText(this, "Codigo del Area: $qrCodeText9", Toast.LENGTH_SHORT).show()
+                if (qrCodeText9 == "NS-QR-MTTO-D-009") {
+                    pH.isEnabled = true
+                    Toast.makeText(this, "Codigo del Area: $qrCodeText9", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
+                }
             }
         }
         //
@@ -554,16 +674,18 @@ class FormAP : AppCompatActivity() {
         }
         //
         pH.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus){
+            if (!hasFocus) {
                 val value = pH.text.toString().toDoubleOrNull()
-                if (value != null){
-                    if (value < 7.2 || value > 7.8 ){
+                if (value != null) {
+                    if (value < 6.5 || value > 8.5) { //correccion
                         val alertDialog = AlertDialog.Builder(this@FormAP)
                             .setTitle("Advertencia PH en agua filtrada")
-                            .setMessage("El pH ingresado esta por fuera del rango permitido.\n Realiza lo siguiente:\n" +
-                                    "REALIZAR MEDICION DE PH CON COLORIMETRO EN TOMAS FINALES\n" +
-                                    "")
-                            .setPositiveButton("Aceptar"){dialog, _ ->
+                            .setMessage(
+                                "El pH ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
+                                        "REALIZAR MEDICION DE PH CON COLORIMETRO EN TOMAS FINALES\n" +
+                                        ""
+                            )
+                            .setPositiveButton("Aceptar") { dialog, _ ->
                                 dialog.dismiss()
                             }
                             .create()
@@ -575,11 +697,18 @@ class FormAP : AppCompatActivity() {
 // presion agua potable
         preAP.isEnabled = false
         //
-        val qrLauncher9 = registerForActivityResult(ScanContract()){ result ->
-            if (result.contents!=null){
+        val qrLauncher9 = registerForActivityResult(ScanContract()) { result ->
+            if (result.contents != null) {
                 qrCodeText10 = result.contents
-                pH.isEnabled = true
-                Toast.makeText(this, "Codigo del Area: $qrCodeText10", Toast.LENGTH_SHORT).show()
+                if (qrCodeText10 == "NS-QR-MTTO-D-010") {
+                    preAP.isEnabled = true
+                    spinnerBomba1AP.isEnabled = true
+                    spinnerBomba2AP.isEnabled = true
+                    Toast.makeText(this, "Codigo del Area: $qrCodeText10", Toast.LENGTH_SHORT)
+                        .show()
+                } else {
+                    Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
+                }
             }
         }
         //
@@ -592,16 +721,18 @@ class FormAP : AppCompatActivity() {
         }
         //
         preAP.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus){
+            if (!hasFocus) {
                 val value = preAP.text.toString().toDoubleOrNull()
-                if (value != null){
-                    if (value < 4 || value > 6 ){
+                if (value != null) {
+                    if (value < 4 || value > 6) {
                         val alertDialog = AlertDialog.Builder(this@FormAP)
-                            .setTitle("Advertencia Presion de agua potable")
-                            .setMessage("La presion ingresada esta por fuera del rango permitido.\n Realiza lo siguiente:\n" +
-                                    "REVISAR SUMINISTRO ELECTRICO E INTERRUPTORES INDIVIDUALES EN TABLERO BOMBAS\n" +
-                                    "PURGAR BOMBAS \n REVISAR EN SELLO MECÁNICO Y PICHANCHA")
-                            .setPositiveButton("Aceptar"){dialog, _ ->
+                            .setTitle("Advertencia Presión de agua potable")
+                            .setMessage(
+                                "La presión ingresada esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
+                                        "REVISAR SUMINISTRO ELECTRICO E INTERRUPTORES INDIVIDUALES EN TABLERO BOMBAS\n" +
+                                        "PURGAR BOMBAS \n REVISAR EN SELLO MECÁNICO Y PICHANCHA"
+                            )
+                            .setPositiveButton("Aceptar") { dialog, _ ->
                                 dialog.dismiss()
                             }
                             .create()
@@ -612,206 +743,179 @@ class FormAP : AppCompatActivity() {
         }
 
 //funcionamiento bomba 1 agua potable
-        funBom1AP.setOnCheckedChangeListener { _, isChecked ->
-            if (!isChecked){
-                val alertDialog = AlertDialog.Builder(this@FormAP)
-                    .setTitle("Advertencia bomba 1 de agua potable")
-                    .setMessage("Verifica que todo este funcionando correctamente")
-                    .setPositiveButton("Aceptar") { dialog, _ ->
-                        dialog.dismiss()
-                    }
-                    .create()
-                alertDialog.show()
+        // Configurar validaciones para Spinner de Bomba 1 de Agua Potable
+        spinnerBomba1AP.isEnabled = false
+        spinnerBomba1AP.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val seleccion = parent.getItemAtPosition(position).toString()
+                if (seleccion == "NO") {
+                    val alertDialog = AlertDialog.Builder(this@FormAP)
+                        .setTitle("Advertencia bomba 1 de agua potable")
+                        .setMessage("REVISAR INTERRUPTOR INDIVIDUAL DE BOMBA \n PURGAR BOMBAS \n REVISAR DE FUGAS EN SELLO MÉCANICO Y PICHANCHA.")
+                        .setPositiveButton("Aceptar") { dialog, _ ->
+                            dialog.dismiss()
+                        }
+                        .create()
+                    alertDialog.show()
+                }
             }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {}
         }
 //funcionamiento bomba 2 agua potable
-        funBom1AP.setOnCheckedChangeListener { _, isChecked ->
-            if (!isChecked){
-                val alertDialog = AlertDialog.Builder(this@FormAP)
-                    .setTitle("Advertencia bomba 2 de agua potable")
-                    .setMessage("Verifica que todo este funcionando correctamente")
-                    .setPositiveButton("Aceptar") { dialog, _ ->
-                        dialog.dismiss()
+        // Configurar validaciones para Spinner de Bomba 2 de Agua Potable
+        spinnerBomba2AP.isEnabled = false
+        spinnerBomba2AP.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val seleccion = parent.getItemAtPosition(position).toString()
+                if (seleccion == "NO") {
+                    val alertDialog = AlertDialog.Builder(this@FormAP)
+                        .setTitle("Advertencia bomba 2 de agua potable")
+                        .setMessage("REVISAR INTERRUPTOR INDIVIDUAL DE BOMBA \n PURGAR BOMBAS \n REVISAR DE FUGAS EN SELLO MÉCANICO Y PICHANCHA.")
+                        .setPositiveButton("Aceptar") { dialog, _ ->
+                            dialog.dismiss()
+                        }
+                        .create()
+                    alertDialog.show()
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>) {}
+        }
+
+        //////////////////////////////////////BOTON DE ENVIAR///////////////////////////////////////////////
+
+        fun manejarExcel(context: Context, fileName: String, sheetName: String, datos: List<String>, headers: List<String>) {
+            // Ruta absoluta al directorio de Descargas
+            val downloadsFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+            val folder = File(downloadsFolder, "RecorridosMantenimiento")
+            if (!folder.exists()) folder.mkdirs() // Crear carpeta si no existe
+
+            val file = File(folder, fileName)
+
+            try {
+                val workbook: Workbook
+                val sheet: Sheet
+
+                // Cargar o crear el archivo Excel
+                workbook = if (file.exists()) {
+                    FileInputStream(file).use { inputStream ->
+                        XSSFWorkbook(inputStream) // Cargar archivo existente
                     }
-                    .create()
-                alertDialog.show()
+                } else {
+                    XSSFWorkbook() // Crear un nuevo archivo
+                }
+
+                // Obtener o crear la hoja
+                sheet = workbook.getSheet(sheetName) ?: workbook.createSheet(sheetName)
+
+                // Agregar encabezados si la hoja está vacía
+                if (sheet.physicalNumberOfRows == 0) {
+                    val headerRow = sheet.createRow(0)
+                    headers.forEachIndexed { index, header ->
+                        headerRow.createCell(index).setCellValue(header)
+                    }
+                }
+
+                // Agregar nueva fila de datos
+                val newRow = sheet.createRow(sheet.lastRowNum + 1)
+                datos.forEachIndexed { index, dato ->
+                    newRow.createCell(index).setCellValue(dato)
+                }
+
+                // Guardar el archivo Excel
+                FileOutputStream(file).use { outputStream ->
+                    workbook.write(outputStream)
+                }
+
+                workbook.close()
+
+                Toast.makeText(context, "Datos guardados en: ${file.absolutePath}", Toast.LENGTH_LONG).show()
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(context, "Error al guardar los datos: ${e.message}", Toast.LENGTH_LONG).show()
             }
         }
+// Llamar la función dentro del listener
 
-//////////////////////////////////////BOTON DE ENVIAR///////////////////////////////////////////////
         btSend.setOnClickListener {
-            //qrporwc
-            val nombreActividad = nombreActPorwc.text.toString()
-            val parametroWC = porWC.text.toString()
-            //qraplu
-            val nombreActividad1 = nombreActPorAPlu.text.toString()
-            val parametroAPlu = porAPlu.text.toString()
-            //qrpreawc
-            val nombreActividad2 = nombreActpreAWC.text.toString()
-            val parametropreAWC = preAWC.text.toString()
-            //fun bomba
-            val nombreActividad3 = nombreActFunbomtrat1.text.toString()
-            val funBom1AguaTratEstado = if (funBom1AguaTratBox.isChecked) "Sí" else "No"
-            val nombreActividad4 = nombreActFunbomtrat2.text.toString()
-            val funBom1AguaTratEstado2 = if (funBom2AguaTratBox.isChecked) "Sí" else "No"
-            //fun nivel carcamo agua cruda
-            val nombreActividad5 = nombreActporCarAC.text.toString()
-            val parametroporCarAC = porCarAC.text.toString()
-            val nombreActividad6 = nombreAcrcRLAgua.text.toString()
-            val parametrocRLAgua = cRLAgua.text.toString()
-            //nivel de agua de osmosis
-            val nombreActividad7 = nombreActporAOs.text.toString()
-            val parametroporAOs = porAOs.text.toString()
-            val nombreActividad8 = nombreActpreAOs.text.toString()
-            val parametropreAOs = preAOs.text.toString()
-            //fun bomba
-            val nombreActividad9 = nombreActFunLIOS1.text.toString()
-            val funBomb1LineaOs = if (funBom1LiOs.isChecked) "Sí" else "No"
-            val nombreActividad10 = nombreActFunLIOS2.text.toString()
-            val funBomb2LineaOs = if (funBom2LiOs.isChecked) "Sí" else "No"
+            val datosFormulario1 = listOf(
+                porWC.text.toString(),
+                porAPlu.text.toString(),
+                preAWC.text.toString(),
+                spinnerBomba1.selectedItem.toString(),
+                spinnerBomba2.selectedItem.toString(),
+                porCarAC.text.toString(),
+                cRLAgua.text.toString(),
+                porAOs.text.toString(),
+                preAOs.text.toString(),
+                spinnerBomba1Osmosis.selectedItem.toString(),
+                spinnerBomba2Osmosis.selectedItem.toString(),
+                porSisAF.text.toString(),
+                preLinAF.text.toString(),
+                spinnerBomba1AF.selectedItem.toString(),
+                spinnerBomba2AF.selectedItem.toString(),
+                pH.text.toString(),
+                preAP.text.toString(),
+                spinnerBomba1AP.selectedItem.toString(),
+                spinnerBomba2AP.selectedItem.toString(),
+                etHallazgosAp.text.toString(),
+                SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault()).format(Date())
+            )
 
-            val nombreActividad11 = nombreActporSisAF.text.toString()
-            val parametroporSisAF = porSisAF.text.toString()
-            val nombreActividad12 = nombreActpreLinAF.text.toString()
-            val parametropreLinAF = preLinAF.text.toString()
-            val nombreActividad13 = nombreActfunBomb1AF.text.toString()
-            val funBomba1AF = if (funBom1AF.isChecked) "Sí" else "No"
-            val nombreActividad14 = nombreActfunBomb2AF.text.toString()
-            val funBomba2AF = if (funBom2AF.isChecked) "Sí" else "No"
+            manejarExcel(
+                context = this,
+                fileName = "RecorridoMantenimiento.xlsx",
+                sheetName = "RecorridoAguaPotable",
+                datos = datosFormulario1,
+                headers = listOf(
+                    "Nivel cisterna de servicio (%)",
+                    "Nivel cisterna de agua pluvial (%)",
+                    "Presión de línea de agua WC",
+                    "Funcionamiento bomba agua tratada 1",
+                    "Funcionamiento bomba agua tratada 2",
+                    "Nivel cárcamo de agua cruda (%)",
+                    "C.R.L. de agua cruda (PPM)",
+                    "Nivel de agua de osmosis (%)",
+                    "Presión de línea de osmosis (PSI)",
+                    "Funcionamiento bomba agua de osmosis 1",
+                    "Funcionamiento bomba agua de osmosis 2",
+                    "Nivel cisterna agua filtrada (%)",
+                    "Presión línea de agua filtrada (PSI)",
+                    "Funcionamiento bomba agua filtrada 1",
+                    "Funcionamiento bomba agua filtrada 2",
+                    "PH en agua filtrada",
+                    "Presion agua potable",
+                    "Funcionamiento bomba agua potable 1",
+                    "Funcionamiento bomba agua potable 2",
+                    "Hallazgos",
+                    "Fecha y Hora"
+                )
+            )
 
+            val sharedPreferences = getSharedPreferences("StatusPref", MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.putString("statusAP", "completed")
+            editor.apply()
 
-
-            val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm:ss",Locale.getDefault())
-            val fechaHoraActual = sdf.format(Date())
-            val downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-            val fileName = "RecorridoMantenimiento.xlsx"
-            val file = File(downloadsDir, fileName)
-            val workbook: Workbook
-            val sheet : Sheet
-
-            if(file.exists()){
-                val inputStream = file.inputStream()
-                workbook = XSSFWorkbook(inputStream)
-                sheet = workbook.getSheetAt(0)
-            }else{
-                // Si el archivo no existe, crearlo
-                workbook = XSSFWorkbook()
-                sheet = workbook.createSheet("RecorridoAguaPotable")
-
-                // Agregar la fila de encabezados
-                val headerRow = sheet.createRow(0)
-                headerRow.createCell(0).setCellValue("Código")
-                headerRow.createCell(1).setCellValue("Nombre Actividad")
-                headerRow.createCell(2).setCellValue("Parámetro") // Nivel cisterna de servicio WC (%)
-                headerRow.createCell(3).setCellValue("Código")
-                headerRow.createCell(4).setCellValue("Nombre Actividad")
-                headerRow.createCell(5).setCellValue("Parámetro") // Nivel cisterna de agua pluvial (%)
-                headerRow.createCell(6).setCellValue("Código")
-                headerRow.createCell(7).setCellValue("Nombre Actividad")
-                headerRow.createCell(8).setCellValue("Parámetro")//Presión de línea agua WC (kgf/cm2)
-                headerRow.createCell(9).setCellValue("Nombre Actividad")
-                headerRow.createCell(10).setCellValue("Parametro")
-                headerRow.createCell(11).setCellValue("Nombre Actividad")
-                headerRow.createCell(12).setCellValue("Parametro")
-                headerRow.createCell(13).setCellValue("Código") //nivel carcamos de agua
-                headerRow.createCell(14).setCellValue("Nombre Actividad")
-                headerRow.createCell(15).setCellValue("Parámetro")
-                headerRow.createCell(16).setCellValue("Nombre Actividad")
-                headerRow.createCell(17).setCellValue("Parámetro")
-                headerRow.createCell(18).setCellValue("Código")
-                headerRow.createCell(19).setCellValue("Nombre Actividad")
-                headerRow.createCell(20).setCellValue("Parámetro")// nivel de agua de osmosis
-                headerRow.createCell(21).setCellValue("Código")
-                headerRow.createCell(22).setCellValue("Nombre Actividad")
-                headerRow.createCell(23).setCellValue("Parámetro")// precion de agua de osmosis
-                headerRow.createCell(24).setCellValue("Nombre Actividad")
-                headerRow.createCell(25).setCellValue("Parametro")//checkbox
-                headerRow.createCell(26).setCellValue("Nombre Actividad")
-                headerRow.createCell(27).setCellValue("Parametro")//checkbox
-                headerRow.createCell(28).setCellValue("Código")
-                headerRow.createCell(29).setCellValue("Nombre Actividad")
-                headerRow.createCell(30).setCellValue("Parámetro")// Nivel cisterna agua filtrada
-                headerRow.createCell(31).setCellValue("Código")
-                headerRow.createCell(32).setCellValue("Nombre Actividad")
-                headerRow.createCell(33).setCellValue("Parámetro")// Presion linea de agua filtrada
-                headerRow.createCell(34).setCellValue("Nombre Actividad")
-                headerRow.createCell(35).setCellValue("Parámetro")// checkbox bomba agua filtrada
-                headerRow.createCell(36).setCellValue("Nombre Actividad")
-                headerRow.createCell(37).setCellValue("Parámetro")//checkbox bomba agua filtrada
-                headerRow.createCell(38).setCellValue("Código")
-                headerRow.createCell(39).setCellValue("Nombre Actividad")
-                headerRow.createCell(40).setCellValue("Parámetro") // pH agua filtrada
-                headerRow.createCell(41).setCellValue("Código")
-                headerRow.createCell(42).setCellValue("Nombre Actividad")
-                headerRow.createCell(43).setCellValue("Parámetro") //presion
-                headerRow.createCell(44).setCellValue("Nombre Actividad")
-                headerRow.createCell(45).setCellValue("Parámetro")
-                headerRow.createCell(46).setCellValue("Nombre Actividad")
-                headerRow.createCell(47).setCellValue("Parámetro")
-                headerRow.createCell(48).setCellValue("Fecha y Hora")
-            }
-            // Agregar nueva fila con los datos
-            val newRow = sheet.createRow(sheet.lastRowNum + 1)
-            newRow.createCell(0).setCellValue(qrCodeText1) //QR
-            newRow.createCell(1).setCellValue(nombreActividad)
-            newRow.createCell(2).setCellValue(parametroWC) // Nivel cisterna de servicio WC (%)
-            newRow.createCell(3).setCellValue(qrCodeText2) //QR
-            newRow.createCell(4).setCellValue(nombreActividad1)
-            newRow.createCell(5).setCellValue(parametroAPlu) // Nivel cisterna de agua pluvial (%)
-            newRow.createCell(6).setCellValue(qrCodeText3) //QR
-            newRow.createCell(7).setCellValue(nombreActividad2) //
-            newRow.createCell(8).setCellValue(parametropreAWC) //Presión de línea agua WC (kgf/cm2)
-            newRow.createCell(9).setCellValue(nombreActividad3) //
-            newRow.createCell(10).setCellValue(funBom1AguaTratEstado)
-            newRow.createCell(11).setCellValue(nombreActividad4) //
-            newRow.createCell(12).setCellValue(funBom1AguaTratEstado2)
-            newRow.createCell(13).setCellValue(qrCodeText4) //QR
-            newRow.createCell(14).setCellValue(nombreActividad5)
-            newRow.createCell(15).setCellValue(parametroporCarAC) //Nivel carcamo de agua
-            newRow.createCell(16).setCellValue(nombreActividad6) //
-            newRow.createCell(17).setCellValue(parametrocRLAgua)
-            newRow.createCell(18).setCellValue(qrCodeText5) //QR
-            newRow.createCell(19).setCellValue(nombreActividad7)
-            newRow.createCell(20).setCellValue(parametroporAOs) //nivel de agua de osmosis
-            newRow.createCell(21).setCellValue(qrCodeText6) //QR
-            newRow.createCell(22).setCellValue(nombreActividad8)
-            newRow.createCell(23).setCellValue(parametropreAOs) // presion agua de osmosdis
-            newRow.createCell(24).setCellValue(nombreActividad9)
-            newRow.createCell(25).setCellValue(funBomb1LineaOs)
-            newRow.createCell(26).setCellValue(nombreActividad10) //
-            newRow.createCell(27).setCellValue(funBomb2LineaOs)
-            newRow.createCell(28).setCellValue(qrCodeText7) //QR
-            newRow.createCell(29).setCellValue(nombreActividad11)
-            newRow.createCell(30).setCellValue(parametroporSisAF) // nivel cisterna agua filtrada000
-            newRow.createCell(31).setCellValue(qrCodeText8) //QR
-            newRow.createCell(32).setCellValue(nombreActividad12)
-            newRow.createCell(33).setCellValue(parametropreLinAF) // presion linea de agua filtrada
-            newRow.createCell(34).setCellValue(nombreActividad13)
-            newRow.createCell(35).setCellValue(funBomba1AF)//
-            newRow.createCell(36).setCellValue(nombreActividad14)
-            newRow.createCell(37).setCellValue(funBomba2AF)//
-
-
-
-
-
-            // ultimos parametros enviados Fecha y hora
-            newRow.createCell(13).setCellValue(fechaHoraActual)
-            // nombre encargado
-
-            // Escribir los datos en el archivo
-            val outputStream = FileOutputStream(file)
-            workbook.write(outputStream)
-            outputStream.close()
-            workbook.close()
-
-            // Mostrar un mensaje para verificar que el archivo se ha creado correctamente
-            if (file.exists()) {
-                Toast.makeText(this, "Archivo Excel creado en Descargas", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "Error al crear el archivo Excel", Toast.LENGTH_SHORT).show()
-            }
+            val intent = Intent(this, recodiario::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(intent)
+            finish()
         }
+
+
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

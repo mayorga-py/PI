@@ -1,73 +1,134 @@
 package com.example.proyectnewro
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
-
 import androidx.appcompat.app.AppCompatActivity
 
-
 class recodiario : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
 
-    private lateinit var imageViewCompleted: ImageView
-    private lateinit var imageViewPending: ImageView
+    private val statusKeys = arrayOf(
+        "statusAP", "statusAgCa", "statusGasMed", "statusElectric", "statusAA", "statusCI"
+    )
+    private val imageCompletedIds = arrayOf(
+        R.id.realizado1,
+        R.id.realizado2,
+        R.id.realizado3,
+        R.id.realizado4,
+        R.id.realizado5,
+        R.id.realizado6
+    )
+    private val imagePendingIds = arrayOf(
+        R.id.pendiente1,
+        R.id.pendiente2,
+        R.id.pendiente3,
+        R.id.pendiente4,
+        R.id.pendiente5,
+        R.id.pendiente6
+    )
+
+    private lateinit var imageViewsCompleted: Array<ImageView>
+    private lateinit var imageViewsPending: Array<ImageView>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recodiario)
 
-        val buttonAP = findViewById<Button>(R.id.buttonAP)
-        imageViewCompleted = findViewById(R.id.realizado)
-        imageViewPending = findViewById(R.id.pendiente)
+        val buttons = arrayOf(
+            findViewById<Button>(R.id.buttonAP),
+            findViewById<Button>(R.id.buttonAgCa),
+            findViewById<Button>(R.id.buttonGM),
+            findViewById<Button>(R.id.buttonElec),
+            findViewById<Button>(R.id.buttonAA),
+            findViewById<Button>(R.id.buttonCI)
+        )
 
-        // Cargar el estado desde SharedPreferences
-        loadStatus()
+        // Inicializar las listas de ImageViews
+        imageViewsCompleted = imageCompletedIds.map { findViewById<ImageView>(it) }.toTypedArray()
+        imageViewsPending = imagePendingIds.map { findViewById<ImageView>(it) }.toTypedArray()
 
-        buttonAP.setOnClickListener {
-            // Obtener el estado actual
+        // Cargar los estados desde SharedPreferences
+        for (i in statusKeys.indices) {
+            loadStatus(statusKeys[i], imageViewsCompleted[i], imageViewsPending[i])
+        }
+
+        // Asignar eventos a los botones
+        buttons.forEachIndexed { index, button ->
+            button.setOnClickListener {
+                toggleStatus(statusKeys[index], imageViewsCompleted[index], imageViewsPending[index], buttons[index])
+                startFormActivity(index)
+            }
+        }
+
+        // 🔹 Inicializar y configurar el botón "Finalizar recorrido"
+        val buttonFin = findViewById<Button>(R.id.buttonFin)
+        buttonFin.setOnClickListener {
             val sharedPreferences = getSharedPreferences("StatusPref", MODE_PRIVATE)
-            val currentStatus = sharedPreferences.getString("status", "pending")
+            val editor = sharedPreferences.edit()
 
-            // Alternar el estado entre "completed" y "pending"
-            val newStatus = if (currentStatus == "pending") "completed" else "pending"
+            // Marcar todas las imágenes como "pendiente"
+            for (key in statusKeys) {
+                editor.putString(key, "pending")
+            }
+            editor.apply()
 
-            // Cambiar el estado
-            updateStatus(newStatus)
+            // Actualizar la UI para reflejar el cambio
+            for (i in statusKeys.indices) {
+                imageViewsCompleted[i].visibility = View.GONE
+                imageViewsPending[i].visibility = View.VISIBLE
+            }
 
-            // Redireccionar a la nueva actividad FormAP
-            val intent = Intent(this,FormAP::class.java)
-            startActivity(intent)
+            // Cerrar la aplicación
+            finishAffinity() // Cierra todas las actividades y la app
         }
     }
 
-    // Declarar las funciones aquí, fuera de onCreate()
-    private fun loadStatus() {
-        val sharedPreferences = getSharedPreferences("StatusPref", MODE_PRIVATE)
-        val status = sharedPreferences.getString("status", "pending")
-
-        when (status) {
-            "completed" -> {
-                imageViewCompleted.visibility = View.VISIBLE
-                imageViewPending.visibility = View.GONE
-            }
-            "pending" -> {
-                imageViewPending.visibility = View.VISIBLE
-                imageViewCompleted.visibility = View.GONE
-            }
+    // Recargar estados al regresar a la pantalla
+    override fun onResume() {
+        super.onResume()
+        for (i in statusKeys.indices) {
+            loadStatus(statusKeys[i], imageViewsCompleted[i], imageViewsPending[i])
         }
     }
 
-    private fun updateStatus(newStatus: String) {
+    // Función para cargar el estado de las imágenes desde SharedPreferences
+    private fun loadStatus(key: String, imageViewCompleted: ImageView, imageViewPending: ImageView) {
         val sharedPreferences = getSharedPreferences("StatusPref", MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.putString("status", newStatus)
-        editor.apply()
+        val status = sharedPreferences.getString(key, "pending") // 🔹 Por defecto "pending"
 
-        // Actualizar la UI
-        loadStatus()
+        if (status == "completed") {
+            imageViewCompleted.visibility = View.VISIBLE
+            imageViewPending.visibility = View.GONE
+        } else {
+            imageViewCompleted.visibility = View.GONE
+            imageViewPending.visibility = View.VISIBLE
+        }
+    }
+
+    // Función para alternar estado y guardar en SharedPreferences
+    private fun toggleStatus(key: String, imageViewCompleted: ImageView, imageViewPending: ImageView, button: Button) {
+        val sharedPreferences = getSharedPreferences("StatusPref", MODE_PRIVATE)
+        val currentStatus = sharedPreferences.getString(key, "pending")
+
+        if (currentStatus == "pending") {
+            // Desactivar el botón hasta que se complete el recorrido
+            button.isEnabled = false
+        }
+    }
+
+    // Función para abrir la actividad correspondiente
+    private fun startFormActivity(index: Int) {
+        val formClasses = arrayOf(
+            FormAP::class.java,
+            FormAgCa::class.java,
+            FormGasMed::class.java,
+            FormEletrico::class.java,
+            FormAireAcondi::class.java,
+            FormContraIncen::class.java
+        )
+        val intent = Intent(this, formClasses[index])
+        startActivity(intent)
     }
 }

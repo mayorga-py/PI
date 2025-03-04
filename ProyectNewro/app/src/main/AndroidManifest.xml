@@ -2,14 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+
+
     <uses-permission
         android:name="android.permission.CAMERA"
         tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
-
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32"
-        tools:ignore="ScopedStorage" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -26,6 +28,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectNewro"
         tools:targetApi="31">
+        <activity
+            android:name=".FormContraIncen"
+            android:exported="false" />
+        <activity
+            android:name=".FormAireAcondi"
+            android:exported="false" />
+        <activity
+            android:name=".FormEletrico"
+            android:exported="false" />
+        <activity
+            android:name=".FormGasMed"
+            android:exported="false" />
+        <activity
+            android:name=".FormAgCa"
+            android:exported="false" />
         <activity
             android:name=".NuevaActividad"
             android:exported="false" />
