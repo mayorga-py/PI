@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ProyectNewro</string>
+
+    <string-array name="opciones_bomba">
+        <item> - </item>
+        <item>SI</item>
+        <item>NO</item>
+    </string-array>
+
+    <string-array name="opciones_ok_na">
+        <item> - </item>
+        <item>Ok</item>
+        <item>No Aplica</item>
+    </string-array>
+
+</resources>

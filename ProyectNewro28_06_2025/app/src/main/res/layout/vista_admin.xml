@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bgnewro1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Título -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Panel de Administrador"
+                android:textSize="22sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Tabla tipo Excel -->
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:background="#FFFFFF"
+                android:padding="8dp">
+
+                <!-- Encabezados -->
+                <TableRow android:background="#3F51B5">
+                    <TextView
+                        android:text="ID"
+                        android:textColor="#FFFFFF"
+                        android:padding="8dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:text="Nombre"
+                        android:textColor="#FFFFFF"
+                        android:padding="8dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:text="Correo"
+                        android:textColor="#FFFFFF"
+                        android:padding="8dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <!-- Fila 1 -->
+                <TableRow>
+                    <TextView android:text="1" android:padding="8dp" />
+                    <TextView android:text="Ismael Torres" android:padding="8dp" />
+                    <TextView android:text="ismael@mail.com" android:padding="8dp" />
+                </TableRow>
+
+                <!-- Fila 2 -->
+                <TableRow>
+                    <TextView android:text="2" android:padding="8dp" />
+                    <TextView android:text="Lucía Pérez" android:padding="8dp" />
+                    <TextView android:text="lucia@mail.com" android:padding="8dp" />
+                </TableRow>
+
+                <!-- Fila 3 -->
+                <TableRow>
+                    <TextView android:text="3" android:padding="8dp" />
+                    <TextView android:text="Carlos Rojas" android:padding="8dp" />
+                    <TextView android:text="carlos@mail.com" android:padding="8dp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
