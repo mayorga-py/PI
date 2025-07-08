@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recodiario"
+    android:background="@drawable/bgnewro1">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071">
+
+        <Button
+            android:id="@+id/buttonAP"
+            android:layout_width="245dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#313D8E"
+            android:textColor="#FFFFFF"
+            android:text="Agua potable"
+            android:textSize="20sp"
+            app:cornerRadius="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/realizado1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/realizado_icon"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/pendiente1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pendiente_icon"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.170">
+
+        <Button
+            android:id="@+id/buttonAgCa"
+            android:layout_width="245dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#313D8E"
+            android:textColor="#FFFFFF"
+            android:text="Agua caliente"
+            android:textSize="20sp"
+            app:cornerRadius="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/realizado2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/realizado_icon"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/pendiente2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pendiente_icon"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.270">
+
+        <Button
+            android:id="@+id/buttonGM"
+            android:layout_width="245dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#313D8E"
+            android:textColor="#FFFFFF"
+            android:text="Gases medicinales"
+            android:textSize="20sp"
+            app:cornerRadius="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/realizado3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/realizado_icon"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/pendiente3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pendiente_icon"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.371">
+
+        <Button
+            android:id="@+id/buttonElec"
+            android:layout_width="245dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#313D8E"
+            android:textColor="#FFFFFF"
+            android:text="Electrico"
+            android:textSize="20sp"
+            app:cornerRadius="0dp"
+            app:iconSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/realizado4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/realizado_icon"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/pendiente4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pendiente_icon"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonFin"
+        android:layout_width="245dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#313D8E"
+        android:textColor="#FFFFFF"
+        android:text="Finalizar recorrido"
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.913" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.570">
+
+        <Button
+            android:id="@+id/buttonCI"
+            android:layout_width="245dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#313D8E"
+            android:textColor="#FFFFFF"
+            android:text="Contra incendios"
+            android:textSize="20sp"
+            app:cornerRadius="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/realizado6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/realizado_icon"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/pendiente6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pendiente_icon"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.470">
+
+        <Button
+            android:id="@+id/buttonAA"
+            android:layout_width="245dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#313D8E"
+            android:textColor="#FFFFFF"
+            android:text="Aire acondicionado"
+            android:textSize="20sp"
+            app:cornerRadius="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/realizado5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/realizado_icon"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/pendiente5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pendiente_icon"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

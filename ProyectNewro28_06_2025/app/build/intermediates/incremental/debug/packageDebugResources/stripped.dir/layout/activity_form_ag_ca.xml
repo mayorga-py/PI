@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgnewro1"
+    android:backgroundTint="#474646"
+    android:backgroundTintMode="multiply"
+    tools:context=".FormAgCa">
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RECORRIDO AGUA CALIENTE"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/textView15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="CALDERA 1 RECORRIDO"
+                android:textColor="#FFFFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/nomActPreGas1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Presion Gas L.P."
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/preGas1"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:ems="10"
+                    android:hint="PSI"
+                    android:inputType="numberDecimal"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btnQRpreGas1"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nomActfunCal1"
+                    android:layout_width="225dp"
+                    android:layout_height="40dp"
+                    android:gravity="end"
+                    android:text="¿Funciona caldera 1?  ->"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/FunCaldera1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:background="#6A6969"
+                    android:backgroundTint="#878585"
+                    android:entries="@array/opciones_bomba"
+                    android:popupBackground="#505050"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/nomActpreTanqAC1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Presión tanque A.C. 1"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/preTanqAC1"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:ems="10"
+                    android:hint="PSI"
+                    android:inputType="numberDecimal"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btnQRpreTanqAC1"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/nomActtempTanqAC1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperatura tanque 1 A.C."
+                android:textColor="#FFFFFF"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/tempTanqAC1"
+                android:layout_width="189dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FFFFFF"
+                android:ems="10"
+                android:hint="°C"
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"/>
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CALDERA 2 RECORRIDO"
+                android:textColor="#FFFFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/nomActPreGas2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Presion Gas L.P."
+                android:textColor="#FFFFFFFF"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/preGas2"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:ems="10"
+                    android:hint="PSI"
+                    android:textColor="#FFFFFF"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btnQRpreGas2"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nomActfunCal2"
+                    android:layout_width="225dp"
+                    android:layout_height="40dp"
+                    android:gravity="end"
+                    android:text="¿Funciona caldera 2?  ->"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/FunCaldera2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:background="#6A6969"
+                    android:backgroundTint="#878585"
+                    android:entries="@array/opciones_bomba"
+                    android:popupBackground="#505050"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/nomActpreTanqAC2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Presión tanque A.C. 2"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/preTanqAC2"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFFFF"
+                    android:ems="10"
+                    android:textColor="#FFFFFF"
+                    android:hint="PSI"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="#FFFFFFFF" />
+
+                <Button
+                    android:id="@+id/btnQRpreTanqAC2"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/nomActtempTanqAC2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperatura tanque 2 A.C."
+                android:textColor="#FFFFFF"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/tempTanqAC2"
+                android:layout_width="189dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FFFFFFFF"
+                android:ems="10"
+                android:hint="°C"
+                android:textColor="#FFFFFF"
+                android:inputType="numberDecimal"
+                android:textColorHint="#FFFFFFFF" />
+
+            <TextView
+                android:id="@+id/nomActFunBombFLu1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Funcionan las bombas? \n Bomba de flujo 1:"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/FunbombFlu1_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:background="#6A6969"
+                    android:backgroundTint="#878585"
+                    android:entries="@array/opciones_bomba"
+                    android:popupBackground="#505050"/>
+
+                <Button
+                    android:id="@+id/btnQRfunBomFlu1_2"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/nomActFunBombFLu2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Bomba de flujo 2"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Spinner
+                android:id="@+id/FunbombFlu2_2"
+                android:layout_width="198dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/nomActFunBombRAC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Funciona bomba R.A.C?"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/FunbombRAC_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:background="#6A6969"
+                    android:backgroundTint="#878585"
+                    android:entries="@array/opciones_bomba"
+                    android:popupBackground="#505050"/>
+
+                <Button
+                    android:id="@+id/btnQRfunBomRAC"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etHaAC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:ems="10"
+                android:hint="HALLAZGOS"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/sendEx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#313D8E"
+                android:textColor="#FFFFFF"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:text="Continuar recorrido"
+                app:cornerRadius="0dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

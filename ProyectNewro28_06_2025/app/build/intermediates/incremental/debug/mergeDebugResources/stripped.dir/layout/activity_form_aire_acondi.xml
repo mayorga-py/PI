@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgnewro1"
+    android:backgroundTint="#474646"
+    android:backgroundTintMode="multiply"
+    tools:context=".FormAireAcondi">
+
+    <TextView
+        android:id="@+id/textView68"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RECORRIDO AIRE ACONDICIONADO"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/textView68"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView84"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Presion bombas de chiller"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etPreBombChill"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:ems="10"
+                    android:hint="PSI"
+                    android:inputType="numberDecimal"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFFFF" />
+
+                <Button
+                    android:id="@+id/btPreBombChill"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView85"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bomba chiller 1"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spChill1"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView86"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bomba chiller 2"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spChill2"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView87"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bomba chiller 3"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spChill3"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView88"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chiller 1"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spChiller1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:background="#6A6969"
+                    android:backgroundTint="#878585"
+                    android:entries="@array/opciones_bomba"
+                    android:popupBackground="#505050"/>
+
+                <Button
+                    android:id="@+id/btChiller1"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView89"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chiller 2"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"  />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spChiller2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:background="#6A6969"
+                    android:backgroundTint="#878585"
+                    android:entries="@array/opciones_bomba"
+                    android:popupBackground="#505050"/>
+
+                <Button
+                    android:id="@+id/btChiller2"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView90"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chiller 3"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"  />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spChiller3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:background="#6A6969"
+                    android:backgroundTint="#878585"
+                    android:entries="@array/opciones_bomba"
+                    android:popupBackground="#505050"/>
+
+                <Button
+                    android:id="@+id/btChiller3"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView91"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chiller 4"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+
+            <Spinner
+                android:id="@+id/spChiller4"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView92"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chiller 5"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spChiller5"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView93"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temp. de salida Chillers"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etTempSalChiller"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:ems="10"
+                    android:hint="°C"
+                    android:inputType="numberDecimal"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFFFF"  />
+
+                <Button
+                    android:id="@+id/btTempSalChiller"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView94"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INY 1"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spINY1"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView95"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INY 2"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"  />
+
+            <Spinner
+                android:id="@+id/spINY2"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INY 3"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spINY3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:background="#6A6969"
+                    android:backgroundTint="#878585"
+                    android:entries="@array/opciones_bomba"
+                    android:popupBackground="#505050"/>
+
+                <Button
+                    android:id="@+id/btINY3"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView97"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UMA 1 (QUIROFANO 1)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"  />
+
+            <Spinner
+                android:id="@+id/spUMA1"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView98"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UMA 2 (QUIROFANO 2)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spUMA2"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView99"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UMA 3 (QUIROFANO 3)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spUMA3"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UMA 4 (PASILLO ÁREA BLANCA 1)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+            <Spinner
+                android:id="@+id/spUMA4"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView101"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UMA 5 (PASILLO ÁREA BLANCA 2)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+            <Spinner
+                android:id="@+id/spUMA5"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView102"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UMA 7 (CEYE)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spUMA7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:background="#6A6969"
+                    android:backgroundTint="#878585"
+                    android:entries="@array/opciones_bomba"
+                    android:popupBackground="#505050"/>
+
+                <Button
+                    android:id="@+id/btUMA7"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView103"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXTRACTOR 07 (COCINA)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spExt7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:background="#6A6969"
+                    android:backgroundTint="#878585"
+                    android:entries="@array/opciones_bomba"
+                    android:popupBackground="#505050"/>
+
+                <Button
+                    android:id="@+id/btExt7"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView104"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXTRACTOR 16 (QUIROFANO 1)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+            <Spinner
+                android:id="@+id/spExt16"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView105"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXTRACTOR 17 (QUIROFANO 2)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+            <Spinner
+                android:id="@+id/spExt17"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView106"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXTRACTOR 18 (QUIROFANO 3)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+            <Spinner
+                android:id="@+id/spExt18"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView107"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXTRACTOR 19 (PASILLO ÁREA BLANCA)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+            <Spinner
+                android:id="@+id/spExt19"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView108"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Extractor 8"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spExt08"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:background="#6A6969"
+                    android:backgroundTint="#878585"
+                    android:entries="@array/opciones_bomba"
+                    android:popupBackground="#505050"/>
+
+                <Button
+                    android:id="@+id/btExt08"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView109"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="EXTRACTOR 09 \n(ALMACÉN PB, 2N)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+            <Spinner
+                android:id="@+id/spExt09"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView110"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="EXTRACTOR 10 \n(BAÑOS PB, 1N, 2N, 3N)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spExt10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:background="#6A6969"
+                    android:backgroundTint="#878585"
+                    android:entries="@array/opciones_bomba"
+                    android:popupBackground="#505050"/>
+
+                <Button
+                    android:id="@+id/btExt10"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="EXTRACTOR 11 \n(Almancen de RPBI)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spExt11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:background="#6A6969"
+                    android:backgroundTint="#878585"
+                    android:entries="@array/opciones_bomba"
+                    android:popupBackground="#505050"/>
+
+                <Button
+                    android:id="@+id/btExt11"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView113"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="EXTRACTOR 12\n(BAÑOS 1N y 2N)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"  />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spExt12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:background="#6A6969"
+                    android:backgroundTint="#878585"
+                    android:entries="@array/opciones_bomba"
+                    android:popupBackground="#505050"/>
+
+                <Button
+                    android:id="@+id/btExt12"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView114"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="EXTRACTOR 20\n(BAÑOS 4N)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spExt20"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView116"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXTRACTOR 21 (CEYE)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spExt21"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:background="#6A6969"
+                    android:backgroundTint="#878585"
+                    android:entries="@array/opciones_bomba"
+                    android:popupBackground="#505050"/>
+
+                <Button
+                    android:id="@+id/btExt21"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView117"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXTRACTOR 22 (RPBI 4N)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+            <Spinner
+                android:id="@+id/spExt22"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView118"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXTRACTOR 23 (TRANSFER)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+            <Spinner
+                android:id="@+id/spExt23"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView119"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXTRACTOR 24 (VESTIDORES)"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+            <Spinner
+                android:id="@+id/spExt24"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="8dp"
+                android:background="#6A6969"
+                android:backgroundTint="#878585"
+                android:entries="@array/opciones_bomba"
+                android:popupBackground="#505050"/>
+
+            <TextView
+                android:id="@+id/textView120"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Porcentaje de Gas LP Calderas"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etPorGaslpcalderas"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:ems="10"
+                    android:hint="%"
+                    android:inputType="numberDecimal"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFFFF"/>
+
+                <Button
+                    android:id="@+id/btPorGaslpcalderas"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView121"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Porcentaje de Gas LP Cocina"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etPorGaslpcocina"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:ems="10"
+                    android:hint="%"
+                    android:inputType="numberDecimal"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFFFF"/>
+
+                <Button
+                    android:id="@+id/btPorGaslpcocina"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#313D8E"
+                    android:textColor="#FFFFFF"
+                    android:text="QR"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etHaAAc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:ems="10"
+                android:hint="HALLAZGOS"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/continuar_rr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#313D8E"
+                android:textColor="#FFFFFF"
+                android:text="Continuar recorrido"
+                app:cornerRadius="0dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
