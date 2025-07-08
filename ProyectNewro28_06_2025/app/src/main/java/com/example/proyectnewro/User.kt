@@ -1,0 +1,1 @@
+data class User(val nombre: String, val correo: String, val is_admin: Boolean)

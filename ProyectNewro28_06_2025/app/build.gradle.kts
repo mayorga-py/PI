@@ -41,12 +41,11 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout);
+    implementation(libs.androidx.constraintlayout)
 
     implementation(libs.com.journeyapps.zxing.android.embedded)
     implementation(libs.androidx.appcompat.v131)
@@ -54,6 +53,10 @@ dependencies {
     implementation(libs.poi)
     implementation(libs.poi.ooxml)
     implementation(libs.commons.collections4)
+
+    // ✅ Retrofit para llamadas HTTP
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
