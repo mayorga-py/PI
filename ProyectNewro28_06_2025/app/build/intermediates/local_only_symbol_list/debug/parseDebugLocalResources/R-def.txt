@@ -69,7 +69,6 @@ id btnQRpreGas1
 id btnQRpreGas2
 id btnQRpreTanqAC1
 id btnQRpreTanqAC2
-id btnRegistrar
 id btnScanQrNAOs
 id btnScanQrNCAC
 id btnScanQrNCAF
@@ -119,7 +118,6 @@ id nomActpreTanqAC1
 id nomActpreTanqAC2
 id nomActtempTanqAC1
 id nomActtempTanqAC2
-id nombreEditText
 id passwordEditText
 id pendiente1
 id pendiente2
@@ -366,7 +364,6 @@ layout activity_main
 layout activity_nueva_actividad
 layout activity_recodiario
 layout login
-layout registro_nu
 layout spinner_dropdown_item
 layout spinner_item
 layout vista_admin

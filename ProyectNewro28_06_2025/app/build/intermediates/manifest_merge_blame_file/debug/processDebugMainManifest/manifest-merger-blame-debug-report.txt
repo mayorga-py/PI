@@ -10,249 +10,249 @@
 10
 11    <!-- Permisos necesarios -->
 12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-12-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:6:5-80
-12-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:6:22-77
+12-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:6:5-80
+12-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:6:22-77
 13    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-13-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:7:5-8:40
-13-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:7:22-79
+13-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:7:5-8:40
+13-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:7:22-79
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:9:5-67
-14-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:9:22-64
+14-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:9:5-67
+14-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:9:22-64
 15    <uses-permission android:name="android.permission.CAMERA" />
-15-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:10:5-12:71
-15-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:11:9-49
+15-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:10:5-12:71
+15-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:11:9-49
 16
 17    <uses-feature
-17-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:14:5-17:46
+17-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:14:5-17:46
 18        android:name="android.hardware.camera"
-18-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:15:9-47
+18-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:15:9-47
 19        android:required="true" />
-19-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:16:9-32
+19-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:16:9-32
 20
 21    <permission
-21-->[androidx.core:core:1.10.1] /Users/dealoarroyo/.gradle/caches/transforms-4/a97b2903f45a62523121200e5776710f/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
+21-->[androidx.core:core:1.10.1] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\a97b2903f45a62523121200e5776710f\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
 22        android:name="com.example.proyectnewro.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-22-->[androidx.core:core:1.10.1] /Users/dealoarroyo/.gradle/caches/transforms-4/a97b2903f45a62523121200e5776710f/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
+22-->[androidx.core:core:1.10.1] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\a97b2903f45a62523121200e5776710f\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
 23        android:protectionLevel="signature" />
-23-->[androidx.core:core:1.10.1] /Users/dealoarroyo/.gradle/caches/transforms-4/a97b2903f45a62523121200e5776710f/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
+23-->[androidx.core:core:1.10.1] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\a97b2903f45a62523121200e5776710f\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
 24
 25    <uses-permission android:name="com.example.proyectnewro.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-25-->[androidx.core:core:1.10.1] /Users/dealoarroyo/.gradle/caches/transforms-4/a97b2903f45a62523121200e5776710f/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
-25-->[androidx.core:core:1.10.1] /Users/dealoarroyo/.gradle/caches/transforms-4/a97b2903f45a62523121200e5776710f/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
+25-->[androidx.core:core:1.10.1] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\a97b2903f45a62523121200e5776710f\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+25-->[androidx.core:core:1.10.1] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\a97b2903f45a62523121200e5776710f\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
 26
 27    <uses-feature
-27-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:28:5-30:36
+27-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:28:5-30:36
 28        android:name="android.hardware.camera.front"
-28-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:29:9-53
+28-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:29:9-53
 29        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
-29-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:30:9-33
+29-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:30:9-33
 30    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
 31    <uses-feature
-31-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:33:5-35:36
+31-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:33:5-35:36
 32        android:name="android.hardware.camera.autofocus"
-32-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:34:9-57
+32-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:34:9-57
 33        android:required="false" />
-33-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:35:9-33
+33-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:35:9-33
 34    <uses-feature
-34-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:36:5-38:36
+34-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:36:5-38:36
 35        android:name="android.hardware.camera.flash"
-35-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:37:9-53
+35-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:37:9-53
 36        android:required="false" />
-36-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:38:9-33
+36-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:38:9-33
 37    <uses-feature
-37-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:39:5-41:36
+37-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:39:5-41:36
 38        android:name="android.hardware.screen.landscape"
-38-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:40:9-57
+38-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:40:9-57
 39        android:required="false" />
-39-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:41:9-33
+39-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:41:9-33
 40    <uses-feature
-40-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:42:5-44:36
+40-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:42:5-44:36
 41        android:name="android.hardware.wifi"
-41-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:43:9-45
+41-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:43:9-45
 42        android:required="false" />
-42-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:44:9-33
+42-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:44:9-33
 43
 44    <application
-44-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:19:5-53:19
+44-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:19:5-53:19
 45        android:allowBackup="true"
-45-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:20:9-35
+45-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:20:9-35
 46        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-46-->[androidx.core:core:1.10.1] /Users/dealoarroyo/.gradle/caches/transforms-4/a97b2903f45a62523121200e5776710f/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
+46-->[androidx.core:core:1.10.1] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\a97b2903f45a62523121200e5776710f\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
 47        android:dataExtractionRules="@xml/data_extraction_rules"
-47-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:23:9-65
+47-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:23:9-65
 48        android:debuggable="true"
 49        android:extractNativeLibs="false"
 50        android:fullBackupContent="@xml/backup_rules"
-50-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:24:9-54
+50-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:24:9-54
 51        android:icon="@mipmap/ic_launcher"
-51-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:25:9-43
+51-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:25:9-43
 52        android:label="@string/app_name"
-52-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:26:9-41
+52-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:26:9-41
 53        android:networkSecurityConfig="@xml/network_security_config"
-53-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:21:9-69
+53-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:21:9-69
 54        android:roundIcon="@mipmap/ic_launcher_round"
-54-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:27:9-54
+54-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:27:9-54
 55        android:supportsRtl="true"
-55-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:28:9-35
+55-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:28:9-35
 56        android:testOnly="true"
 57        android:theme="@style/Theme.ProyectNewro"
-57-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:29:9-50
+57-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:29:9-50
 58        android:usesCleartextTraffic="true" >
-58-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:22:9-44
+58-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:22:9-44
 59
 60        <!-- Actividad que se lanza al iniciar la app -->
 61        <activity
-61-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:33:9-40:20
+61-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:33:9-40:20
 62            android:name="com.example.proyectnewro.LoginActivity"
-62-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:34:13-42
+62-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:34:13-42
 63            android:exported="true" >
-63-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:35:13-36
+63-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:35:13-36
 64            <intent-filter>
-64-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:36:13-39:29
+64-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:36:13-39:29
 65                <action android:name="android.intent.action.MAIN" />
-65-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:37:17-69
-65-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:37:25-66
+65-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:37:17-69
+65-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:37:25-66
 66
 67                <category android:name="android.intent.category.LAUNCHER" />
-67-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:38:17-77
-67-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:38:27-74
+67-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:38:17-77
+67-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:38:27-74
 68            </intent-filter>
 69        </activity>
 70
 71        <!-- Actividades adicionales -->
 72        <activity
-72-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:43:9-75
+72-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:43:9-75
 73            android:name="com.example.proyectnewro.MainActivity"
-73-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:43:19-47
+73-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:43:19-47
 74            android:exported="false" />
-74-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:43:48-72
+74-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:43:48-72
 75        <activity
-75-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:44:9-78
+75-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:44:9-78
 76            android:name="com.example.proyectnewro.FormContraIncen"
-76-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:44:19-50
+76-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:44:19-50
 77            android:exported="false" />
-77-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:44:51-75
+77-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:44:51-75
 78        <activity
-78-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:45:9-77
+78-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:45:9-77
 79            android:name="com.example.proyectnewro.FormAireAcondi"
-79-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:45:19-49
+79-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:45:19-49
 80            android:exported="false" />
-80-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:45:50-74
+80-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:45:50-74
 81        <activity
-81-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:46:9-75
+81-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:46:9-75
 82            android:name="com.example.proyectnewro.FormEletrico"
-82-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:46:19-47
+82-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:46:19-47
 83            android:exported="false" />
-83-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:46:48-72
+83-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:46:48-72
 84        <activity
-84-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:47:9-73
+84-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:47:9-73
 85            android:name="com.example.proyectnewro.FormGasMed"
-85-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:47:19-45
+85-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:47:19-45
 86            android:exported="false" />
-86-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:47:46-70
+86-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:47:46-70
 87        <activity
-87-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:48:9-71
+87-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:48:9-71
 88            android:name="com.example.proyectnewro.FormAgCa"
-88-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:48:19-43
+88-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:48:19-43
 89            android:exported="false" />
-89-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:48:44-68
+89-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:48:44-68
 90        <activity
-90-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:49:9-77
+90-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:49:9-77
 91            android:name="com.example.proyectnewro.NuevaActividad"
-91-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:49:19-49
+91-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:49:19-49
 92            android:exported="false" />
-92-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:49:50-74
+92-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:49:50-74
 93        <activity
-93-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:50:9-69
+93-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:50:9-69
 94            android:name="com.example.proyectnewro.FormAP"
-94-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:50:19-41
+94-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:50:19-41
 95            android:exported="false" />
-95-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:50:42-66
+95-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:50:42-66
 96        <activity
-96-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:51:9-73
+96-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:51:9-73
 97            android:name="com.example.proyectnewro.recodiario"
-97-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:51:19-45
+97-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:51:19-45
 98            android:exported="false" />
-98-->/Users/dealoarroyo/Development/kotlin/PI/ProyectNewro28_06_2025/app/src/main/AndroidManifest.xml:51:46-70
+98-->C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\app\src\main\AndroidManifest.xml:51:46-70
 99
 100        <provider
-100-->[androidx.emoji2:emoji2:1.2.0] /Users/dealoarroyo/.gradle/caches/transforms-4/e306c1b381e1939abd4cf108316d7a23/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+100-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\e306c1b381e1939abd4cf108316d7a23\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 101            android:name="androidx.startup.InitializationProvider"
-101-->[androidx.emoji2:emoji2:1.2.0] /Users/dealoarroyo/.gradle/caches/transforms-4/e306c1b381e1939abd4cf108316d7a23/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+101-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\e306c1b381e1939abd4cf108316d7a23\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
 102            android:authorities="com.example.proyectnewro.androidx-startup"
-102-->[androidx.emoji2:emoji2:1.2.0] /Users/dealoarroyo/.gradle/caches/transforms-4/e306c1b381e1939abd4cf108316d7a23/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+102-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\e306c1b381e1939abd4cf108316d7a23\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
 103            android:exported="false" >
-103-->[androidx.emoji2:emoji2:1.2.0] /Users/dealoarroyo/.gradle/caches/transforms-4/e306c1b381e1939abd4cf108316d7a23/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+103-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\e306c1b381e1939abd4cf108316d7a23\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
 104            <meta-data
-104-->[androidx.emoji2:emoji2:1.2.0] /Users/dealoarroyo/.gradle/caches/transforms-4/e306c1b381e1939abd4cf108316d7a23/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+104-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\e306c1b381e1939abd4cf108316d7a23\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
 105                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-105-->[androidx.emoji2:emoji2:1.2.0] /Users/dealoarroyo/.gradle/caches/transforms-4/e306c1b381e1939abd4cf108316d7a23/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+105-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\e306c1b381e1939abd4cf108316d7a23\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
 106                android:value="androidx.startup" />
-106-->[androidx.emoji2:emoji2:1.2.0] /Users/dealoarroyo/.gradle/caches/transforms-4/e306c1b381e1939abd4cf108316d7a23/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+106-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\e306c1b381e1939abd4cf108316d7a23\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
 107            <meta-data
-107-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/dealoarroyo/.gradle/caches/transforms-4/dd9fa10e66bd2a311276e61658029922/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+107-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\dd9fa10e66bd2a311276e61658029922\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
 108                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-108-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/dealoarroyo/.gradle/caches/transforms-4/dd9fa10e66bd2a311276e61658029922/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+108-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\dd9fa10e66bd2a311276e61658029922\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
 109                android:value="androidx.startup" />
-109-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/dealoarroyo/.gradle/caches/transforms-4/dd9fa10e66bd2a311276e61658029922/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+109-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\dd9fa10e66bd2a311276e61658029922\transformed\lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
 110            <meta-data
-110-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+110-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
 111                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-111-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+111-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
 112                android:value="androidx.startup" />
-112-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+112-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
 113        </provider>
 114
 115        <activity
-115-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:47:9-53:63
+115-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:47:9-53:63
 116            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-116-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:48:13-74
+116-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:48:13-74
 117            android:clearTaskOnLaunch="true"
-117-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:49:13-45
+117-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:49:13-45
 118            android:screenOrientation="sensorLandscape"
-118-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:50:13-56
+118-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:50:13-56
 119            android:stateNotNeeded="true"
-119-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:51:13-42
+119-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:51:13-42
 120            android:theme="@style/zxing_CaptureTheme"
-120-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:52:13-54
+120-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:52:13-54
 121            android:windowSoftInputMode="stateAlwaysHidden" />
-121-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/8ce69ff36c5a453da48dbde8d19d727a/transformed/zxing-android-embedded-4.3.0/AndroidManifest.xml:53:13-60
+121-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\8ce69ff36c5a453da48dbde8d19d727a\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:53:13-60
 122
 123        <receiver
-123-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
 124            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-124-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+124-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
 125            android:directBootAware="false"
-125-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+125-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
 126            android:enabled="true"
-126-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
 127            android:exported="true"
-127-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
 128            android:permission="android.permission.DUMP" >
-128-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
 129            <intent-filter>
-129-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+129-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
 130                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-130-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-130-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+130-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+130-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
 131            </intent-filter>
 132            <intent-filter>
-132-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+132-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
 133                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-133-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-133-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+133-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+133-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
 134            </intent-filter>
 135            <intent-filter>
-135-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+135-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
 136                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-136-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-136-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+136-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+136-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
 137            </intent-filter>
 138            <intent-filter>
-138-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+138-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
 139                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-139-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-139-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/dealoarroyo/.gradle/caches/transforms-4/d471312d1c295f4df0ac839936688d2f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+139-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+139-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Mauricio\Documents\pi\PI\ProyectNewro28_06_2025\.gradle\caches\transforms-4\d471312d1c295f4df0ac839936688d2f\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
 140            </intent-filter>
 141        </receiver>
 142    </application>

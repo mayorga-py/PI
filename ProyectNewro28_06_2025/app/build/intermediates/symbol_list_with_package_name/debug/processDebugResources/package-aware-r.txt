@@ -3232,7 +3232,6 @@ id btnQRpreGas1
 id btnQRpreGas2
 id btnQRpreTanqAC1
 id btnQRpreTanqAC2
-id btnRegistrar
 id btnScanQrNAOs
 id btnScanQrNCAC
 id btnScanQrNCAF
@@ -3494,7 +3493,6 @@ id nomActpreTanqAC1
 id nomActpreTanqAC2
 id nomActtempTanqAC1
 id nomActtempTanqAC2
-id nombreEditText
 id none
 id normal
 id north
@@ -4125,7 +4123,6 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
-layout registro_nu
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

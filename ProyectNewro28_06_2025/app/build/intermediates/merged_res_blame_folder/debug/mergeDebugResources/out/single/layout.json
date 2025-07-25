@@ -20,10 +20,6 @@
         "source": "com.example.proyectnewro.app-main-34:/layout/vista_admin.xml"
     },
     {
-        "merged": "com.example.proyectnewro.app-mergeDebugResources-31:/layout/registro_nu.xml",
-        "source": "com.example.proyectnewro.app-main-34:/layout/registro_nu.xml"
-    },
-    {
         "merged": "com.example.proyectnewro.app-mergeDebugResources-31:/layout/activity_form_eletrico.xml",
         "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_eletrico.xml"
     },

@@ -4,7 +4,7 @@
             "outputFile": "com.example.proyectnewro.app-mergeDebugResources-30:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/dealoarroyo/.gradle/caches/transforms-4/e5165a3d9715c8ba90ad14ecc95f2c83/transformed/material-1.10.0/res/values-v23/values-v23.xml",
+                    "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\caches\\transforms-4\\e5165a3d9715c8ba90ad14ecc95f2c83\\transformed\\material-1.10.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,5,9,13,16,21,25,28,31,34,39,42,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/dealoarroyo/.gradle/caches/transforms-4/e2f2aaf518426291ba91213ca193c81c/transformed/appcompat-1.6.1/res/values-v23/values-v23.xml",
+                    "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\caches\\transforms-4\\e2f2aaf518426291ba91213ca193c81c\\transformed\\appcompat-1.6.1\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -34,7 +34,7 @@
                     }
                 },
                 {
-                    "source": "/Users/dealoarroyo/.gradle/caches/transforms-4/8a6cd2c8b088235579a353580b0ed4d2/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
+                    "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\caches\\transforms-4\\8a6cd2c8b088235579a353580b0ed4d2\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

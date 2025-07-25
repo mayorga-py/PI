@@ -12,10 +12,6 @@
         "source": "com.example.proyectnewro.app-main-34:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.proyectnewro.app-debug-32:/layout_registro_nu.xml.flat",
-        "source": "com.example.proyectnewro.app-main-34:/layout/registro_nu.xml"
-    },
-    {
         "merged": "com.example.proyectnewro.app-debug-32:/drawable_edittext_background.xml.flat",
         "source": "com.example.proyectnewro.app-main-34:/drawable/edittext_background.xml"
     },
