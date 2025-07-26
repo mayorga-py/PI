@@ -36,6 +36,10 @@
         "source": "com.example.proyectnewro.app-main-34:/layout/vista_admin.xml"
     },
     {
+        "merged": "com.example.proyectnewro.app-debug-32:/drawable_bg_boton_redondeado.xml.flat",
+        "source": "com.example.proyectnewro.app-main-34:/drawable/bg_boton_redondeado.xml"
+    },
+    {
         "merged": "com.example.proyectnewro.app-debug-32:/drawable_ic_launcher_background.xml.flat",
         "source": "com.example.proyectnewro.app-main-34:/drawable/ic_launcher_background.xml"
     },
@@ -46,6 +50,10 @@
     {
         "merged": "com.example.proyectnewro.app-debug-32:/drawable-v24_background_blur.jpg.flat",
         "source": "com.example.proyectnewro.app-main-34:/drawable-v24/background_blur.jpg"
+    },
+    {
+        "merged": "com.example.proyectnewro.app-debug-32:/drawable_agua_caliente_icon.png.flat",
+        "source": "com.example.proyectnewro.app-main-34:/drawable/agua_caliente_icon.png"
     },
     {
         "merged": "com.example.proyectnewro.app-debug-32:/layout_activity_recodiario.xml.flat",
@@ -96,8 +104,20 @@
         "source": "com.example.proyectnewro.app-main-34:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "com.example.proyectnewro.app-debug-32:/drawable_electrico_icon.png.flat",
+        "source": "com.example.proyectnewro.app-main-34:/drawable/electrico_icon.png"
+    },
+    {
         "merged": "com.example.proyectnewro.app-debug-32:/layout_activity_form_gas_med.xml.flat",
         "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_gas_med.xml"
+    },
+    {
+        "merged": "com.example.proyectnewro.app-debug-32:/drawable_agua_icon.png.flat",
+        "source": "com.example.proyectnewro.app-main-34:/drawable/agua_icon.png"
+    },
+    {
+        "merged": "com.example.proyectnewro.app-debug-32:/drawable-v24_libretita.png.flat",
+        "source": "com.example.proyectnewro.app-main-34:/drawable-v24/libretita.png"
     },
     {
         "merged": "com.example.proyectnewro.app-debug-32:/xml_backup_rules.xml.flat",
@@ -136,6 +156,14 @@
         "source": "com.example.proyectnewro.app-main-34:/drawable/avatar_usuario.png"
     },
     {
+        "merged": "com.example.proyectnewro.app-debug-32:/drawable_incendios_icon.png.flat",
+        "source": "com.example.proyectnewro.app-main-34:/drawable/incendios_icon.png"
+    },
+    {
+        "merged": "com.example.proyectnewro.app-debug-32:/drawable_gases_icon.png.flat",
+        "source": "com.example.proyectnewro.app-main-34:/drawable/gases_icon.png"
+    },
+    {
         "merged": "com.example.proyectnewro.app-debug-32:/drawable_con_observaciones_icon.png.flat",
         "source": "com.example.proyectnewro.app-main-34:/drawable/con_observaciones_icon.png"
     },
@@ -154,5 +182,9 @@
     {
         "merged": "com.example.proyectnewro.app-debug-32:/layout_spinner_item.xml.flat",
         "source": "com.example.proyectnewro.app-main-34:/layout/spinner_item.xml"
+    },
+    {
+        "merged": "com.example.proyectnewro.app-debug-32:/drawable_aire_icon.png.flat",
+        "source": "com.example.proyectnewro.app-main-34:/drawable/aire_icon.png"
     }
 ]

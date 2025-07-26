@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgnewro1"
+    android:background="#5C5983ED"
     android:padding="24dp"
     tools:context=".LoginActivity">
 
@@ -27,7 +27,7 @@
         android:background="@drawable/edittext_background"
         android:padding="12dp"
         android:textColor="@android:color/black"
-        android:textColorHint="#999"
+        android:textColorHint="#FFFFFF"
         android:inputType="textEmailAddress" />
 
     <EditText
@@ -40,7 +40,7 @@
         android:background="@drawable/edittext_background"
         android:padding="12dp"
         android:textColor="@android:color/black"
-        android:textColorHint="#999"
+        android:textColorHint="#FFFFFF"
         android:inputType="textPassword" />
 
     <Button
@@ -50,7 +50,7 @@
         android:layout_below="@id/passwordEditText"
         android:layout_marginTop="24dp"
         android:text="Iniciar Sesión"
-        android:backgroundTint="#3F51B5"
+        android:backgroundTint="#A3313D8E"
         android:textColor="@android:color/white"
         android:fontFamily="sans-serif-medium"
         android:elevation="4dp" />

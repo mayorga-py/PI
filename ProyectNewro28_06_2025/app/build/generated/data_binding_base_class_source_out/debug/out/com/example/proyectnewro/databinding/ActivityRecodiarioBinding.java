@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -21,25 +23,46 @@ public final class ActivityRecodiarioBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button buttonAA;
+  public final LinearLayout buttonAA;
 
   @NonNull
-  public final Button buttonAP;
+  public final LinearLayout buttonAP;
 
   @NonNull
-  public final Button buttonAgCa;
+  public final LinearLayout buttonAgCa;
 
   @NonNull
-  public final Button buttonCI;
+  public final LinearLayout buttonCI;
 
   @NonNull
-  public final Button buttonElec;
+  public final LinearLayout buttonElec;
 
   @NonNull
   public final Button buttonFin;
 
   @NonNull
-  public final Button buttonGM;
+  public final LinearLayout buttonGM;
+
+  @NonNull
+  public final ImageView iconoAA;
+
+  @NonNull
+  public final ImageView iconoAgCa;
+
+  @NonNull
+  public final ImageView iconoAgua;
+
+  @NonNull
+  public final ImageView iconoCI;
+
+  @NonNull
+  public final ImageView iconoElec;
+
+  @NonNull
+  public final ImageView iconoGM;
+
+  @NonNull
+  public final LinearLayout linearLayout6;
 
   @NonNull
   public final ConstraintLayout main;
@@ -80,14 +103,37 @@ public final class ActivityRecodiarioBinding implements ViewBinding {
   @NonNull
   public final ImageView realizado6;
 
-  private ActivityRecodiarioBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonAA,
-      @NonNull Button buttonAP, @NonNull Button buttonAgCa, @NonNull Button buttonCI,
-      @NonNull Button buttonElec, @NonNull Button buttonFin, @NonNull Button buttonGM,
-      @NonNull ConstraintLayout main, @NonNull ImageView pendiente1, @NonNull ImageView pendiente2,
-      @NonNull ImageView pendiente3, @NonNull ImageView pendiente4, @NonNull ImageView pendiente5,
-      @NonNull ImageView pendiente6, @NonNull ImageView realizado1, @NonNull ImageView realizado2,
-      @NonNull ImageView realizado3, @NonNull ImageView realizado4, @NonNull ImageView realizado5,
-      @NonNull ImageView realizado6) {
+  @NonNull
+  public final TextView textoAA;
+
+  @NonNull
+  public final TextView textoAgCa;
+
+  @NonNull
+  public final TextView textoAgua;
+
+  @NonNull
+  public final TextView textoCI;
+
+  @NonNull
+  public final TextView textoElec;
+
+  @NonNull
+  public final TextView textoGM;
+
+  private ActivityRecodiarioBinding(@NonNull ConstraintLayout rootView,
+      @NonNull LinearLayout buttonAA, @NonNull LinearLayout buttonAP,
+      @NonNull LinearLayout buttonAgCa, @NonNull LinearLayout buttonCI,
+      @NonNull LinearLayout buttonElec, @NonNull Button buttonFin, @NonNull LinearLayout buttonGM,
+      @NonNull ImageView iconoAA, @NonNull ImageView iconoAgCa, @NonNull ImageView iconoAgua,
+      @NonNull ImageView iconoCI, @NonNull ImageView iconoElec, @NonNull ImageView iconoGM,
+      @NonNull LinearLayout linearLayout6, @NonNull ConstraintLayout main,
+      @NonNull ImageView pendiente1, @NonNull ImageView pendiente2, @NonNull ImageView pendiente3,
+      @NonNull ImageView pendiente4, @NonNull ImageView pendiente5, @NonNull ImageView pendiente6,
+      @NonNull ImageView realizado1, @NonNull ImageView realizado2, @NonNull ImageView realizado3,
+      @NonNull ImageView realizado4, @NonNull ImageView realizado5, @NonNull ImageView realizado6,
+      @NonNull TextView textoAA, @NonNull TextView textoAgCa, @NonNull TextView textoAgua,
+      @NonNull TextView textoCI, @NonNull TextView textoElec, @NonNull TextView textoGM) {
     this.rootView = rootView;
     this.buttonAA = buttonAA;
     this.buttonAP = buttonAP;
@@ -96,6 +142,13 @@ public final class ActivityRecodiarioBinding implements ViewBinding {
     this.buttonElec = buttonElec;
     this.buttonFin = buttonFin;
     this.buttonGM = buttonGM;
+    this.iconoAA = iconoAA;
+    this.iconoAgCa = iconoAgCa;
+    this.iconoAgua = iconoAgua;
+    this.iconoCI = iconoCI;
+    this.iconoElec = iconoElec;
+    this.iconoGM = iconoGM;
+    this.linearLayout6 = linearLayout6;
     this.main = main;
     this.pendiente1 = pendiente1;
     this.pendiente2 = pendiente2;
@@ -109,6 +162,12 @@ public final class ActivityRecodiarioBinding implements ViewBinding {
     this.realizado4 = realizado4;
     this.realizado5 = realizado5;
     this.realizado6 = realizado6;
+    this.textoAA = textoAA;
+    this.textoAgCa = textoAgCa;
+    this.textoAgua = textoAgua;
+    this.textoCI = textoCI;
+    this.textoElec = textoElec;
+    this.textoGM = textoGM;
   }
 
   @Override
@@ -139,31 +198,31 @@ public final class ActivityRecodiarioBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.buttonAA;
-      Button buttonAA = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout buttonAA = ViewBindings.findChildViewById(rootView, id);
       if (buttonAA == null) {
         break missingId;
       }
 
       id = R.id.buttonAP;
-      Button buttonAP = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout buttonAP = ViewBindings.findChildViewById(rootView, id);
       if (buttonAP == null) {
         break missingId;
       }
 
       id = R.id.buttonAgCa;
-      Button buttonAgCa = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout buttonAgCa = ViewBindings.findChildViewById(rootView, id);
       if (buttonAgCa == null) {
         break missingId;
       }
 
       id = R.id.buttonCI;
-      Button buttonCI = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout buttonCI = ViewBindings.findChildViewById(rootView, id);
       if (buttonCI == null) {
         break missingId;
       }
 
       id = R.id.buttonElec;
-      Button buttonElec = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout buttonElec = ViewBindings.findChildViewById(rootView, id);
       if (buttonElec == null) {
         break missingId;
       }
@@ -175,8 +234,50 @@ public final class ActivityRecodiarioBinding implements ViewBinding {
       }
 
       id = R.id.buttonGM;
-      Button buttonGM = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout buttonGM = ViewBindings.findChildViewById(rootView, id);
       if (buttonGM == null) {
+        break missingId;
+      }
+
+      id = R.id.iconoAA;
+      ImageView iconoAA = ViewBindings.findChildViewById(rootView, id);
+      if (iconoAA == null) {
+        break missingId;
+      }
+
+      id = R.id.iconoAgCa;
+      ImageView iconoAgCa = ViewBindings.findChildViewById(rootView, id);
+      if (iconoAgCa == null) {
+        break missingId;
+      }
+
+      id = R.id.iconoAgua;
+      ImageView iconoAgua = ViewBindings.findChildViewById(rootView, id);
+      if (iconoAgua == null) {
+        break missingId;
+      }
+
+      id = R.id.iconoCI;
+      ImageView iconoCI = ViewBindings.findChildViewById(rootView, id);
+      if (iconoCI == null) {
+        break missingId;
+      }
+
+      id = R.id.iconoElec;
+      ImageView iconoElec = ViewBindings.findChildViewById(rootView, id);
+      if (iconoElec == null) {
+        break missingId;
+      }
+
+      id = R.id.iconoGM;
+      ImageView iconoGM = ViewBindings.findChildViewById(rootView, id);
+      if (iconoGM == null) {
+        break missingId;
+      }
+
+      id = R.id.linearLayout6;
+      LinearLayout linearLayout6 = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout6 == null) {
         break missingId;
       }
 
@@ -254,10 +355,47 @@ public final class ActivityRecodiarioBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textoAA;
+      TextView textoAA = ViewBindings.findChildViewById(rootView, id);
+      if (textoAA == null) {
+        break missingId;
+      }
+
+      id = R.id.textoAgCa;
+      TextView textoAgCa = ViewBindings.findChildViewById(rootView, id);
+      if (textoAgCa == null) {
+        break missingId;
+      }
+
+      id = R.id.textoAgua;
+      TextView textoAgua = ViewBindings.findChildViewById(rootView, id);
+      if (textoAgua == null) {
+        break missingId;
+      }
+
+      id = R.id.textoCI;
+      TextView textoCI = ViewBindings.findChildViewById(rootView, id);
+      if (textoCI == null) {
+        break missingId;
+      }
+
+      id = R.id.textoElec;
+      TextView textoElec = ViewBindings.findChildViewById(rootView, id);
+      if (textoElec == null) {
+        break missingId;
+      }
+
+      id = R.id.textoGM;
+      TextView textoGM = ViewBindings.findChildViewById(rootView, id);
+      if (textoGM == null) {
+        break missingId;
+      }
+
       return new ActivityRecodiarioBinding((ConstraintLayout) rootView, buttonAA, buttonAP,
-          buttonAgCa, buttonCI, buttonElec, buttonFin, buttonGM, main, pendiente1, pendiente2,
-          pendiente3, pendiente4, pendiente5, pendiente6, realizado1, realizado2, realizado3,
-          realizado4, realizado5, realizado6);
+          buttonAgCa, buttonCI, buttonElec, buttonFin, buttonGM, iconoAA, iconoAgCa, iconoAgua,
+          iconoCI, iconoElec, iconoGM, linearLayout6, main, pendiente1, pendiente2, pendiente3,
+          pendiente4, pendiente5, pendiente6, realizado1, realizado2, realizado3, realizado4,
+          realizado5, realizado6, textoAA, textoAgCa, textoAgua, textoCI, textoElec, textoGM);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
