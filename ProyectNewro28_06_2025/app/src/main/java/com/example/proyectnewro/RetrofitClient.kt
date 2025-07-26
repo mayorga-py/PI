@@ -2,7 +2,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    private const val BASE_URL = "https://backend-pi-074a.onrender.com/login" // usar IP local para emulador
+    private const val BASE_URL = "https://backend-pi-074a.onrender.com/"
 
     val instance: ApiService by lazy {
         val retrofit = Retrofit.Builder()
