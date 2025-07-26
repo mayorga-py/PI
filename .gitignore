@@ -1,0 +1,17 @@
+# Ignorar el entorno local
+.env
+
+# Ignorar dependencias
+node_modules/
+
+# Archivos del sistema
+.DS_Store
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Salidas
+dist/
+build/
