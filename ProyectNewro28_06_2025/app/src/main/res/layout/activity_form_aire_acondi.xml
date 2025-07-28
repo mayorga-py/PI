@@ -5,9 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgnewro1"
-    android:backgroundTint="#474646"
-    android:backgroundTintMode="multiply"
+    android:padding="24dp"
+    android:background="#5C5983ED"
     tools:context=".FormAireAcondi">
 
     <TextView
@@ -16,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="RECORRIDO AIRE ACONDICIONADO"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Presion bombas de chiller"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -61,16 +60,17 @@
                     android:backgroundTint="#FFFFFF"
                     android:ems="10"
                     android:hint="PSI"
+                    android:background="@drawable/edittext_background"
                     android:inputType="numberDecimal"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFFFF" />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
                 <Button
                     android:id="@+id/btPreBombChill"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +83,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bomba chiller 1"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -92,17 +92,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView86"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bomba chiller 2"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -111,17 +111,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView87"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bomba chiller 3"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -130,17 +130,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView88"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chiller 1"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -154,17 +154,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/btChiller1"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -177,7 +177,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chiller 2"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"  />
 
             <LinearLayout
@@ -191,17 +191,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/btChiller2"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -214,7 +214,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chiller 3"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"  />
 
             <LinearLayout
@@ -228,17 +228,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/btChiller3"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -251,7 +251,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chiller 4"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
 
@@ -261,17 +261,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView92"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chiller 5"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -280,17 +280,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView93"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Temp. de salida Chillers"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -306,16 +306,17 @@
                     android:backgroundTint="#FFFFFF"
                     android:ems="10"
                     android:hint="°C"
+                    android:background="@drawable/edittext_background"
                     android:inputType="numberDecimal"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFFFF"  />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"  />
 
                 <Button
                     android:id="@+id/btTempSalChiller"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -328,7 +329,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="INY 1"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -337,17 +338,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView95"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="INY 2"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"  />
 
             <Spinner
@@ -356,16 +357,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="INY 3"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -379,17 +380,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/btINY3"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -402,7 +403,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="UMA 1 (QUIROFANO 1)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"  />
 
             <Spinner
@@ -411,17 +412,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView98"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="UMA 2 (QUIROFANO 2)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -430,17 +431,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView99"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="UMA 3 (QUIROFANO 3)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -449,17 +450,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView100"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="UMA 4 (PASILLO ÁREA BLANCA 1)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"/>
 
             <Spinner
@@ -468,17 +469,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView101"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="UMA 5 (PASILLO ÁREA BLANCA 2)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"/>
 
             <Spinner
@@ -487,17 +488,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView102"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="UMA 7 (CEYE)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -511,17 +512,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/btUMA7"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -535,7 +536,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="EXTRACTOR 07 (COCINA)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"/>
 
             <LinearLayout
@@ -549,17 +550,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/btExt7"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -572,7 +573,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="EXTRACTOR 16 (QUIROFANO 1)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"/>
 
             <Spinner
@@ -581,17 +582,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView105"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="EXTRACTOR 17 (QUIROFANO 2)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"/>
 
             <Spinner
@@ -600,17 +601,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView106"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="EXTRACTOR 18 (QUIROFANO 3)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"/>
 
             <Spinner
@@ -619,17 +620,18 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView107"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textAlignment="center"
                 android:text="EXTRACTOR 19 (PASILLO ÁREA BLANCA)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"/>
 
             <Spinner
@@ -638,17 +640,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView108"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Extractor 8"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
 
@@ -663,17 +665,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/btExt08"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -687,7 +689,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="EXTRACTOR 09 \n(ALMACÉN PB, 2N)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"/>
 
             <Spinner
@@ -696,10 +698,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView110"
@@ -707,7 +709,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="EXTRACTOR 10 \n(BAÑOS PB, 1N, 2N, 3N)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"/>
 
             <LinearLayout
@@ -721,17 +723,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/btExt10"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -745,7 +747,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="EXTRACTOR 11 \n(Almancen de RPBI)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"/>
 
             <LinearLayout
@@ -759,17 +761,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/btExt11"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -783,7 +785,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="EXTRACTOR 12\n(BAÑOS 1N y 2N)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"  />
 
             <LinearLayout
@@ -797,17 +799,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/btExt12"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -821,7 +823,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="EXTRACTOR 20\n(BAÑOS 4N)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -830,17 +832,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView116"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="EXTRACTOR 21 (CEYE)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -854,17 +856,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/btExt21"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -877,7 +879,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="EXTRACTOR 22 (RPBI 4N)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"/>
 
             <Spinner
@@ -886,17 +888,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView118"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="EXTRACTOR 23 (TRANSFER)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"/>
 
             <Spinner
@@ -905,17 +907,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView119"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="EXTRACTOR 24 (VESTIDORES)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"/>
 
             <Spinner
@@ -924,17 +926,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView120"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Porcentaje de Gas LP Calderas"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -950,16 +952,17 @@
                     android:backgroundTint="#FFFFFF"
                     android:ems="10"
                     android:hint="%"
+                    android:background="@drawable/edittext_background"
                     android:inputType="numberDecimal"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFFFF"/>
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"/>
 
                 <Button
                     android:id="@+id/btPorGaslpcalderas"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -972,12 +975,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Porcentaje de Gas LP Cocina"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="60dp"
                 android:orientation="horizontal">
 
                 <EditText
@@ -988,16 +991,17 @@
                     android:backgroundTint="#FFFFFF"
                     android:ems="10"
                     android:hint="%"
+                    android:background="@drawable/edittext_background"
                     android:inputType="numberDecimal"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFFFF"/>
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"/>
 
                 <Button
                     android:id="@+id/btPorGaslpcocina"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -1008,19 +1012,20 @@
             <EditText
                 android:id="@+id/etHaAAc"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
                 android:hint="HALLAZGOS"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"/>
+                android:background="@drawable/edittext_background"
+                android:textColor="#000000"
+                android:textColorHint="#000000"/>
 
             <Button
                 android:id="@+id/continuar_rr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="#313D8E"
+                android:backgroundTint="#A3313D8E"
                 android:textColor="#FFFFFF"
                 android:text="Continuar recorrido"
                 app:cornerRadius="0dp"/>

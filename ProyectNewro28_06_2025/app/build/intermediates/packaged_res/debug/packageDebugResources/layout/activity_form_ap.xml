@@ -5,9 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgnewro1"
-    android:backgroundTint="#474646"
-    android:backgroundTintMode="multiply"
+    android:padding="24dp"
+    android:background="#5C5983ED"
     tools:context=".FormAP">
 
     <TextView
@@ -17,7 +16,7 @@
         android:layout_marginTop="16dp"
         android:text="RECORRIDO AGUA POTABLE"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="22sp"
         android:textStyle="bold|italic"
         app:layout_constraintTop_toTopOf="parent"
@@ -45,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nivel cisterna de servicio WC"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -59,22 +58,25 @@
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
+                    android:background="@drawable/edittext_background"
                     android:backgroundTint="#FFFFFF"
                     android:ems="10"
                     android:enabled="false"
                     android:hint="%"
                     android:inputType="numberDecimal"
                     android:text=""
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
                 <Button
                     android:id="@+id/btnScanQrNWC"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
+                    android:drawableStart="@drawable/ic_qr"
+                    android:drawablePadding="8dp"
                     android:text="QR"/>/>
             </LinearLayout>
 
@@ -83,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nivel cisterna de agua pluvial"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -99,12 +101,13 @@
                     android:layout_height="48dp"
                     android:layout_weight="1"
                     android:backgroundTint="#FFFFFF"
+                    android:background="@drawable/edittext_background"
                     android:ems="10"
                     android:hint="%"
                     android:inputType="numberDecimal"
                     android:text=""
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
@@ -113,7 +116,7 @@
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -123,7 +126,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Presión de línea de agua WC "
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -137,19 +140,20 @@
                     android:layout_height="48dp"
                     android:layout_weight="1"
                     android:backgroundTint="#FFFFFF"
+                    android:background="@drawable/edittext_background"
                     android:ems="10"
                     android:hint="PSI"
                     android:inputType="numberDecimal"
                     android:text=""
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
                 <Button
                     android:id="@+id/btnScanQrPLAWC"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -159,7 +163,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="¿Funcionan las bombas?"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -174,7 +178,7 @@
                     android:layout_height="40dp"
                     android:gravity="end"
                     android:text="Agua tratada 1:"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -183,8 +187,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
                     android:popupBackground="#505050"/>
 
@@ -209,7 +213,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:text="Agua tratada 2:"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -218,10 +222,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <TextView
                     android:id="@+id/textView38"
@@ -236,7 +240,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nivel cárcamo agua cruda"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -252,17 +256,18 @@
                     android:backgroundTint="#FFFFFF"
                     android:ems="10"
                     android:hint="%"
+                    android:background="@drawable/edittext_background"
                     android:inputType="numberDecimal"
                     android:text=""
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
                 <Button
                     android:id="@+id/btnScanQrNCAC"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -272,7 +277,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="C.R.L. de agua cruda"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -289,9 +294,10 @@
                     android:ems="10"
                     android:hint="PPM"
                     android:inputType="numberDecimal"
+                    android:background="@drawable/edittext_background"
                     android:text=""
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
             </LinearLayout>
 
@@ -300,7 +306,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nivel de agua de osmosis"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -317,16 +323,17 @@
                     android:ems="10"
                     android:hint="%"
                     android:inputType="numberDecimal"
+                    android:background="@drawable/edittext_background"
                     android:text=""
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
                 <Button
                     android:id="@+id/btnScanQrNAOs"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -336,7 +343,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Presión de línea de osmosis"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -350,19 +357,20 @@
                     android:layout_height="48dp"
                     android:layout_weight="1"
                     android:backgroundTint="#FFFFFF"
+                    android:background="@drawable/edittext_background"
                     android:ems="10"
                     android:hint="PSI"
                     android:inputType="numberDecimal"
                     android:text=""
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
                 <Button
                     android:id="@+id/btnScanQrPAOs"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -373,7 +381,7 @@
                 android:layout_height="wrap_content"
                 android:text="¿Funcionan las bombas?"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -387,7 +395,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:text="Agua de osmosis 1:"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -396,10 +404,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
                 <TextView
                     android:id="@+id/textView40"
                     android:layout_width="wrap_content"
@@ -420,7 +428,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:text="Agua de osmosis 2:"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -429,10 +437,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <TextView
                     android:id="@+id/textView41"
@@ -448,7 +456,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nivel cisterna agua filtrada"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -463,18 +471,19 @@
                     android:layout_weight="1"
                     android:backgroundTint="#FFFFFF"
                     android:ems="10"
+                    android:background="@drawable/edittext_background"
                     android:hint="%"
                     android:inputType="numberDecimal"
                     android:text=""
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
                 <Button
                     android:id="@+id/btnScanQrNCAF"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -484,7 +493,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Presión de línea de agua filtrada"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -500,17 +509,18 @@
                     android:backgroundTint="#FFFFFF"
                     android:ems="10"
                     android:hint="PSI"
+                    android:background="@drawable/edittext_background"
                     android:inputType="numberDecimal"
                     android:text=""
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
                 <Button
                     android:id="@+id/btnScanQrPLAF"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -520,7 +530,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="¿Funcionan las bombas?"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -534,7 +544,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:text="Agua filtrada 1:"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -543,10 +553,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <TextView
                     android:id="@+id/textView43"
@@ -569,7 +579,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:text="Agua filtrada 2:"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -578,10 +588,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <TextView
                     android:id="@+id/textView44"
@@ -598,7 +608,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="PH en agua filtrada"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -612,19 +622,20 @@
                     android:layout_height="48dp"
                     android:layout_weight="1"
                     android:backgroundTint="#FFFFFF"
+                    android:background="@drawable/edittext_background"
                     android:ems="10"
                     android:hint="PH"
                     android:inputType="numberDecimal"
                     android:text=""
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
                 <Button
                     android:id="@+id/btnScanQrpH"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -634,7 +645,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Presión agua potable"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -651,9 +662,10 @@
                     android:ems="10"
                     android:hint="PSI"
                     android:inputType="numberDecimal"
+                    android:background="@drawable/edittext_background"
                     android:text=""
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
@@ -662,7 +674,7 @@
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -672,7 +684,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="¿Funcionan las bombas?"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -687,7 +699,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:text="Agua potable 1:"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -696,10 +708,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <TextView
                     android:id="@+id/textView46"
@@ -722,7 +734,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:text="Agua potable 2:"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -731,10 +743,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <TextView
                     android:id="@+id/textView47"
@@ -750,17 +762,18 @@
                 android:layout_height="48dp"
                 android:layout_weight="1"
                 android:backgroundTint="#FFFFFF"
+                android:background="@drawable/edittext_background"
                 android:ems="10"
                 android:hint="HALLAZGOS"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"/>
+                android:textColor="#000000"
+                android:textColorHint="#000000"/>
 
             <Button
                 android:id="@+id/btSend"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="#313D8E"
+                android:backgroundTint="#A3313D8E"
                 android:textColor="#FFFFFF"
                 android:paddingBottom="6dp"
                 android:text="Continuar recorrido"

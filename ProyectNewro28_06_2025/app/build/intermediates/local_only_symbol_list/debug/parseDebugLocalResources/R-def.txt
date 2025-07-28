@@ -12,6 +12,7 @@ drawable avatar_usuario
 drawable background_blur
 drawable bg_boton_redondeado
 drawable bgnewro1
+drawable boton_qr
 drawable circle_background
 drawable con_observaciones_icon
 drawable edittext_background
@@ -19,6 +20,7 @@ drawable electrico_icon
 drawable gases_icon
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_qr
 drawable incendios_icon
 drawable libretita
 drawable pendiente_icon

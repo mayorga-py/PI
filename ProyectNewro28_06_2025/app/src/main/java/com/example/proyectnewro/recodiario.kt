@@ -109,7 +109,8 @@ class recodiario : AppCompatActivity() {
     }
 
     // Función para alternar estado y guardar en SharedPreferences
-    private fun toggleStatus(key: String, imageViewCompleted: ImageView, imageViewPending: ImageView, button: View) {
+    @Suppress("UNUSED_PARAMETER")
+    private fun toggleStatus(key: String, imageViewCompleted: ImageView, imageViewsPending: ImageView, button: View) {
         val sharedPreferences = getSharedPreferences("StatusPref", MODE_PRIVATE)
         val currentStatus = sharedPreferences.getString(key, "pending")
 
@@ -117,6 +118,7 @@ class recodiario : AppCompatActivity() {
             button.isEnabled = false
         }
     }
+
 
     // Función para abrir la actividad correspondiente
     private fun startFormActivity(index: Int) {

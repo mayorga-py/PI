@@ -5,9 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgnewro1"
-    android:backgroundTint="#474646"
-    android:backgroundTintMode="multiply"
+    android:padding="24dp"
+    android:background="#5C5983ED"
     tools:context=".FormAgCa">
 
     <TextView
@@ -16,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="RECORRIDO AGUA CALIENTE"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="CALDERA 1 RECORRIDO"
-                android:textColor="#FFFFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -55,7 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Presion Gas L.P."
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -70,17 +69,18 @@
                     android:layout_weight="1"
                     android:backgroundTint="#FFFFFF"
                     android:ems="10"
+                    android:background="@drawable/edittext_background"
                     android:hint="PSI"
                     android:inputType="numberDecimal"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
                 <Button
                     android:id="@+id/btnQRpreGas1"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -98,7 +98,7 @@
                     android:layout_height="40dp"
                     android:gravity="end"
                     android:text="¿Funciona caldera 1?  ->"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -107,10 +107,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
             </LinearLayout>
 
 
@@ -119,7 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Presión tanque A.C. 1"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -137,17 +137,18 @@
                     android:backgroundTint="#FFFFFF"
                     android:ems="10"
                     android:hint="PSI"
+                    android:background="@drawable/edittext_background"
                     android:inputType="numberDecimal"
                     android:text=""
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
                 <Button
                     android:id="@+id/btnQRpreTanqAC1"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -157,7 +158,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Temperatura tanque 1 A.C."
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20dp" />
 
             <EditText
@@ -168,9 +169,10 @@
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
                 android:hint="°C"
+                android:background="@drawable/edittext_background"
                 android:inputType="numberDecimal"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFFFF" />
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -182,7 +184,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="CALDERA 2 RECORRIDO"
-                android:textColor="#FFFFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -192,7 +194,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Presion Gas L.P."
-                android:textColor="#FFFFFFFF"
+                android:textColor="#000000"
                 android:textSize="20dp" />
 
             <LinearLayout
@@ -208,16 +210,17 @@
                     android:backgroundTint="#FFFFFF"
                     android:ems="10"
                     android:hint="PSI"
-                    android:textColor="#FFFFFF"
+                    android:background="@drawable/edittext_background"
+                    android:textColor="#000000"
                     android:inputType="numberDecimal"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColorHint="#000000" />
 
                 <Button
                     android:id="@+id/btnQRpreGas2"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -233,7 +236,7 @@
                     android:layout_height="40dp"
                     android:gravity="end"
                     android:text="¿Funciona caldera 2?  ->"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -242,10 +245,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
             </LinearLayout>
 
             <TextView
@@ -253,7 +256,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Presión tanque A.C. 2"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -270,17 +273,18 @@
                     android:layout_weight="1"
                     android:backgroundTint="#FFFFFFFF"
                     android:ems="10"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:hint="PSI"
+                    android:background="@drawable/edittext_background"
                     android:inputType="numberDecimal"
-                    android:textColorHint="#FFFFFFFF" />
+                    android:textColorHint="#000000" />
 
                 <Button
                     android:id="@+id/btnQRpreTanqAC2"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -290,7 +294,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Temperatura tanque 2 A.C."
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20dp" />
 
             <EditText
@@ -301,9 +305,10 @@
                 android:backgroundTint="#FFFFFFFF"
                 android:ems="10"
                 android:hint="°C"
-                android:textColor="#FFFFFF"
+                android:background="@drawable/edittext_background"
+                android:textColor="#000000"
                 android:inputType="numberDecimal"
-                android:textColorHint="#FFFFFFFF" />
+                android:textColorHint="#000000" />
 
             <TextView
                 android:id="@+id/nomActFunBombFLu1"
@@ -311,7 +316,7 @@
                 android:layout_height="wrap_content"
                 android:text="¿Funcionan las bombas? \n Bomba de flujo 1:"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -326,17 +331,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/btnQRfunBomFlu1_2"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -346,7 +351,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:text="Bomba de flujo 2"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -357,24 +362,24 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/nomActFunBombRAC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="¿Funciona bomba R.A.C?"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="60dp"
                 android:orientation="horizontal">
 
                 <Spinner
@@ -383,17 +388,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/btnQRfunBomRAC"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -401,19 +406,20 @@
             <EditText
                 android:id="@+id/etHaAC"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
+                android:background="@drawable/edittext_background"
                 android:hint="HALLAZGOS"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"/>
+                android:textColor="#000000"
+                android:textColorHint="#000000"/>
 
             <Button
                 android:id="@+id/sendEx"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="#313D8E"
+                android:backgroundTint="#A3313D8E"
                 android:textColor="#FFFFFF"
                 android:paddingTop="6dp"
                 android:paddingBottom="6dp"
