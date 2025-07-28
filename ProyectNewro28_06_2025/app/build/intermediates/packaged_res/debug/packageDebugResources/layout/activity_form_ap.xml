@@ -75,9 +75,7 @@
                     android:layout_weight="1"
                     android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
-                    android:drawableStart="@drawable/ic_qr"
-                    android:drawablePadding="8dp"
-                    android:text="QR"/>/>
+                    android:text="QR"/>
             </LinearLayout>
 
             <TextView

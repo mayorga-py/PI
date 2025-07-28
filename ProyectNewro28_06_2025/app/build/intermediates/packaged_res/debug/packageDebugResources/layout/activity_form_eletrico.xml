@@ -5,9 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgnewro1"
-    android:backgroundTint="#474646"
-    android:backgroundTintMode="multiply"
+    android:padding="24dp"
+    android:background="#5C5983ED"
     tools:context=".FormEletrico">
 
     <TextView
@@ -16,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="RECORRIDO ELECTRICO"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,7 +47,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:text="Planta de emergencia en modo auto"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -61,17 +60,17 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/btPlanta_emerg"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -84,7 +83,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Errores (Fallas eléctricas)"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <EditText
@@ -94,10 +93,11 @@
                 android:layout_weight="1"
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
+                android:background="@drawable/edittext_background"
                 android:hint="Escribe aqui los errores encontrados"
                 android:inputType="text"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFFFF" />
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
 
             <TextView
                 android:id="@+id/textView52"
@@ -105,7 +105,7 @@
                 android:layout_height="wrap_content"
                 android:text="Tableros"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold|italic" />
 
@@ -114,7 +114,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-GN2"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
         <LinearLayout
@@ -127,17 +127,17 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <Button
                 android:id="@+id/btspTab_gn2"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
-                android:backgroundTint="#313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:textColor="#FFFFFF"
                 android:text="QR"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -149,7 +149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-GN1"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
 
@@ -159,10 +159,10 @@
                     android:layout_width="199dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
 
             <TextView
@@ -170,7 +170,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:text="REVISIÓN TAB-GSV"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -178,16 +178,16 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-GCR"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -195,17 +195,17 @@
                 android:layout_width="199dp"
                 android:layout_height="20dp"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050" />
+                android:popupBackground="#5C313D8E" />
 
             <TextView
                 android:id="@+id/textView57"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-GSE"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -213,17 +213,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView58"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-PSN"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -231,17 +231,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView59"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-PS-SV"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
 
@@ -250,10 +250,10 @@
                     android:layout_width="199dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
 
 
@@ -262,7 +262,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-PB-R"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -270,17 +270,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView61"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-PB-SV"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -288,17 +288,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView62"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-PB-CR"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
 
@@ -307,17 +307,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050" />
+                android:popupBackground="#5C313D8E" />
 
             <TextView
                 android:id="@+id/textView63"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-PBN"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -325,17 +325,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView64"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-CC-P1-R"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -343,17 +343,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView65"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-P1-SV"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
 
@@ -363,10 +363,10 @@
                     android:layout_width="199dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
 
 
@@ -375,7 +375,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-P1N"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -383,17 +383,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView67"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-P2-R"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -401,16 +401,16 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-P2-SV"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -418,17 +418,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView69"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-P2-CR"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
                 <Spinner
@@ -436,17 +436,17 @@
                     android:layout_width="199dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView70"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-P2N"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -454,17 +454,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView71"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-P3-R"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -472,17 +472,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView72"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-P3-SV"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -490,17 +490,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView73"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-P3-CR"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
                 <Spinner
@@ -508,17 +508,17 @@
                     android:layout_width="199dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView74"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-P3N1"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -526,17 +526,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView75"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-P3N2"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -544,17 +544,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView76"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-P4-R"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -562,17 +562,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView77"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-P4-SV"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -580,17 +580,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView78"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-P4-CR"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
 
@@ -600,17 +600,17 @@
                     android:layout_width="199dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView79"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN CC-P4N"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -618,17 +618,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView80"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-P4N"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -636,17 +636,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView81"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-PAN3"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -654,17 +654,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView82"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-PAN2"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -672,17 +672,17 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView83"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-PAN1"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <Spinner
@@ -690,22 +690,22 @@
                 android:layout_width="199dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
+                android:background="#5C313D8E"
+                android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+                android:popupBackground="#5C313D8E"/>
 
             <TextView
                 android:id="@+id/textView56"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN TAB-PA-SE"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="60dp"
                 android:orientation="horizontal">
 
                 <Spinner
@@ -713,17 +713,17 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/btTan_pa_se"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -733,19 +733,20 @@
             <EditText
                 android:id="@+id/etHaEle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
+                android:background="@drawable/edittext_background"
                 android:hint="HALLAZGOS"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"/>/>
+                android:textColor="#000000"
+                android:textColorHint="#000000"/>/>
 
             <Button
                 android:id="@+id/continuar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="#313D8E"
+                android:backgroundTint="#A3313D8E"
                 android:textColor="#FFFFFF"
                 android:text="Continuar recorrido"
                 app:cornerRadius="0dp" />

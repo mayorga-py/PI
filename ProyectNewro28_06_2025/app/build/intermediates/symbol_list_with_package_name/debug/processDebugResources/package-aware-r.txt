@@ -2971,7 +2971,6 @@ drawable avd_show_password
 drawable background_blur
 drawable bg_boton_redondeado
 drawable bgnewro1
-drawable boton_qr
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3009,7 +3008,6 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
-drawable ic_qr
 drawable ic_search_black_24
 drawable incendios_icon
 drawable libretita

@@ -16,12 +16,12 @@
         "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\drawable\\bgnewro1.jpeg"
     },
     {
-        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\drawable_incendios_icon.png.flat",
         "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\drawable\\incendios_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
@@ -38,6 +38,14 @@
     {
         "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.proyectnewro.app-debug-32:/layout_activity_form_ag_ca.xml.flat",
+        "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_ag_ca.xml"
+    },
+    {
+        "merged": "com.example.proyectnewro.app-debug-32:/layout_activity_recodiario.xml.flat",
+        "source": "com.example.proyectnewro.app-main-34:/layout/activity_recodiario.xml"
     },
     {
         "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\layout_activity_form_gas_med.xml.flat",
@@ -64,12 +72,16 @@
         "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\drawable-v24\\libretita.png"
     },
     {
+        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
         "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\drawable_ic_qr.png.flat",
         "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\drawable\\ic_qr.png"
     },
     {
-        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.example.proyectnewro.app-debug-32:/layout_activity_form_aire_acondi.xml.flat",
+        "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_aire_acondi.xml"
     },
     {
         "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\drawable-v24_background_blur.jpg.flat",
@@ -80,8 +92,16 @@
         "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_ap.xml"
     },
     {
+        "merged": "com.example.proyectnewro.app-debug-32:/layout_activity_form_contra_incen.xml.flat",
+        "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_contra_incen.xml"
+    },
+    {
         "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.proyectnewro.app-debug-32:/drawable_pendiente_icon.png.flat",
+        "source": "com.example.proyectnewro.app-main-34:/drawable/pendiente_icon.png"
     },
     {
         "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\layout_login.xml.flat",
@@ -128,6 +148,10 @@
         "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\drawable\\electrico_icon.png"
     },
     {
+        "merged": "com.example.proyectnewro.app-debug-32:/drawable_realizado_icon.png.flat",
+        "source": "com.example.proyectnewro.app-main-34:/drawable/realizado_icon.png"
+    },
+    {
         "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\drawable_boton_qr.xml.flat",
         "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\drawable\\boton_qr.xml"
     },
@@ -148,8 +172,16 @@
         "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "com.example.proyectnewro.app-debug-32:/layout_activity_form_eletrico.xml.flat",
+        "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_eletrico.xml"
+    },
+    {
         "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\layout_vista_admin.xml.flat",
         "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\vista_admin.xml"
+    },
+    {
+        "merged": "com.example.proyectnewro.app-debug-32:/layout_activity_form_gas_med.xml.flat",
+        "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_gas_med.xml"
     },
     {
         "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\xml_network_security_config.xml.flat",

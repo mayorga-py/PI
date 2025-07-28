@@ -5,9 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgnewro1"
-    android:backgroundTint="#474646"
-    android:backgroundTintMode="multiply"
+    android:padding="24dp"
+    android:background="#5C5983ED"
     tools:context=".FormContraIncen">
 
     <TextView
@@ -16,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="RECORRIDO CONTRA INCENDIOS"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="REVISIÓN PANEL DE ALARMAS"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -59,17 +58,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/btRevPanel"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ALARMAS EN PANEL DE ALARMAS"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"/>
 
             <EditText
@@ -91,12 +90,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_weight="1"
-                android:backgroundTint="#FFFFFF"
+                android:backgroundTint="#FFFFFFFF"
                 android:ems="10"
+                android:background="@drawable/edittext_background"
                 android:hint="Escribe aqui el numero de alarmas"
                 android:inputType="numberDecimal"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFFFF"/>
+                android:textColor="#000000"
+                android:textColorHint="#000000"/>
 
             <TextView
                 android:id="@+id/textView122"
@@ -104,29 +104,36 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="REVISIÓN TABLERO\nBOMBAS CONTRA INCENDIOS"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp"/>
 
-            <Spinner
-                android:id="@+id/spRevsionTab"
-                android:layout_width="199dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingHorizontal="8dp"
-                android:background="#6A6969"
-                android:backgroundTint="#878585"
-                android:entries="@array/opciones_bomba"
-                android:popupBackground="#505050"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spRevsionTab"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="25"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
+                    android:entries="@array/opciones_bomba"
+                    android:paddingHorizontal="8dp"
+                    android:popupBackground="#5C313D8E" />
+            </LinearLayout>
 
             <EditText
                 android:id="@+id/etHaCI"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
+                android:background="@drawable/edittext_background"
                 android:hint="HALLAZGOS"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"/>
+                android:textColor="#000000"
+                android:textColorHint="#000000"/>
 
             <Button
                 android:id="@+id/btsendCI"
@@ -134,7 +141,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="#313D8E"
+                android:backgroundTint="#A3313D8E"
                 android:text="Continuar recorrido"
                 app:cornerRadius="0dp"/>
 

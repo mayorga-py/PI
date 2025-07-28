@@ -2970,7 +2970,6 @@ int drawable avd_show_password 0x7f08007d
 int drawable background_blur 0x7f08007e
 int drawable bg_boton_redondeado 0x7f08007f
 int drawable bgnewro1 0x7f080080
-int drawable boton_qr 0x7f080081
 int drawable btn_checkbox_checked_mtrl 0x7f080082
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f080083
 int drawable btn_checkbox_unchecked_mtrl 0x7f080084
@@ -3008,7 +3007,6 @@ int drawable ic_mtrl_checked_circle 0x7f0800a3
 int drawable ic_mtrl_chip_checked_black 0x7f0800a4
 int drawable ic_mtrl_chip_checked_circle 0x7f0800a5
 int drawable ic_mtrl_chip_close_circle 0x7f0800a6
-int drawable ic_qr 0x7f0800a7
 int drawable ic_search_black_24 0x7f0800a8
 int drawable incendios_icon 0x7f0800a9
 int drawable libretita 0x7f0800aa

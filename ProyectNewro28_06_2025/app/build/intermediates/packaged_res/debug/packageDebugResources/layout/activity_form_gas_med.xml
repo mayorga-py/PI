@@ -5,9 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgnewro1"
-    android:backgroundTint="#474646"
-    android:backgroundTintMode="multiply"
+    android:padding="24dp"
+    android:background="#5C5983ED"
     tools:context=".FormGasMed">
 
 
@@ -21,7 +20,7 @@
         android:backgroundTint="#898585"
         android:text="RECORRIDO GASES MEDICINALES"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Presion bancada izquierda"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -69,17 +68,18 @@
                     android:ems="10"
                     android:enabled="false"
                     android:hint="PSI"
+                    android:background="@drawable/edittext_background"
                     android:inputType="numberDecimal"
                     android:text=""
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
                 <Button
                     android:id="@+id/QRPreBanIz"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -89,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Presion bancada derecha"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -104,12 +104,13 @@
                     android:layout_weight="1"
                     android:backgroundTint="#FFFFFF"
                     android:ems="10"
+                    android:background="@drawable/edittext_background"
                     android:enabled="false"
                     android:hint="PSI"
                     android:inputType="numberDecimal"
                     android:text=""
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
 
 
@@ -126,7 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cambio de bancada"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -153,7 +154,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Revisión de fugas bancada"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -174,7 +175,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Funcionamiento extrator de gases"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -187,17 +188,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/QRCBextGa"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -207,7 +208,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Presion tanque de aire medicinal"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -223,18 +224,19 @@
                     android:backgroundTint="#FFFFFF"
                     android:ems="10"
                     android:enabled="false"
+                    android:background="@drawable/edittext_background"
                     android:hint="PSI"
                     android:inputType="numberDecimal"
                     android:text=""
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
                 <Button
                     android:id="@+id/QRPreTanqAiMed"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -244,7 +246,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:text="¿Funcionan las compresoras?"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
 
@@ -259,7 +261,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:text="Compresora 1:  "
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -268,10 +270,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <TextView
                     android:id="@+id/textView371"
@@ -293,7 +295,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:text="Compresora 2:  "
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -302,10 +304,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
                 <TextView
                     android:id="@+id/textView372"
                     android:layout_width="wrap_content"
@@ -319,7 +321,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:text="¿Funcionan las secadoras?"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -333,7 +335,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:text="Secadora 1:  "
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -342,10 +344,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
                 <TextView
                     android:id="@+id/textView373"
                     android:layout_width="wrap_content"
@@ -366,7 +368,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:text="Secadora 1:  "
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -375,10 +377,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
                 <TextView
                     android:id="@+id/textView374"
                     android:layout_width="wrap_content"
@@ -397,7 +399,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Presion de tanque de vacio"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -413,18 +415,19 @@
                     android:backgroundTint="#FFFFFF"
                     android:ems="10"
                     android:enabled="false"
+                    android:background="@drawable/edittext_background"
                     android:hint="PSI"
                     android:inputType="numberDecimal"
                     android:text=""
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
                 <Button
                     android:id="@+id/QRPreTanVac"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -434,7 +437,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:text="¿Funcionan las bombas?"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
@@ -448,7 +451,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:text="Bomba vacio 1:  "
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -457,10 +460,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
                 <TextView
                     android:id="@+id/textView376"
                     android:layout_width="wrap_content"
@@ -482,7 +485,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:text="Bomba vacio 2:  "
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <Spinner
@@ -491,10 +494,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
                 <TextView
                     android:id="@+id/textView375"
                     android:layout_width="wrap_content"
@@ -509,11 +512,11 @@
                 android:layout_height="wrap_content"
                 android:text="Encendido de bombas de vacio de evacuacion de gases anestesicos"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="20sp" />
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="60dp"
                 android:orientation="horizontal">
 
                 <Spinner
@@ -522,17 +525,17 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:paddingHorizontal="8dp"
-                    android:background="#6A6969"
-                    android:backgroundTint="#878585"
+                    android:background="#5C313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#505050"/>
+                    android:popupBackground="#5C313D8E"/>
 
                 <Button
                     android:id="@+id/QREncBombVacDeEvacGasAne"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#313D8E"
+                    android:backgroundTint="#5C313D8E"
                     android:textColor="#FFFFFF"
                     android:text="QR" />
             </LinearLayout>
@@ -540,12 +543,13 @@
             <EditText
                 android:id="@+id/etHaGM"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
+                android:background="@drawable/edittext_background"
                 android:hint="HALLAZGOS"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"/>
+                android:textColor="#000000"
+                android:textColorHint="#000000"/>
 
             <Button
                 android:id="@+id/sendEx1"
