@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.net.Uri
+import androidx.core.net.toUri
 
 
 class MainActivity : AppCompatActivity() {
@@ -23,9 +24,9 @@ class MainActivity : AppCompatActivity() {
 
         val btNcoments: Button = findViewById(R.id.Btncoments)
         btNcoments.setOnClickListener {
-            val url = "https://backend-pi-074a.onrender.com"
+            val url = "https://erp-enmx.onrender.com"
             val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse(url)
+            intent.data = url.toUri()
             startActivity(intent)
         }
 
