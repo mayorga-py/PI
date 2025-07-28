@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         val btNcoments: Button = findViewById(R.id.Btncoments)
         btNcoments.setOnClickListener {
-            val url = "http://10.16.32.53:3000"
+            val url = "https://backend-pi-074a.onrender.com"
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(url)
             startActivity(intent)
