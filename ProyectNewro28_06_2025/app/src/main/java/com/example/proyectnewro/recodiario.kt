@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 
 class recodiario : AppCompatActivity() {
@@ -37,12 +38,12 @@ class recodiario : AppCompatActivity() {
         setContentView(R.layout.activity_recodiario)
 
         val buttons = arrayOf(
-            findViewById<Button>(R.id.buttonAP),
-            findViewById<Button>(R.id.buttonAgCa),
-            findViewById<Button>(R.id.buttonGM),
-            findViewById<Button>(R.id.buttonElec),
-            findViewById<Button>(R.id.buttonAA),
-            findViewById<Button>(R.id.buttonCI)
+            findViewById<LinearLayout>(R.id.buttonAP),
+            findViewById<LinearLayout>(R.id.buttonAgCa),
+            findViewById<LinearLayout>(R.id.buttonGM),
+            findViewById<LinearLayout>(R.id.buttonElec),
+            findViewById<LinearLayout>(R.id.buttonAA),
+            findViewById<LinearLayout>(R.id.buttonCI)
         )
 
         // Inicializar las listas de ImageViews
@@ -108,12 +109,11 @@ class recodiario : AppCompatActivity() {
     }
 
     // Función para alternar estado y guardar en SharedPreferences
-    private fun toggleStatus(key: String, imageViewCompleted: ImageView, imageViewPending: ImageView, button: Button) {
+    private fun toggleStatus(key: String, imageViewCompleted: ImageView, imageViewPending: ImageView, button: View) {
         val sharedPreferences = getSharedPreferences("StatusPref", MODE_PRIVATE)
         val currentStatus = sharedPreferences.getString(key, "pending")
 
         if (currentStatus == "pending") {
-            // Desactivar el botón hasta que se complete el recorrido
             button.isEnabled = false
         }
     }

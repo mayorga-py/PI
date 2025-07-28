@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         val btN: Button = findViewById(R.id.RDiario)
         btN.setOnClickListener {
 
-            val intent: Intent = Intent(this, recodiario::class.java)
+            val intent = Intent(this, recodiario::class.java)
             startActivity(intent)
         }
 
