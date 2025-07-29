@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
@@ -29,6 +30,46 @@ import java.util.Date
 import java.util.Locale
 
 class FormEletrico : AppCompatActivity() {
+    private fun mostrarAlertaPersonalizada(mensaje: String) {
+        val dialogView = layoutInflater.inflate(R.layout.alerta_error, null)
+        val alertDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val txtMensaje = dialogView.findViewById<TextView>(R.id.etalertasp)
+        val btnAceptar = dialogView.findViewById<Button>(R.id.btnAceptar)
+
+        txtMensaje.text = mensaje
+
+        btnAceptar.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        alertDialog.show()
+    }
+
+    private fun mostrarAlertaExito(mensaje: String) {
+        val dialogView = layoutInflater.inflate(R.layout.alerta_exito, null)
+        val alertDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val txtMensaje = dialogView.findViewById<TextView>(R.id.mensajeExito)
+        val btnAceptar = dialogView.findViewById<Button>(R.id.btnAceptarExito)
+
+        txtMensaje.text = mensaje
+
+        btnAceptar.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        alertDialog.show()
+    }
+
     private lateinit var spPlantaEmergencia : Spinner
     private lateinit var spiTab_gn2 : Spinner
     private lateinit var spiTab_gn1 : Spinner
@@ -132,15 +173,11 @@ class FormEletrico : AppCompatActivity() {
         spPlantaEmergencia.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
+
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia planta de emergencia")
-                        .setMessage("COLOCAR PLANTA DE EMERGENCIA EN MODO AUTOMATICO")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "COLOCAR PLANTA DE EMERGENCIA EN MODO AUTOMATICO"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -176,14 +213,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_gn2")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -242,14 +274,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_gn1")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -258,14 +285,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_gsv")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -279,14 +301,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_gcr")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -295,14 +312,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_gse")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -311,14 +323,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_psn")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -332,14 +339,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_ps_sv")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -348,14 +350,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_pb_r")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -364,14 +361,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_pb_sv")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -385,14 +377,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_cc_p1_r")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -401,14 +388,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_pbn")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -417,14 +399,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_cc_p1_r")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -439,14 +416,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_p1_sv")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -455,14 +427,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_p1n")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -471,14 +438,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_p2_r")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -487,14 +449,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_p2_sv")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -509,14 +466,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_p2_cr")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -525,14 +477,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_p2n")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -541,14 +488,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_p3_r")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -557,14 +499,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_p3_sv")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -581,14 +518,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_p3_cr")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -597,14 +529,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_p3_n1")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -613,14 +540,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_p3_n2")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -629,14 +551,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_p4_r")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -645,14 +562,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_p4_sv")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -670,14 +582,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_p4_cr")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -686,14 +593,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_cc_p4n")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -702,14 +604,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_p4n")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -718,14 +615,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_pan3")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -734,14 +626,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_pan2")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -750,14 +637,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_pan1")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -789,14 +671,9 @@ class FormEletrico : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormEletrico)
-                        .setTitle("Advertencia Tab_pa_se")
-                        .setMessage("RESTAURAR INTERRUPTORES Y REGISTRARLO EN COMENTARIOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR INTERRUPTORES Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -848,10 +725,10 @@ class FormEletrico : AppCompatActivity() {
 
                 workbook.close()
 
-                Toast.makeText(context, "Datos guardados en: ${file.absolutePath}", Toast.LENGTH_LONG).show()
+                mostrarAlertaExito("Datos guardados correctamente en:\n\n${file.absolutePath}")
             } catch (e: Exception) {
                 e.printStackTrace()
-                Toast.makeText(context, "Error al guardar los datos: ${e.message}", Toast.LENGTH_LONG).show()
+                mostrarAlertaPersonalizada("Error al guardar los datos:\n\n${e.message}")
             }
         }
 

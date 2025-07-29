@@ -10,6 +10,11 @@
         <item>Ok</item>
         <item>No Aplica</item>
     </string-array>
+    <string-array name="opciones_on_off">
+        <item> - </item>
+        <item>APAGADO</item>
+        <item>ENCENDIDO</item>
+    </string-array>
     <color name="black">#FF000000</color>
     <color name="colorPopup">#FFFFFF</color>
     <color name="white">#FFFFFFFF</color>

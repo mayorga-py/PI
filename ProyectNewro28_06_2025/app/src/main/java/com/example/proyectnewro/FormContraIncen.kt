@@ -10,6 +10,7 @@ import android.widget.AdapterView
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
@@ -29,6 +30,48 @@ import java.util.Date
 import java.util.Locale
 
 class FormContraIncen : AppCompatActivity() {
+
+    private fun mostrarAlertaPersonalizada(mensaje: String) {
+        val dialogView = layoutInflater.inflate(R.layout.alerta_error, null)
+        val alertDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val txtMensaje = dialogView.findViewById<TextView>(R.id.etalertasp)
+        val btnAceptar = dialogView.findViewById<Button>(R.id.btnAceptar)
+
+        txtMensaje.text = mensaje
+
+        btnAceptar.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        alertDialog.show()
+    }
+
+    private fun mostrarAlertaExito(mensaje: String) {
+        val dialogView = layoutInflater.inflate(R.layout.alerta_exito, null)
+        val alertDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val txtMensaje = dialogView.findViewById<TextView>(R.id.mensajeExito)
+        val btnAceptar = dialogView.findViewById<Button>(R.id.btnAceptarExito)
+
+        txtMensaje.text = mensaje
+
+        btnAceptar.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        alertDialog.show()
+    }
+
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,15 +92,11 @@ class FormContraIncen : AppCompatActivity() {
         spirevpanCI.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
+
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormContraIncen)
-                        .setTitle("Advertencia Revision Panel de Alarmas")
-                        .setMessage("Realiza lo siguiente: \nVERIFICAR EL ÁREA ALARMADA Y POSTERIORMENTE RESTAURAR SISTEMA")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "Realiza lo siguiente: \n\nVERIFICAR EL ÁREA ALARMADA \nPOSTERIORMENTE RESTAURAR SISTEMA"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -91,17 +130,9 @@ class FormContraIncen : AppCompatActivity() {
                 val value = etCI.text.toString().toDoubleOrNull()
                 if (value != null) {
                     if (value < 1 || value > 2) {
-                        // Mostrar advertencia si el valor está fuera del rango
-                        val alertDialog = AlertDialog.Builder(this@FormContraIncen)
-                            .setTitle("Advertencia ALARMAS EN PANEL DE ALARMAS")
-                            .setMessage(
-                                "checar con ing chava"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                        mostrarAlertaPersonalizada(
+                            "REVISAR CON ING. SALVADOR"
+                        )
                     }
                 }
             }
@@ -111,14 +142,9 @@ class FormContraIncen : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormContraIncen)
-                        .setTitle("Advertencia REVISIÓN TABLERO BOMBAS CONTRA INCENDIOS\n")
-                        .setMessage("Realiza lo siguiente: \nVERIFICAR FUNCIONAMIENTO DE BOMBA DE DIESEL Y RESTAURAR SISTEMA")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "Realiza lo siguiente: \n\nVERIFICAR FUNCIONAMIENTO DE BOMBA DE DIESEL Y RESTAURAR SISTEMA"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -170,10 +196,10 @@ class FormContraIncen : AppCompatActivity() {
 
                 workbook.close()
 
-                Toast.makeText(context, "Datos guardados en: ${file.absolutePath}", Toast.LENGTH_LONG).show()
+                mostrarAlertaExito("Datos guardados correctamente en:\n\n${file.absolutePath}")
             } catch (e: Exception) {
                 e.printStackTrace()
-                Toast.makeText(context, "Error al guardar los datos: ${e.message}", Toast.LENGTH_LONG).show()
+                mostrarAlertaPersonalizada("Error al guardar los datos:\n\n${e.message}")
             }
         }
 

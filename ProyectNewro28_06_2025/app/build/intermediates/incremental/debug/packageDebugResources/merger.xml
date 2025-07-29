@@ -7,6 +7,10 @@
         <item> - </item>
         <item>Ok</item>
         <item>No Aplica</item>
+    </string-array><string-array name="opciones_on_off">
+        <item> - </item>
+        <item>APAGADO</item>
+        <item>ENCENDIDO</item>
     </string-array></file><file path="C:\Users\lilys\StudioProjects\PI\ProyectNewro28_06_2025\app\src\main\res\values\styles.xml" qualifiers=""/><file path="C:\Users\lilys\StudioProjects\PI\ProyectNewro28_06_2025\app\src\main\res\values\themes.xml" qualifiers=""><style name="Base.Theme.ProyectNewro" parent="Theme.Material3.DayNight.NoActionBar">
         
         

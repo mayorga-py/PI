@@ -176,7 +176,7 @@ class FormAP : AppCompatActivity() {
         }
 
 // campo Agua pluvial
-        porAPlu.isEnabled = false
+        porAPlu.isEnabled = true
         //obtener el resultado
         val qrLauncher1 = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {
@@ -204,23 +204,16 @@ class FormAP : AppCompatActivity() {
                 val value = porAPlu.text.toString().toDoubleOrNull()
                 if (value != null) {
                     if (value < 20 || value > 70) {
-                        val alertDialog = AlertDialog.Builder(this@FormAP)
-                            .setTitle("Advertencia nivel de agua pluvial")
-                            .setMessage(
-                                "El porcentaje de agua pluvial está por fuera del rango.\nRealiza lo siguiente:\n" +
-                                        "REALIZAR TRASVASE DE AGUA"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                        mostrarAlertaPersonalizada(
+                            "El porcentaje de agua pluvial está por fuera del rango.\nRealiza lo siguiente:\n\n" +
+                                    "REALIZAR TRASVASE DE AGUA"
+                        )
                     }
                 }
             }
         }
 // campo presion Agua WC
-        preAWC.isEnabled = false
+        preAWC.isEnabled = true
         //
         val qrLauncher2 = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {
@@ -248,19 +241,12 @@ class FormAP : AppCompatActivity() {
             if (!hasFocus) {
                 val value = preAWC.text.toString().toDoubleOrNull()
                 if (value != null) {
-                    if (value < 4 || value > 6.0) {
-                        val alertDialog = AlertDialog.Builder(this@FormAP)
-                            .setTitle("Advertencia presión de agua WC")
-                            .setMessage(
-                                "La presión ingresada esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
-                                        "REVISAR SUMINISTRO ELÉCRICO E INTERRUPTORES INDIVIDUALES DE TABLEREO BOMBAS \n" +
-                                        "PURGAR BOMBAS \nREVISAR FUGAS EN SELLO MECÁNICO Y PICHANCHA"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                    if (value < 4 || value > 6) {
+                        mostrarAlertaPersonalizada(
+                            "La presión ingresada esta por fuera del rango permitido.\nRealiza lo siguiente:\n\n" +
+                                    "REVISAR SUMINISTRO ELÉCRICO E INTERRUPTORES INDIVIDUALES DE TABLEREO BOMBAS \n" +
+                                    "PURGAR BOMBAS \nREVISAR FUGAS EN SELLO MECÁNICO Y PICHANCHA"
+                        )
                     }
                 }
             }
@@ -275,7 +261,7 @@ class FormAP : AppCompatActivity() {
         spinnerBomba2.adapter = adapter
 
 //funcionamiento bomba 1 agua trat
-        spinnerBomba1.isEnabled = false
+        spinnerBomba1.isEnabled = true
         spinnerBomba1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -285,15 +271,9 @@ class FormAP : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAP)
-                        .setTitle("Advertencia bomba 1 de agua tratada")
-                        .setMessage("REVISA EL INTERRUPTOR INDIVIDUAL DE BOMBA \nPURGA LA BOMBA \nREVISA FUGAS EN SELLO MÉCANICO Y PICHANCHA.")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISA EL INTERRUPTOR INDIVIDUAL DE BOMBA \nPURGA LA BOMBA \nREVISA FUGAS EN SELLO MÉCANICO Y PICHANCHA."
+                    )
                 }
             }
 
@@ -301,7 +281,7 @@ class FormAP : AppCompatActivity() {
         }
 
 //funcionamiento bomba 2 agua trat
-        spinnerBomba2.isEnabled = false
+        spinnerBomba2.isEnabled = true
         spinnerBomba2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -311,15 +291,9 @@ class FormAP : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAP)
-                        .setTitle("Advertencia bomba 2 de agua tratada")
-                        .setMessage("REVISA EL INTERRUPTOR INDIVIDUAL DE BOMBA \nPURGA LA BOMBA \nREVISA FUGAS EN SELLO MÉCANICO Y PICHANCHA.")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISA EL INTERRUPTOR INDIVIDUAL DE BOMBA \nPURGA LA BOMBA \nREVISA FUGAS EN SELLO MÉCANICO Y PICHANCHA."
+                    )
                 }
             }
 
@@ -355,18 +329,11 @@ class FormAP : AppCompatActivity() {
                 val value = porCarAC.text.toString().toDoubleOrNull()
                 if (value != null) {
                     if (value < 90 || value > 100) {
-                        val alertDialog = AlertDialog.Builder(this@FormAP)
-                            .setTitle("Advertencia nivel de cárcamo agua cruda")
-                            .setMessage(
-                                "El porcentaje ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
-                                        "REVISAR NIVELES DE CISTERNAS DE AGUA CRUDA Y\n" +
-                                        "SUMINISTRO DE CEA"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                        mostrarAlertaPersonalizada(
+                            "El porcentaje ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n\n" +
+                                    "REVISAR NIVELES DE CISTERNAS DE AGUA CRUDA Y\n" +
+                                    "SUMINISTRO DE CEA"
+                        )
                     }
                 }
             }
@@ -378,19 +345,12 @@ class FormAP : AppCompatActivity() {
             if (!hasFocus) {
                 val value = cRLAgua.text.toString().toDoubleOrNull()
                 if (value != null) {
-                    if (value < 0.20 || value > 1.5) {
-                        val alertDialog = AlertDialog.Builder(this@FormAP)
-                            .setTitle("Advertencia C.R.L. de agua cruda (PPM)")
-                            .setMessage(
-                                "El registro ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
-                                        "SI ES MENOR A .20 COLOCAR PASTILLA DE CLORO EN CARCAMO Y REVISAR CLORO EN CISTERNAS DE AGUA CRUDA\n" +
-                                        "SI ES MAYOR A 1.5 MEDIR CLORO DE AGUA FILTRADA"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                    if (value < 0.2 || value > 1.5) {
+                        mostrarAlertaPersonalizada(
+                            "El registro ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n\n" +
+                                    "SI ES MENOR A .20 COLOCAR PASTILLA DE CLORO EN CARCAMO Y REVISAR CLORO EN CISTERNAS DE AGUA CRUDA\n" +
+                                    "SI ES MAYOR A 1.5 MEDIR CLORO DE AGUA FILTRADA"
+                        )
                     }
                 }
             }
@@ -424,18 +384,11 @@ class FormAP : AppCompatActivity() {
                 val value = porAOs.text.toString().toDoubleOrNull()
                 if (value != null) {
                     if (value < 50 || value > 100) {
-                        val alertDialog = AlertDialog.Builder(this@FormAP)
-                            .setTitle("Advertencia Nivel de agua de osmosis")
-                            .setMessage(
-                                "El porcentaje ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
-                                        "REALIZAR EL LLENADO DE TINACO DE OSMOSIS Y\n" +
-                                        "FUNCIONAMIENTO DE FLOTADORES"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                        mostrarAlertaPersonalizada(
+                            "El porcentaje ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n\n" +
+                                    "REALIZAR EL LLENADO DE TINACO DE OSMOSIS Y\n" +
+                                    "FUNCIONAMIENTO DE FLOTADORES"
+                        )
                     }
                 }
             }
@@ -470,18 +423,11 @@ class FormAP : AppCompatActivity() {
                 val value = preAOs.text.toString().toDoubleOrNull()
                 if (value != null) {
                     if (value < 4 || value > 7) {
-                        val alertDialog = AlertDialog.Builder(this@FormAP)
-                            .setTitle("Advertencia Presión de línea de osmosis")
-                            .setMessage(
-                                "La presión ingresada esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
-                                        "REVISAR EL SIMINISTRO ELECTRICO\n" +
-                                        "INTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                        mostrarAlertaPersonalizada(
+                            "La presión ingresada esta por fuera del rango permitido.\nRealiza lo siguiente:\n\n" +
+                                    "REVISAR EL SIMINISTRO ELECTRICO\n" +
+                                    "INTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS"
+                        )
                     }
                 }
             }
@@ -499,15 +445,9 @@ class FormAP : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAP)
-                        .setTitle("Advertencia bomba 1 de agua de osmosis")
-                        .setMessage("REVISAR SUMINISTRO ELECTRICO E \n INTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS.")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISA SUMINISTRO ELECTRICO E \n INTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS."
+                    )
                 }
             }
 
@@ -526,15 +466,9 @@ class FormAP : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAP)
-                        .setTitle("Advertencia bomba 2 de agua de ósmosis")
-                        .setMessage("REVISAR SUMINISTRO ELECTRICO E \n INTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS.")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISA SUMINISTRO ELECTRICO E \n INTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS."
+                    )
                 }
             }
 
@@ -570,18 +504,11 @@ class FormAP : AppCompatActivity() {
                 val value = porSisAF.text.toString().toDoubleOrNull()
                 if (value != null) {
                     if (value < 90 || value > 100) {
-                        val alertDialog = AlertDialog.Builder(this@FormAP)
-                            .setTitle("Advertencia Nivel cisterna Agua Filtrada")
-                            .setMessage(
-                                "El porcentaje ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
-                                        "REVISAR LLAVES DE PASO DE TUBERÍA ABIERTAS\nSUMINISTRO ELECTRICO E INTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS AGUA CRUDA" +
-                                        "REVISAR FUNCIONAMIENTO EN MANUAL DE BOMBAS DE AGUA CRUDA"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                        mostrarAlertaPersonalizada(
+                            "El porcentaje ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n\n" +
+                                    "REVISAR LLAVES DE PASO DE TUBERÍA ABIERTAS\nSUMINISTRO ELECTRICO E INTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS AGUA CRUDA" +
+                                    "REVISAR FUNCIONAMIENTO EN MANUAL DE BOMBAS DE AGUA CRUDA"
+                        )
                     }
                 }
             }
@@ -616,19 +543,12 @@ class FormAP : AppCompatActivity() {
             if (!hasFocus) {
                 val value = preLinAF.text.toString().toDoubleOrNull()
                 if (value != null) {
-                    if (value < 4 || value > 7.5) {
-                        val alertDialog = AlertDialog.Builder(this@FormAP)
-                            .setTitle("Advertencia Presión linea agua filtrada")
-                            .setMessage(
-                                "El porcentaje ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
-                                        "REVISAR SUMINISTRO ELECTRICO E INTERRUPTORES INDIVIDUALES EN TABLERO BOMBAS\n" +
-                                        "FUNCIONAMIENTO DE BOMBAS"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                    if (value < 50 || value > 100) {
+                        mostrarAlertaPersonalizada(
+                            "El porcentaje ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n\n" +
+                                    "REVISAR SUMINISTRO ELECTRICO E INTERRUPTORES INDIVIDUALES EN TABLERO BOMBAS\n" +
+                                    "FUNCIONAMIENTO DE BOMBAS"
+                        )
                     }
                 }
             }
@@ -645,14 +565,9 @@ class FormAP : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormAP)
-                        .setTitle("Advertencia bomba 1 de agua filtrada")
-                        .setMessage("REVISAR SUMINISTRO ELECTRICO E \nINTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS.")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISA SUMINISTRO ELECTRICO E \n INTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS."
+                    )
                 }
             }
 
@@ -670,14 +585,9 @@ class FormAP : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormAP)
-                        .setTitle("Advertencia bomba 2 de agua filtrada")
-                        .setMessage("REVISAR SUMINISTRO ELECTRICO E \nINTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS.")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISA SUMINISTRO ELECTRICO E \n INTERRUPTORES INDIVIDUALES DE TABLERO BOMBAS."
+                    )
                 }
             }
 
@@ -711,19 +621,11 @@ class FormAP : AppCompatActivity() {
             if (!hasFocus) {
                 val value = pH.text.toString().toDoubleOrNull()
                 if (value != null) {
-                    if (value < 6.5 || value > 8.5) { //correccion
-                        val alertDialog = AlertDialog.Builder(this@FormAP)
-                            .setTitle("Advertencia PH en agua filtrada")
-                            .setMessage(
-                                "El pH ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
-                                        "REALIZAR MEDICION DE PH CON COLORIMETRO EN TOMAS FINALES\n" +
-                                        ""
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                    if (value < 6.5 || value > 8.5) {
+                        mostrarAlertaPersonalizada(
+                            "El pH ingresado esta por fuera del rango permitido.\nRealiza lo siguiente:\n\n" +
+                                    "REALIZAR MEDICION DE PH CON COLORIMETRO EN TOMAS FINALES\n"
+                        )
                     }
                 }
             }
@@ -759,18 +661,11 @@ class FormAP : AppCompatActivity() {
                 val value = preAP.text.toString().toDoubleOrNull()
                 if (value != null) {
                     if (value < 4 || value > 6) {
-                        val alertDialog = AlertDialog.Builder(this@FormAP)
-                            .setTitle("Advertencia Presión de agua potable")
-                            .setMessage(
-                                "La presión ingresada esta por fuera del rango permitido.\nRealiza lo siguiente:\n" +
-                                        "REVISAR SUMINISTRO ELECTRICO E INTERRUPTORES INDIVIDUALES EN TABLERO BOMBAS\n" +
-                                        "PURGAR BOMBAS \n REVISAR EN SELLO MECÁNICO Y PICHANCHA"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                        mostrarAlertaPersonalizada(
+                            "La presión ingresada esta por fuera del rango permitido.\nRealiza lo siguiente:\n\n" +
+                                    "REVISAR SUMINISTRO ELECTRICO E INTERRUPTORES INDIVIDUALES EN TABLERO BOMBAS\n" +
+                                    "PURGAR BOMBAS \n REVISAR EN SELLO MECÁNICO Y PICHANCHA"
+                        )
                     }
                 }
             }
@@ -788,14 +683,9 @@ class FormAP : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormAP)
-                        .setTitle("Advertencia bomba 1 de agua potable")
-                        .setMessage("REVISAR INTERRUPTOR INDIVIDUAL DE BOMBA \n PURGAR BOMBAS \n REVISAR DE FUGAS EN SELLO MÉCANICO Y PICHANCHA.")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR INTERRUPTOR INDIVIDUAL DE BOMBA \n PURGAR BOMBAS \n REVISAR DE FUGAS EN SELLO MÉCANICO Y PICHANCHA."
+                    )
                 }
             }
 
@@ -813,14 +703,9 @@ class FormAP : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormAP)
-                        .setTitle("Advertencia bomba 2 de agua potable")
-                        .setMessage("REVISAR INTERRUPTOR INDIVIDUAL DE BOMBA \n PURGAR BOMBAS \n REVISAR DE FUGAS EN SELLO MÉCANICO Y PICHANCHA.")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR INTERRUPTOR INDIVIDUAL DE BOMBA \n PURGAR BOMBAS \n REVISAR DE FUGAS EN SELLO MÉCANICO Y PICHANCHA."
+                    )
                 }
             }
 
@@ -873,13 +758,9 @@ class FormAP : AppCompatActivity() {
                 }
 
                 workbook.close()
-                // ALERTA DE ÉXITO
                 mostrarAlertaExito("Datos guardados correctamente en:\n\n${file.absolutePath}")
-
             } catch (e: Exception) {
                 e.printStackTrace()
-
-                // ALERTA DE ERROR
                 mostrarAlertaPersonalizada("Error al guardar los datos:\n\n${e.message}")
             }
         }

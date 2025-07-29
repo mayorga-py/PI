@@ -10,6 +10,7 @@ import android.widget.AdapterView
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
@@ -29,6 +30,47 @@ import java.util.Date
 import java.util.Locale
 
 class FormAireAcondi : AppCompatActivity() {
+
+    private fun mostrarAlertaPersonalizada(mensaje: String) {
+        val dialogView = layoutInflater.inflate(R.layout.alerta_error, null)
+        val alertDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val txtMensaje = dialogView.findViewById<TextView>(R.id.etalertasp)
+        val btnAceptar = dialogView.findViewById<Button>(R.id.btnAceptar)
+
+        txtMensaje.text = mensaje
+
+        btnAceptar.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        alertDialog.show()
+    }
+
+    private fun mostrarAlertaExito(mensaje: String) {
+        val dialogView = layoutInflater.inflate(R.layout.alerta_exito, null)
+        val alertDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val txtMensaje = dialogView.findViewById<TextView>(R.id.mensajeExito)
+        val btnAceptar = dialogView.findViewById<Button>(R.id.btnAceptarExito)
+
+        txtMensaje.text = mensaje
+
+        btnAceptar.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        alertDialog.show()
+    }
+
     private lateinit var spiChill1 : Spinner
     private lateinit var spiChill2 : Spinner
     private lateinit var spiChill3 : Spinner
@@ -67,6 +109,8 @@ class FormAireAcondi : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_form_aire_acondi)
+
+
 
         val et = findViewById<EditText>(R.id.etPreBombChill)
         val btnpresionbombachiller = findViewById<Button>(R.id.btPreBombChill)
@@ -150,17 +194,10 @@ class FormAireAcondi : AppCompatActivity() {
                 val value = et.text.toString().toDoubleOrNull()
                 if (value != null) {
                     if (value < 60) {
-                        val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                            .setTitle("Advertencia Presion bomba chiller")
-                            .setMessage(
-                                "La Presion de bomba chiller esta por fuera del rango Realiza lo siguiente:\n\n" +
-                                        "REVISAR FUNCIONAMIENTO BOMBAS CHILLERS"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                        mostrarAlertaPersonalizada(
+                            "La Presion de bomba chiller esta por fuera del rango Realiza lo siguiente:\n\n" +
+                                    "REVISAR FUNCIONAMIENTO BOMBAS CHILLERS"
+                        )
                     }
                 }
             }
@@ -197,15 +234,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("REVISAR CON ING CHAVA")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR FUNCIONAMIENTO Y REGISTRAR ERROR EN HALLAZGOS"
+                    )
                 }
             }
 
@@ -220,15 +251,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("REVISAR CON ING CHAVA")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR FUNCIONAMIENTO Y REGISTRAR ERROR EN HALLAZGOS"
+                    )
                 }
             }
 
@@ -243,15 +268,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("REVISAR CON ING CHAVA")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR FUNCIONAMIENTO Y REGISTRAR ERROR EN HALLAZGOS"
+                    )
                 }
             }
 
@@ -269,15 +288,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Advertencia chiller 1")
-                        .setMessage("RESTAURAR FUNCIONAMIENTO Y REGISTRAR ERROR EN HALLAZGOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR FUNCIONAMIENTO Y REGISTRAR ERROR EN HALLAZGOS"
+                    )
                 }
             }
 
@@ -305,7 +318,7 @@ class FormAireAcondi : AppCompatActivity() {
             qrLauncher2.launch(options2) // Inicia el escaneo
         }
 
-        spiChiller2.isEnabled = false
+        spiChiller2.isEnabled = true
         spiChiller2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -315,15 +328,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Advertencia chiller 2")
-                        .setMessage("RESTAURAR FUNCIONAMIENTO Y REGISTRAR ERROR EN HALLAZGOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR FUNCIONAMIENTO Y REGISTRAR ERROR EN HALLAZGOS"
+                    )
                 }
             }
 
@@ -362,15 +369,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Advertencia chiller 3")
-                        .setMessage("RESTAURAR FUNCIONAMIENTO Y REGISTRAR ERROR EN HALLAZGOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR FUNCIONAMIENTO Y REGISTRAR ERROR EN HALLAZGOS"
+                    )
                 }
             }
 
@@ -411,15 +412,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Advertencia chiller 4")
-                        .setMessage("RESTAURAR FUNCIONAMIENTO Y REGISTRAR ERROR EN HALLAZGOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR FUNCIONAMIENTO Y REGISTRAR ERROR EN HALLAZGOS"
+                    )
                 }
             }
 
@@ -434,15 +429,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Advertencia chiller 3")
-                        .setMessage("RESTAURAR FUNCIONAMIENTO Y REGISTRAR ERROR EN HALLAZGOS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "RESTAURAR FUNCIONAMIENTO Y REGISTRAR ERROR EN HALLAZGOS"
+                    )
                 }
             }
 
@@ -456,17 +445,10 @@ class FormAireAcondi : AppCompatActivity() {
                 val value = et.text.toString().toDoubleOrNull()
                 if (value != null) {
                     if (value < 10) {
-                        val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                            .setTitle("Advertencia de temperatura chillers")
-                            .setMessage(
-                                "La temperattura del chiller esta por fuera del rango Realiza lo siguiente:\n\n" +
-                                        "REALIZAR REVISIÓN DE FUNCIONAMIENTO DE CHILLERS Y BOMBAS DE CHILLERS"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                        mostrarAlertaPersonalizada(
+                            "La temperattura del chiller esta por fuera del rango Realiza lo siguiente:\n\n" +
+                                    "REALIZAR REVISIÓN DE FUNCIONAMIENTO DE CHILLERS Y BOMBAS DE CHILLERS"
+                        )
                     }
                 }
             }
@@ -508,15 +490,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("REVISAR CON CHAVA")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR CON ING. SALVADOR"
+                    )
                 }
             }
 
@@ -531,15 +507,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("REVISAR CON CHAVA")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR CON ING. SALVADOR"
+                    )
                 }
             }
 
@@ -554,15 +524,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("REVISAR CON CHAVA")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR CON ING. SALVADOR"
+                    )
                 }
             }
 
@@ -613,15 +577,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("REVISAR CON CHAVA")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR CON ING. SALVADOR"
+                    )
                 }
             }
 
@@ -636,15 +594,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("REVISAR CON CHAVA")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR CON ING. SALVADOR"
+                    )
                 }
             }
 
@@ -659,15 +611,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("REVISAR CON CHAVA")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR CON ING. SALVADOR"
+                    )
                 }
             }
 
@@ -682,15 +628,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("REVISAR CON CHAVA")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR CON ING. SALVADOR"
+                    )
                 }
             }
 
@@ -705,15 +645,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("REVISAR CON CHAVA")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR CON ING. SALVADOR"
+                    )
                 }
             }
 
@@ -728,15 +662,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Avertencia UMA 7")
-                        .setMessage("ENCENDER EXTRACTOR")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR CON ING. SALVADOR"
+                    )
                 }
             }
 
@@ -783,15 +711,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Avertencia Extractor 7")
-                        .setMessage("ENCENDER EXTRACTOR")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "ENCENDER EXTRACTOR"
+                    )
                 }
             }
 
@@ -838,15 +760,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Avertencia Extractor 16")
-                        .setMessage("revisar con ing chava")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "ENCENDER EXTRACTOR"
+                    )
                 }
             }
 
@@ -861,15 +777,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Avertencia Extractor 17")
-                        .setMessage("revisar")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "ENCENDER EXTRACTOR"
+                    )
                 }
             }
 
@@ -884,15 +794,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Avertencia Extractor 18")
-                        .setMessage("revisar")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "ENCENDER EXTRACTOR"
+                    )
                 }
             }
 
@@ -907,15 +811,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Avertencia Extractor 19")
-                        .setMessage("ENCENDER EXTRACTOR")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "ENCENDER EXTRACTOR"
+                    )
                 }
             }
 
@@ -930,15 +828,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Avertencia Extractor 8")
-                        .setMessage("ENCENDER EXTRACTOR")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "ENCENDER EXTRACTOR"
+                    )
                 }
             }
 
@@ -978,15 +870,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Avertencia Extractor 9")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "ENCENDER EXTRACTOR"
+                    )
                 }
             }
 
@@ -1001,15 +887,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Avertencia Extractor 10")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "ENCENDER EXTRACTOR"
+                    )
                 }
             }
 
@@ -1050,15 +930,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Avertencia Extractor 11")
-                        .setMessage("Encencer extractor")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "ENCENDER EXTRACTOR"
+                    )
                 }
             }
 
@@ -1097,15 +971,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Avertencia Extractor 12")
-                        .setMessage("Encencer extractor")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "ENCENDER EXTRACTOR"
+                    )
                 }
             }
 
@@ -1145,15 +1013,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Avertencia Extractor 20")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "ENCENDER EXTRACTOR"
+                    )
                 }
             }
 
@@ -1168,15 +1030,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Avertencia Extractor 21")
-                        .setMessage("Encencer extractor")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "ENCENDER EXTRACTOR"
+                    )
                 }
             }
 
@@ -1208,9 +1064,9 @@ class FormAireAcondi : AppCompatActivity() {
         }
 
         //ext 22,23,24
-        spiExt22.isEnabled = false
-        spiExt23.isEnabled = false
-        spiExt24.isEnabled = false
+        spiExt22.isEnabled = true
+        spiExt23.isEnabled = true
+        spiExt24.isEnabled = true
         spiExt22.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -1220,15 +1076,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Avertencia Extractor 22")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "ENCENDER EXTRACTOR"
+                    )
                 }
             }
 
@@ -1243,15 +1093,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Avertencia Extractor 23")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "ENCENDER EXTRACTOR"
+                    )
                 }
             }
 
@@ -1266,15 +1110,9 @@ class FormAireAcondi : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "APAGADO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                        .setTitle("Avertencia Extractor 24")
-                        .setMessage("")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "ENCENDER EXTRACTOR"
+                    )
                 }
             }
 
@@ -1288,17 +1126,10 @@ class FormAireAcondi : AppCompatActivity() {
                 val value = et.text.toString().toDoubleOrNull()
                 if (value != null) {
                     if (value < 50) {
-                        val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                            .setTitle("Advertencia Porcentaje gas lp calderas")
-                            .setMessage(
-                                "El porcentaje de gas lp calderas esta por fuera del rango Realiza lo siguiente:\n\n" +
-                                        "REALIZAR REVISIÓN DE FUGAS Y REALIZAR RECARGA DE TANQUE"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                        mostrarAlertaPersonalizada(
+                            "El porcentaje de gas lp calderas esta por fuera del rango Realiza lo siguiente:\n\n" +
+                                    "REALIZAR REVISIÓN DE FUGAS Y REALIZAR RECARGA DE TANQUE"
+                        )
                     }
                 }
             }
@@ -1331,17 +1162,10 @@ class FormAireAcondi : AppCompatActivity() {
                 val value = et.text.toString().toDoubleOrNull()
                 if (value != null) {
                     if (value < 50) {
-                        val alertDialog = AlertDialog.Builder(this@FormAireAcondi)
-                            .setTitle("Advertencia Porcentaje gas lp cocina")
-                            .setMessage(
-                                "El porcentaje de gas lp cocina esta por fuera del rango Realiza lo siguiente:\n\n" +
-                                        "REALIZAR REVISIÓN DE FUGAS Y REALIZAR RECARGA DE TANQUE"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                        mostrarAlertaPersonalizada(
+                            "El porcentaje de gas lp cocina esta por fuera del rango Realiza lo siguiente:\n\n" +
+                                    "REALIZAR REVISIÓN DE FUGAS Y REALIZAR RECARGA DE TANQUE"
+                        )
                     }
                 }
             }
@@ -1414,10 +1238,10 @@ class FormAireAcondi : AppCompatActivity() {
 
                 workbook.close()
 
-                Toast.makeText(context, "Datos guardados en: ${file.absolutePath}", Toast.LENGTH_LONG).show()
+                mostrarAlertaExito("Datos guardados correctamente en:\n\n${file.absolutePath}")
             } catch (e: Exception) {
                 e.printStackTrace()
-                Toast.makeText(context, "Error al guardar los datos: ${e.message}", Toast.LENGTH_LONG).show()
+                mostrarAlertaPersonalizada("Error al guardar los datos:\n\n${e.message}")
             }
         }
 

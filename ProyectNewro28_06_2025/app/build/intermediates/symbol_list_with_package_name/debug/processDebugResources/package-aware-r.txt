@@ -79,6 +79,7 @@ animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
 array opciones_bomba
 array opciones_ok_na
+array opciones_on_off
 attr SharedValue
 attr SharedValueId
 attr actionBarDivider

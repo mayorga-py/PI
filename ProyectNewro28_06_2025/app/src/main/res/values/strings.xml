@@ -13,4 +13,10 @@
         <item>No Aplica</item>
     </string-array>
 
+    <string-array name="opciones_on_off">
+        <item> - </item>
+        <item>APAGADO</item>
+        <item>ENCENDIDO</item>
+    </string-array>
+
 </resources>

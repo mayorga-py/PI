@@ -78,6 +78,7 @@ int animator mtrl_fab_transformation_sheet_collapse_spec 0x7f020020
 int animator mtrl_fab_transformation_sheet_expand_spec 0x7f020021
 int array opciones_bomba 0x7f030000
 int array opciones_ok_na 0x7f030001
+int array opciones_on_off 0x7f030002
 int attr SharedValue 0x7f040000
 int attr SharedValueId 0x7f040001
 int attr actionBarDivider 0x7f040002

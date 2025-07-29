@@ -94,7 +94,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -113,7 +113,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -132,7 +132,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -156,7 +156,7 @@
                     android:paddingHorizontal="8dp"
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
-                    android:entries="@array/opciones_bomba"
+                    android:entries="@array/opciones_on_off"
                     android:popupBackground="#5C313D8E"/>
 
                 <Button
@@ -193,7 +193,7 @@
                     android:paddingHorizontal="8dp"
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
-                    android:entries="@array/opciones_bomba"
+                    android:entries="@array/opciones_on_off"
                     android:popupBackground="#5C313D8E"/>
 
                 <Button
@@ -230,7 +230,7 @@
                     android:paddingHorizontal="8dp"
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
-                    android:entries="@array/opciones_bomba"
+                    android:entries="@array/opciones_on_off"
                     android:popupBackground="#5C313D8E"/>
 
                 <Button
@@ -263,7 +263,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -282,7 +282,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -340,7 +340,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -359,7 +359,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -382,7 +382,7 @@
                     android:paddingHorizontal="8dp"
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
-                    android:entries="@array/opciones_bomba"
+                    android:entries="@array/opciones_on_off"
                     android:popupBackground="#5C313D8E"/>
 
                 <Button
@@ -414,7 +414,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -433,7 +433,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -452,7 +452,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -471,7 +471,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -490,7 +490,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -514,7 +514,7 @@
                     android:paddingHorizontal="8dp"
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
-                    android:entries="@array/opciones_bomba"
+                    android:entries="@array/opciones_on_off"
                     android:popupBackground="#5C313D8E"/>
 
                 <Button
@@ -552,7 +552,7 @@
                     android:paddingHorizontal="8dp"
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
-                    android:entries="@array/opciones_bomba"
+                    android:entries="@array/opciones_on_off"
                     android:popupBackground="#5C313D8E"/>
 
                 <Button
@@ -584,7 +584,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -603,7 +603,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -622,7 +622,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -642,7 +642,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -667,7 +667,7 @@
                     android:paddingHorizontal="8dp"
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
-                    android:entries="@array/opciones_bomba"
+                    android:entries="@array/opciones_on_off"
                     android:popupBackground="#5C313D8E"/>
 
                 <Button
@@ -700,7 +700,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -725,7 +725,7 @@
                     android:paddingHorizontal="8dp"
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
-                    android:entries="@array/opciones_bomba"
+                    android:entries="@array/opciones_on_off"
                     android:popupBackground="#5C313D8E"/>
 
                 <Button
@@ -763,7 +763,7 @@
                     android:paddingHorizontal="8dp"
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
-                    android:entries="@array/opciones_bomba"
+                    android:entries="@array/opciones_on_off"
                     android:popupBackground="#5C313D8E"/>
 
                 <Button
@@ -801,7 +801,7 @@
                     android:paddingHorizontal="8dp"
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
-                    android:entries="@array/opciones_bomba"
+                    android:entries="@array/opciones_on_off"
                     android:popupBackground="#5C313D8E"/>
 
                 <Button
@@ -834,7 +834,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -858,7 +858,7 @@
                     android:paddingHorizontal="8dp"
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
-                    android:entries="@array/opciones_bomba"
+                    android:entries="@array/opciones_on_off"
                     android:popupBackground="#5C313D8E"/>
 
                 <Button
@@ -890,7 +890,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -909,7 +909,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView
@@ -928,7 +928,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
-                android:entries="@array/opciones_bomba"
+                android:entries="@array/opciones_on_off"
                 android:popupBackground="#5C313D8E"/>
 
             <TextView

@@ -29,7 +29,7 @@
         android:text="Entendido"
         android:textAllCaps="false"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#5A4FBF"
+        android:backgroundTint="#A3313D8E"
         android:textColor="#FFFFFF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

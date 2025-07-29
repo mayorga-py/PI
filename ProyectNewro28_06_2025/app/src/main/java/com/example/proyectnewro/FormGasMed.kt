@@ -34,6 +34,46 @@ import java.util.Locale
 
 class FormGasMed : AppCompatActivity() {
 
+    private fun mostrarAlertaPersonalizada(mensaje: String) {
+        val dialogView = layoutInflater.inflate(R.layout.alerta_error, null)
+        val alertDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val txtMensaje = dialogView.findViewById<TextView>(R.id.etalertasp)
+        val btnAceptar = dialogView.findViewById<Button>(R.id.btnAceptar)
+
+        txtMensaje.text = mensaje
+
+        btnAceptar.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        alertDialog.show()
+    }
+
+    private fun mostrarAlertaExito(mensaje: String) {
+        val dialogView = layoutInflater.inflate(R.layout.alerta_exito, null)
+        val alertDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val txtMensaje = dialogView.findViewById<TextView>(R.id.mensajeExito)
+        val btnAceptar = dialogView.findViewById<Button>(R.id.btnAceptarExito)
+
+        txtMensaje.text = mensaje
+
+        btnAceptar.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        alertDialog.show()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -118,15 +158,9 @@ class FormGasMed : AppCompatActivity() {
             ) {
                 val seleccion = parent?.getItemAtPosition(position).toString()
                 if (seleccion == "Ok") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormGasMed)
-                        .setTitle("MUY BIEN INGENIERO SIGUE ASI!!!")
-                        .setMessage("TE HAS PUESTO LA CAMISETA DE LA EMPRESA")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "TODO CORRECTO"
+                    )
                 }
             }
 
@@ -141,15 +175,9 @@ class FormGasMed : AppCompatActivity() {
             ) {
                 val seleccion = parent?.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormGasMed)
-                        .setTitle("REVISAR DE NUEVO ")
-                        .setMessage("PIIIIILAS MUÑECO")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR LA CAUSA Y REGISTRARLO EN HALLAZGOS"
+                    )
                 }
             }
 
@@ -189,17 +217,10 @@ class FormGasMed : AppCompatActivity() {
                 val value = preBanIzz.text.toString().toDoubleOrNull()
                 if (value != null) {
                     if (value < 100) {
-                        val alertDialog = AlertDialog.Builder(this@FormGasMed)
-                            .setTitle("Advertencia Presion bancada izquierda")
-                            .setMessage(
-                                "La Presion bancada izquierda está por fuera del rango. Realiza lo siguiente:\n\n" +
-                                        "REALIZAR CAMBIO EN BANCADA DE OXIGENO \n REVISAR FUGAS EN TANQUES DE OXIGENO."
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                        mostrarAlertaPersonalizada(
+                            "La Presion bancada izquierda está por fuera del rango. Realiza lo siguiente:\n\n" +
+                                    "REALIZAR CAMBIO EN BANCADA DE OXIGENO \n REVISAR FUGAS EN TANQUES DE OXIGENO."
+                        )
                     }
                 }
             }
@@ -212,17 +233,10 @@ class FormGasMed : AppCompatActivity() {
                 val value = preBanDerr.text.toString().toDoubleOrNull()
                 if (value != null) {
                     if (value < 100) {
-                        val alertDialog = AlertDialog.Builder(this@FormGasMed)
-                            .setTitle("Advertencia Presion bancada derecha")
-                            .setMessage(
-                                "La Presion bancada derecha está por fuera del rango. Realiza lo siguiente:\n\n" +
-                                        "REALIZAR CAMBIO EN BANCADA DE OXIGENO \n REVISAR FUGAS EN TANQUES DE OXIGENO."
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                        mostrarAlertaPersonalizada(
+                            "La Presion bancada derecha está por fuera del rango. Realiza lo siguiente:\n\n" +
+                                    "REALIZAR CAMBIO EN BANCADA DE OXIGENO \n REVISAR FUGAS EN TANQUES DE OXIGENO."
+                        )
                     }
                 }
             }
@@ -259,15 +273,9 @@ class FormGasMed : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormGasMed)
-                        .setTitle("Advertencia Funcionamiento extrator de gases")
-                        .setMessage("REVISAR SUMINISTRO ELÉCTRICO DE EXTRACTOR DE GASES\nREVISAR PASTILLA DE EXTRACTOR DE GASES EN CUARTO DE MAQUINAS")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR SUMINISTRO ELÉCTRICO DE EXTRACTOR DE GASES\n\nREVISAR PASTILLA DE EXTRACTOR DE GASES EN CUARTO DE MAQUINAS\""
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -310,19 +318,11 @@ class FormGasMed : AppCompatActivity() {
             if (!hasFocus){
                 val value = preTanqAiMedd.text.toString().toDoubleOrNull()
                 if(value != null){
-                    if(value <100){
-                        val alertDialog = AlertDialog.Builder(this@FormGasMed)
-                            .setTitle("Advertencia Presion tanque aire medicinal")
-                            .setMessage(
-                                "La Presion bancada izquierda está por fuera del rango. Realiza lo siguiente:\n\n" +
-                                        "REVISAR FUNCIONAMIENTO DE COMPRESORES DE AIRE MEDICINAL."
-
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                    if (value < 100) {
+                        mostrarAlertaPersonalizada(
+                            "La Presion bancada izquierda está por fuera del rango. Realiza lo siguiente:\n\n" +
+                                    "REVISAR FUNCIONAMIENTO DE COMPRESORES DE AIRE MEDICINAL."
+                        )
                     }
                 }
             }
@@ -333,15 +333,9 @@ class FormGasMed : AppCompatActivity() {
     override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
         val seleccion = parent.getItemAtPosition(position).toString()
         if (seleccion == "NO") {
-            // Mostrar advertencia si la opción seleccionada es "No funcionando"
-            val alertDialog = AlertDialog.Builder(this@FormGasMed)
-                .setTitle("Advertencia Funcionamiento compresora 1")
-                .setMessage("REVISAR SUMINISTRO ELÉCTRICO DE COMPRESOR Y TABLERO DE CONTROL")
-                .setPositiveButton("Aceptar") { dialog, _ ->
-                    dialog.dismiss()
-                }
-                .create()
-            alertDialog.show()
+            mostrarAlertaPersonalizada(
+                "REVISAR SUMINISTRO ELÉCTRICO DE COMPRESOR Y TABLERO DE CONTROL"
+            )
         }
     }
     override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -351,14 +345,9 @@ class FormGasMed : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    val alertDialog = AlertDialog.Builder(this@FormGasMed)
-                        .setTitle("Advertencia Funcionamiento compresora 2")
-                        .setMessage("REVISAR SUMINISTRO ELÉCTRICO DE COMPRESOR Y TABLERO DE CONTROL")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR SUMINISTRO ELÉCTRICO DE COMPRESOR Y TABLERO DE CONTROL"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -368,15 +357,9 @@ class FormGasMed : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormGasMed)
-                        .setTitle("Advertencia Funcionamiento Secadora 1")
-                        .setMessage("REVISAR SUMINISTRO ELÉCTRICO DE SECADORA\nVERIFICAR INTERRUPTOR DE ENCENDIDO")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR SUMINISTRO ELÉCTRICO DE SECADORA Y TABLERO DE CONTROL"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -391,15 +374,9 @@ class FormGasMed : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormGasMed)
-                        .setTitle("Advertencia Funcionamiento Secadora 2")
-                        .setMessage("REVISAR SUMINISTRO ELÉCTRICO DE SECADORA\nVERIFICAR INTERRUPTOR DE ENCENDIDO")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR SUMINISTRO ELÉCTRICO DE SECADORA Y TABLERO DE CONTROL"
+                    )
                 }
             }
 
@@ -443,17 +420,10 @@ class FormGasMed : AppCompatActivity() {
                 val value = preTanVac1.text.toString().toDoubleOrNull()
                 if (value != null) {
                     if (value > -85 || value < -50) {
-                        val alertDialog = AlertDialog.Builder(this@FormGasMed)
-                            .setTitle("Advertencia Presión tanque de vacio")
-                            .setMessage(
-                                "La Presion bancada izquierda está por fuera del rango. Realiza lo siguiente:\n\n" +
-                                        "REALIZAR REVISIÓN DE FUNCIONAMIENTO TE BOMBAS DE VACIO"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                        mostrarAlertaPersonalizada(
+                            "La Presion bancada izquierda está por fuera del rango. Realiza lo siguiente:\n\n" +
+                                    "REALIZAR REVISIÓN DE FUNCIONAMIENTO TE BOMBAS DE VACIO"
+                        )
                     }
                 }
             }
@@ -468,6 +438,12 @@ class FormGasMed : AppCompatActivity() {
                 id: Long
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
+                if (seleccion == "NO") {
+                    mostrarAlertaPersonalizada(
+                        "REVISAR SUMINISTRO ELÉCTRICO DE BOMBAS DE VACIO \nTABLERO DE CONTROL"
+                    )
+                }
+
                 if (seleccion == "NO") {
                     // Mostrar advertencia si la opción seleccionada es "No funcionando"
                     val alertDialog = AlertDialog.Builder(this@FormGasMed)
@@ -493,15 +469,9 @@ class FormGasMed : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormGasMed)
-                        .setTitle("Advertencia Funcionamiento Bomba de vacio 2")
-                        .setMessage("REVISAR SUMINISTRO ELÉCTRICO DE BOMBAS DE VACIO \nTABLERO DE CONTROL")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR SUMINISTRO ELÉCTRICO DE BOMBAS DE VACIO \nTABLERO DE CONTROL"
+                    )
                 }
             }
 
@@ -542,15 +512,9 @@ class FormGasMed : AppCompatActivity() {
             ) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormGasMed)
-                        .setTitle("Advertencia Encendido de bombas de vacio de evacuacion de gases anestesicos")
-                        .setMessage("pendiente con ing chava")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISAR SUMINISTRO ELÉCTRICO DE BOMBAS DE VACIO \nTABLERO DE CONTROL"
+                    )
                 }
             }
 
@@ -603,10 +567,10 @@ class FormGasMed : AppCompatActivity() {
 
                 workbook.close()
 
-                Toast.makeText(context, "Datos guardados en: ${file.absolutePath}", Toast.LENGTH_LONG).show()
+                mostrarAlertaExito("Datos guardados correctamente en:\n\n${file.absolutePath}")
             } catch (e: Exception) {
                 e.printStackTrace()
-                Toast.makeText(context, "Error al guardar los datos: ${e.message}", Toast.LENGTH_LONG).show()
+                mostrarAlertaPersonalizada("Error al guardar los datos:\n\n${e.message}")
             }
         }
 

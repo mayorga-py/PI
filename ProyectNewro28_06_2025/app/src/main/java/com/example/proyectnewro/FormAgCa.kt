@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
@@ -35,7 +36,46 @@ class FormAgCa : AppCompatActivity() {
     private lateinit var spinnerFunbomba2: Spinner
     private lateinit var spinnerFunRAC: Spinner
 
-    // private lateinit var spinnerBomba2: Spinner
+    private fun mostrarAlertaPersonalizada(mensaje: String) {
+        val dialogView = layoutInflater.inflate(R.layout.alerta_error, null)
+        val alertDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val txtMensaje = dialogView.findViewById<TextView>(R.id.etalertasp)
+        val btnAceptar = dialogView.findViewById<Button>(R.id.btnAceptar)
+
+        txtMensaje.text = mensaje
+
+        btnAceptar.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        alertDialog.show()
+    }
+
+    private fun mostrarAlertaExito(mensaje: String) {
+        val dialogView = layoutInflater.inflate(R.layout.alerta_exito, null)
+        val alertDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val txtMensaje = dialogView.findViewById<TextView>(R.id.mensajeExito)
+        val btnAceptar = dialogView.findViewById<Button>(R.id.btnAceptarExito)
+
+        txtMensaje.text = mensaje
+
+        btnAceptar.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        alertDialog.show()
+    }
+
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,7 +117,6 @@ class FormAgCa : AppCompatActivity() {
 
         //campo presion gas lp 1
         preGasLp1.isEnabled = false
-        spinnerFunCaldera1.isEnabled = false
         //iniciar qr lector y obtener escaneo
         val qrLauncher = registerForActivityResult(ScanContract()){ result ->
             if (result.contents != null){
@@ -107,19 +146,11 @@ class FormAgCa : AppCompatActivity() {
             if (!hasFocus) {
                 val value = preGasLp1.text.toString().toDoubleOrNull()
                 if (value != null){
-                    if (value <6.0 || value >8.5){
-                        // Mostrar advertencia si el valor está fuera del rango
-                        val alertDialog = AlertDialog.Builder(this@FormAgCa)
-                            .setTitle("Advertencia de Presion de gas L.P. 1")
-                            .setMessage(
-                                "La presion de gas L.P. está por fuera del rango. Realiza lo siguiente:\n\n" +
-                                        "REVISIÓN DE SUMINISTRO DE GAS LP Ó \nREVISIÓN DE REGULADOR DE SEGUNDA ETAPA."
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                    if (value < 6.0 || value > 8.5) {
+                        mostrarAlertaPersonalizada(
+                            "La presion de gas L.P. está por fuera del rango. Realiza lo siguiente:\n\n" +
+                                    "REVISIÓN DE SUMINISTRO DE GAS LP Ó \nREVISIÓN DE REGULADOR DE SEGUNDA ETAPA."
+                        )
                     }
                 }
             }
@@ -138,15 +169,9 @@ class FormAgCa : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAgCa)
-                        .setTitle("Advertencia funcion de caldera 1")
-                        .setMessage("REVISA QUE TODO ESTE FUNCIONANDO CORRECTAMENTE")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISA QUE TODO ESTE FUNCIONANDO CORRECTAMENTE"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -183,18 +208,11 @@ class FormAgCa : AppCompatActivity() {
             if (!hasFocus){
                 val value = preTanq1.text.toString().toDoubleOrNull()
                 if (value != null){
-                    if (value < 4 || value> 7){
-                        val alertDialog = AlertDialog.Builder(this@FormAgCa)
-                            .setTitle("Advertencia de Presion Tanque 1 A.C.")
-                            .setMessage(
-                                "La presion de tanque 1 A.C. está por fuera del rango. Realiza lo siguiente:\n\n" +
-                                        "REALIZAR REVISIÓN DE BOMBAS DE AGUA POTABLE\n."
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                    if (value < 4 || value > 7) {
+                        mostrarAlertaPersonalizada(
+                            "La presion de tanque 1 A.C. está por fuera del rango. Realiza lo siguiente:\n\n" +
+                                    "REALIZAR REVISIÓN DE BOMBAS DE AGUA POTABLE\n."
+                        )
                     }
                 }
             }
@@ -206,18 +224,11 @@ class FormAgCa : AppCompatActivity() {
             if(!hasFocus){
                 val value = tempTanq1.text.toString().toDoubleOrNull()
                 if (value!= null){
-                    if (value < 35){
-                        val alertDialog = AlertDialog.Builder(this@FormAgCa)
-                            .setTitle("Advertencia de temperatura")
-                            .setMessage(
-                                "La temperatura del tanque 1  está por fuera del rango. Realiza lo siguiente. \n\n"+
-                                "REVISAR FUNCIONAMIENTO DE CALDERAS\n"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                    if (value < 35) {
+                        mostrarAlertaPersonalizada(
+                            "La temperatura del tanque 1  está por fuera del rango. Realiza lo siguiente. \n\n"+
+                                    "REVISAR FUNCIONAMIENTO DE CALDERAS\n"
+                        )
                     }
                 }
             }
@@ -251,18 +262,11 @@ class FormAgCa : AppCompatActivity() {
             if(!hasFocus){
                 val value = preGasLp2.text.toString().toDoubleOrNull()
                 if (value!= null){
-                    if (value > 35){ // de 4 a 7
-                        val alertDialog = AlertDialog.Builder(this@FormAgCa)
-                            .setTitle("Advertencia de Presion de gas L.P. 2")
-                            .setMessage(
-                                "La presion de gas L.P. está por fuera del rango. Realiza lo siguiente:\n\n" +
-                                        "REVISIÓN DE SUMINISTRO DE GAS LP Ó \n REVISIÓN DE REGULADOR DE SEGUNDA ETAPA."
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                    if (value < 4 || value > 7) {
+                        mostrarAlertaPersonalizada(
+                            "La presion de gas L.P. está por fuera del rango. Realiza lo siguiente:\n\n" +
+                                    "REVISIÓN DE SUMINISTRO DE GAS LP Ó \n REVISIÓN DE REGULADOR DE SEGUNDA ETAPA."
+                        )
                     }
                 }
             }
@@ -274,15 +278,9 @@ class FormAgCa : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAgCa)
-                        .setTitle("Advertencia funcion de caldera ")
-                        .setMessage("REVISA QUE TODO ESTE FUNCIONANDO CORRECTAMENTE")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISA QUE TODO ESTE FUNCIONANDO CORRECTAMENTE"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -317,17 +315,10 @@ class FormAgCa : AppCompatActivity() {
                 val value = preTanq2.text.toString().toDoubleOrNull()
                 if (value != null) {
                     if (value < 4 || value > 7) {
-                        val alertDialog = AlertDialog.Builder(this@FormAgCa)
-                            .setTitle("Advertencia de Presion Tanque 2 A.C.")
-                            .setMessage(
-                                "La presion de tanque 2 A.C. está por fuera del rango. Realiza lo siguiente:\n\n" +
-                                        "REALIZAR REVISIÓN DE BOMBAS DE AGUA POTABLE\n."
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                        mostrarAlertaPersonalizada(
+                            "La presion de tanque 2 A.C. está por fuera del rango. Realiza lo siguiente:\n\n" +
+                                    "REALIZAR REVISIÓN DE BOMBAS DE AGUA POTABLE\n."
+                        )
                     }
                 }
             }
@@ -339,18 +330,11 @@ class FormAgCa : AppCompatActivity() {
             if(!hasFocus){
                 val value = tempTanq2.text.toString().toDoubleOrNull()
                 if (value!= null){
-                    if (value > 35){
-                        val alertDialog = AlertDialog.Builder(this@FormAgCa)
-                            .setTitle("Advertencia de temperatura")
-                            .setMessage(
-                                "La temperatura del tanque 2  está por fuera del rango. Realiza lo siguiente. \n\n"+
-                                        "REVISAR FUNCIONAMIENTO DE CALDERAS\n"
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                    if (value < 35) {
+                        mostrarAlertaPersonalizada(
+                            "La temperatura del tanque 2  está por fuera del rango. Realiza lo siguiente. \n\n"+
+                                    "REVISAR FUNCIONAMIENTO DE CALDERAS\n"
+                        )
                     }
                 }
             }
@@ -386,15 +370,9 @@ class FormAgCa : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAgCa)
-                        .setTitle("Advertencia funcion bomba de flujo 1")
-                        .setMessage("REVISA QUE TODO ESTE FUNCIONANDO CORRECTAMENTE")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISA QUE TODO ESTE FUNCIONANDO CORRECTAMENTE"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -403,15 +381,9 @@ class FormAgCa : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAgCa)
-                        .setTitle("Advertencia funcion bomba de flujo 2")
-                        .setMessage("REVISA QUE TODO ESTE FUNCIONANDO CORRECTAMENTE")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISA QUE TODO ESTE FUNCIONANDO CORRECTAMENTE"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -445,15 +417,9 @@ class FormAgCa : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
                 if (seleccion == "NO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormAgCa)
-                        .setTitle("Advertencia funcion bomba R.A.C.")
-                        .setMessage("REVISA QUE TODO ESTE FUNCIONANDO CORRECTAMENTE")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
+                    mostrarAlertaPersonalizada(
+                        "REVISA QUE TODO ESTE FUNCIONANDO CORRECTAMENTE"
+                    )
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {}
@@ -504,11 +470,10 @@ class FormAgCa : AppCompatActivity() {
                 }
 
                 workbook.close()
-
-                Toast.makeText(context, "Datos guardados en: ${file.absolutePath}", Toast.LENGTH_LONG).show()
+                mostrarAlertaExito("Datos guardados correctamente en:\n\n${file.absolutePath}")
             } catch (e: Exception) {
                 e.printStackTrace()
-                Toast.makeText(context, "Error al guardar los datos: ${e.message}", Toast.LENGTH_LONG).show()
+                mostrarAlertaPersonalizada("Error al guardar los datos:\n\n${e.message}")
             }
         }
 
