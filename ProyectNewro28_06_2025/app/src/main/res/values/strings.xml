@@ -19,4 +19,10 @@
         <item>ENCENDIDO</item>
     </string-array>
 
+    <string-array name="calarmas_salarmas">
+        <item> - </item>
+        <item>CON ALARMAS</item>
+        <item>SIN ALARMAS</item>
+    </string-array>
+
 </resources>

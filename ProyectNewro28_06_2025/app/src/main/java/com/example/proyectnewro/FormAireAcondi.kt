@@ -185,10 +185,10 @@ class FormAireAcondi : AppCompatActivity() {
 
 
         //presion bomba chiller   //chiller 1,2,3
-        et.isEnabled = false
-        spiChill1.isEnabled = false
-        spiChill2.isEnabled = false
-        spiChill3.isEnabled = false
+        et.isEnabled = true
+        spiChill1.isEnabled = true
+        spiChill2.isEnabled = true
+        spiChill3.isEnabled = true
         et.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
                 val value = et.text.toString().toDoubleOrNull()
@@ -278,7 +278,7 @@ class FormAireAcondi : AppCompatActivity() {
         }
 
         //spinners chiller con qr
-        spiChiller1.isEnabled = false
+        spiChiller1.isEnabled = true
         spiChiller1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -303,7 +303,6 @@ class FormAireAcondi : AppCompatActivity() {
                     spiChiller1.isEnabled = true // Habilitar el campo si el código es correcto
                     Toast.makeText(this, "Código del Área: $btnQRR2", Toast.LENGTH_SHORT).show()
                 } else {
-                    spiChiller1.isEnabled =false // Asegurarse de que el campo permanezca deshabilitado
                     Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
                 }
             } else {
@@ -343,8 +342,6 @@ class FormAireAcondi : AppCompatActivity() {
                     spiChiller2.isEnabled = true // Habilitar el campo si el código es correcto
                     Toast.makeText(this, "Código del Área: $btnQRR3", Toast.LENGTH_SHORT).show()
                 } else {
-                    spiChiller2.isEnabled =
-                        false // Asegurarse de que el campo permanezca deshabilitado
                     Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
                 }
             } else {
@@ -359,7 +356,7 @@ class FormAireAcondi : AppCompatActivity() {
             qrLauncher3.launch(options3) // Inicia el escaneo
         }
 
-        spiChiller3.isEnabled = false
+        spiChiller3.isEnabled = true
         spiChiller3.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -401,8 +398,8 @@ class FormAireAcondi : AppCompatActivity() {
         }
 
         //spinners chiller sin qr
-        spiChill4.isEnabled = false
-        spiChill5.isEnabled = false
+        spiChill4.isEnabled = true
+        spiChill5.isEnabled = true
         spiChill4.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -439,7 +436,7 @@ class FormAireAcondi : AppCompatActivity() {
         }
 
         //temp salida chillers
-        tempSalidaChill.isEnabled = false
+        tempSalidaChill.isEnabled = true
         tempSalidaChill.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
                 val value = et.text.toString().toDoubleOrNull()
@@ -462,7 +459,6 @@ class FormAireAcondi : AppCompatActivity() {
                     spiINY2.isEnabled = true
                     Toast.makeText(this, "Código del Área: $btnQRR5", Toast.LENGTH_SHORT).show()
                 } else {
-                    tempSalidaChill.isEnabled = false // Asegurarse de que el campo permanezca deshabilitado
                     Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
                 }
             } else {
@@ -478,9 +474,9 @@ class FormAireAcondi : AppCompatActivity() {
         }
 
         //iny
-        spiINY1.isEnabled = false
-        spiINY2.isEnabled = false
-        spiINY3.isEnabled = false
+        spiINY1.isEnabled = true
+        spiINY2.isEnabled = true
+        spiINY3.isEnabled = true
         spiINY1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -561,12 +557,12 @@ class FormAireAcondi : AppCompatActivity() {
         }
 
 
-        spiUMA1.isEnabled = false
-        spiUMA2.isEnabled = false
-        spiUMA3.isEnabled = false
-        spiUMA4.isEnabled = false
-        spiUMA5.isEnabled = false
-        spiUMA7.isEnabled = false
+        spiUMA1.isEnabled = true
+        spiUMA2.isEnabled = true
+        spiUMA3.isEnabled = true
+        spiUMA4.isEnabled = true
+        spiUMA5.isEnabled = true
+        spiUMA7.isEnabled = true
         //umas 1,2,3,4,5 y 7
         spiUMA1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
@@ -680,12 +676,7 @@ class FormAireAcondi : AppCompatActivity() {
                     spiUMA5.isEnabled = true
                     spiUMA7.isEnabled = true // Habilitar el campo si el código es correcto
                     Toast.makeText(this, "Código del Área: $btnQRR7", Toast.LENGTH_SHORT).show()
-                } else {
-                    spiUMA1.isEnabled = false
-                    spiUMA2.isEnabled = false
-                    spiUMA4.isEnabled = false
-                    spiUMA5.isEnabled = false
-                    spiUMA7.isEnabled = false // Asegurarse de que el campo permanezca deshabilitado
+                } else { // Asegurarse de que el campo permanezca deshabilitado
                     Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
                 }
             } else {
@@ -745,11 +736,11 @@ class FormAireAcondi : AppCompatActivity() {
         }
 
 
-        spiExt16.isEnabled = false
-        spiExt17.isEnabled = false
-        spiExt18.isEnabled = false
-        spiExt19.isEnabled = false
-        spiExt8.isEnabled = false
+        spiExt16.isEnabled = true
+        spiExt17.isEnabled = true
+        spiExt18.isEnabled = true
+        spiExt19.isEnabled = true
+        spiExt8.isEnabled = true
         //ext 16 17 18 19 08
         spiExt16.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
@@ -858,8 +849,8 @@ class FormAireAcondi : AppCompatActivity() {
             qrLauncher9.launch(options9) // Inicia el escaneo
         }
 
-        spiExt9.isEnabled = false
-        spiExt10.isEnabled = false
+        spiExt9.isEnabled = true
+        spiExt10.isEnabled = true
         // ext 9 10
         spiExt9.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
@@ -903,8 +894,6 @@ class FormAireAcondi : AppCompatActivity() {
                     spiExt10.isEnabled = true // Habilitar el campo si el código es correcto
                     Toast.makeText(this, "Código del Área: $btnQRR10", Toast.LENGTH_SHORT).show()
                 } else {
-                    spiExt9.isEnabled =false
-                    spiExt10.isEnabled = false // Asegurarse de que el campo permanezca deshabilitado
                     Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
                 }
             } else {
@@ -919,7 +908,7 @@ class FormAireAcondi : AppCompatActivity() {
             qrLauncher10.launch(options10) // Inicia el escaneo
         }
 
-        spiExt11.isEnabled = false
+        spiExt11.isEnabled = true
         // ext 11
         spiExt11.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
@@ -945,7 +934,6 @@ class FormAireAcondi : AppCompatActivity() {
                     spiExt11.isEnabled = true // Habilitar el campo si el código es correcto
                     Toast.makeText(this, "Código del Área: $btnQRR11", Toast.LENGTH_SHORT).show()
                 } else {
-                    spiExt11.isEnabled = false // Asegurarse de que el campo permanezca deshabilitado
                     Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
                 }
             } else {
@@ -960,7 +948,7 @@ class FormAireAcondi : AppCompatActivity() {
             qrLauncher11.launch(options11) // Inicia el escaneo
         }
 
-        spiExt12.isEnabled = false
+        spiExt12.isEnabled = true
         //ext 12
         spiExt12.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
@@ -986,7 +974,6 @@ class FormAireAcondi : AppCompatActivity() {
                     spiExt12.isEnabled = true // Habilitar el campo si el código es correcto
                     Toast.makeText(this, "Código del Área: $btnQRR12", Toast.LENGTH_SHORT).show()
                 } else {
-                    spiExt12.isEnabled = false // Asegurarse de que el campo permanezca deshabilitado
                     Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
                 }
             } else {
@@ -1002,8 +989,8 @@ class FormAireAcondi : AppCompatActivity() {
         }
 
         //ext 20 21
-        spiExt20.isEnabled = false
-        spiExt21.isEnabled = false
+        spiExt20.isEnabled = true
+        spiExt21.isEnabled = true
         spiExt20.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -1119,7 +1106,7 @@ class FormAireAcondi : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
 
-        etporgaslpcalderas.isEnabled = false
+        etporgaslpcalderas.isEnabled = true
         //et porcentajes
         etporgaslpcalderas.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
@@ -1141,7 +1128,6 @@ class FormAireAcondi : AppCompatActivity() {
                     etporgaslpcalderas.isEnabled = true // Habilitar el campo si el código es correcto
                     Toast.makeText(this, "Código del Área: $btnQRR14", Toast.LENGTH_SHORT).show()
                 } else {
-                    etporgaslpcalderas.isEnabled = false // Asegurarse de que el campo permanezca deshabilitado
                     Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
                 }
             } else {
@@ -1156,7 +1142,7 @@ class FormAireAcondi : AppCompatActivity() {
             qrLauncher14.launch(options14) // Inicia el escaneo
         }
 
-        etporgaslpcocina.isEnabled = false
+        etporgaslpcocina.isEnabled = true
         etporgaslpcocina.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
                 val value = et.text.toString().toDoubleOrNull()
@@ -1177,7 +1163,6 @@ class FormAireAcondi : AppCompatActivity() {
                     etporgaslpcocina.isEnabled = true // Habilitar el campo si el código es correcto
                     Toast.makeText(this, "Código del Área: $btnQRR15", Toast.LENGTH_SHORT).show()
                 } else {
-                    etporgaslpcocina.isEnabled = false // Asegurarse de que el campo permanezca deshabilitado
                     Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
                 }
             } else {

@@ -158,7 +158,7 @@ class FormGasMed : AppCompatActivity() {
             ) {
                 val seleccion = parent?.getItemAtPosition(position).toString()
                 if (seleccion == "Ok") {
-                    mostrarAlertaPersonalizada(
+                    mostrarAlertaExito(
                         "TODO CORRECTO"
                     )
                 }
@@ -185,7 +185,7 @@ class FormGasMed : AppCompatActivity() {
         }
 
         //campo presion bancada derecha
-        preBanIzz.isEnabled = false
+        preBanIzz.isEnabled = true
         //qr
         val qrLauncher = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {
@@ -195,8 +195,6 @@ class FormGasMed : AppCompatActivity() {
                     preBanDerr.isEnabled = true
                     Toast.makeText(this, "Código del Área: $btnQR1", Toast.LENGTH_SHORT).show()
                 } else {
-                    preBanIzz.isEnabled = false // Asegurarse de que el campo permanezca deshabilitado
-                    preBanDerr.isEnabled = false
                     Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
                 }
             } else {
@@ -227,7 +225,7 @@ class FormGasMed : AppCompatActivity() {
         }
 
         //campo presion bancada derecha
-        preBanDerr.isEnabled = false
+        preBanDerr.isEnabled = true
         preBanDerr.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
                 val value = preBanDerr.text.toString().toDoubleOrNull()
@@ -243,7 +241,7 @@ class FormGasMed : AppCompatActivity() {
         }
 
 //campo funcionamiento extractor de gases
-        sPextGaa.isEnabled = false
+        sPextGaa.isEnabled = true
         //qr
         val qrLauncher1 = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {
@@ -252,7 +250,6 @@ class FormGasMed : AppCompatActivity() {
                     sPextGaa.isEnabled = true
                     Toast.makeText(this, "Código del Área: $btnQR3", Toast.LENGTH_SHORT).show()
                 } else {
-                    sPextGaa.isEnabled = false
                     Toast.makeText(this, "Error: Código QR incorrecto", Toast.LENGTH_SHORT).show()
                 }
             } else {
@@ -282,11 +279,11 @@ class FormGasMed : AppCompatActivity() {
         }
 
         //campo presion tanque aire medicinal
-        preTanqAiMedd.isEnabled =false
-        sPfunComp1.isEnabled = false
-        sPfunComp2.isEnabled = false
-        sPRevSeca1.isEnabled = false
-        sPRevSeca2.isEnabled = false
+        preTanqAiMedd.isEnabled =true
+        sPfunComp1.isEnabled = true
+        sPfunComp2.isEnabled = true
+        sPRevSeca1.isEnabled = true
+        sPRevSeca2.isEnabled = true
         //qr
         val qrLauncher2 = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {
@@ -385,9 +382,9 @@ class FormGasMed : AppCompatActivity() {
 
 
         //campo presion de tanque de vacio
-        preTanVac1.isEnabled = false
-        sPFunBomVac1.isEnabled = false
-        sPFunBomVac2.isEnabled = false
+        preTanVac1.isEnabled = true
+        sPFunBomVac1.isEnabled = true
+        sPFunBomVac2.isEnabled = true
         //qr
         val qrLauncher3 = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {
@@ -421,7 +418,7 @@ class FormGasMed : AppCompatActivity() {
                 if (value != null) {
                     if (value > -85 || value < -50) {
                         mostrarAlertaPersonalizada(
-                            "La Presion bancada izquierda está por fuera del rango. Realiza lo siguiente:\n\n" +
+                            "La Presioón está por fuera del rango. Realiza lo siguiente:\n\n" +
                                     "REALIZAR REVISIÓN DE FUNCIONAMIENTO TE BOMBAS DE VACIO"
                         )
                     }
@@ -442,18 +439,6 @@ class FormGasMed : AppCompatActivity() {
                     mostrarAlertaPersonalizada(
                         "REVISAR SUMINISTRO ELÉCTRICO DE BOMBAS DE VACIO \nTABLERO DE CONTROL"
                     )
-                }
-
-                if (seleccion == "NO") {
-                    // Mostrar advertencia si la opción seleccionada es "No funcionando"
-                    val alertDialog = AlertDialog.Builder(this@FormGasMed)
-                        .setTitle("Advertencia Funcionamiento Bomba de vacio 1")
-                        .setMessage("REVISAR SUMINISTRO ELÉCTRICO DE BOMBAS DE VACIO \nTABLERO DE CONTROL")
-                        .setPositiveButton("Aceptar") { dialog, _ ->
-                            dialog.dismiss()
-                        }
-                        .create()
-                    alertDialog.show()
                 }
             }
 
@@ -478,7 +463,7 @@ class FormGasMed : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
 
-        sPEncBombVacDeEvacGasAne.isEnabled = false
+        sPEncBombVacDeEvacGasAne.isEnabled = true
         //qr
         val qrLauncher4 = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {

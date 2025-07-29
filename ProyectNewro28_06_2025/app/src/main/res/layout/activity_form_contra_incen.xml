@@ -60,8 +60,8 @@
                     android:paddingHorizontal="8dp"
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
-                    android:entries="@array/opciones_bomba"
-                    android:popupBackground="#5C313D8E"/>
+                    android:entries="@array/calarmas_salarmas"
+                    android:popupBackground="#7C94FF"/>
 
                 <Button
                     android:id="@+id/btRevPanel"
@@ -93,7 +93,7 @@
                 android:backgroundTint="#FFFFFFFF"
                 android:ems="10"
                 android:background="@drawable/edittext_background"
-                android:hint="Escribe aqui el numero de alarmas"
+                android:hint="Escribe aqui el numero de alarmas ACTIVAS"
                 android:inputType="numberDecimal"
                 android:textColor="#000000"
                 android:textColorHint="#000000"/>
@@ -119,9 +119,9 @@
                     android:layout_weight="25"
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
-                    android:entries="@array/opciones_bomba"
+                    android:entries="@array/calarmas_salarmas"
                     android:paddingHorizontal="8dp"
-                    android:popupBackground="#5C313D8E" />
+                    android:popupBackground="#7C94FF" />
             </LinearLayout>
 
             <EditText

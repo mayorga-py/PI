@@ -61,7 +61,7 @@
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#5C313D8E"/>
+                    android:popupBackground="#7C94FF"/>
 
                 <Button
                     android:id="@+id/btRevPanel"
@@ -121,7 +121,7 @@
                     android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
                     android:paddingHorizontal="8dp"
-                    android:popupBackground="#5C313D8E" />
+                    android:popupBackground="#7C94FF" />
             </LinearLayout>
 
             <EditText

@@ -116,7 +116,7 @@ class FormAgCa : AppCompatActivity() {
         var qrCodeText88: String?
 
         //campo presion gas lp 1
-        preGasLp1.isEnabled = false
+        preGasLp1.isEnabled = true
         //iniciar qr lector y obtener escaneo
         val qrLauncher = registerForActivityResult(ScanContract()){ result ->
             if (result.contents != null){
@@ -164,7 +164,7 @@ class FormAgCa : AppCompatActivity() {
 
 
 //campo funcion caldera 1
-        spinnerFunCaldera1.isEnabled= false
+        spinnerFunCaldera1.isEnabled= true
         spinnerFunCaldera1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
@@ -179,7 +179,7 @@ class FormAgCa : AppCompatActivity() {
 
 
         //campo presion tanque 1 agua caliente
-        preTanq1.isEnabled = false
+        preTanq1.isEnabled = true
         //iniciar lector y obtener escaneo
         val qrLauncher1 = registerForActivityResult(ScanContract()){result ->
             if (result.contents != null){
@@ -219,7 +219,7 @@ class FormAgCa : AppCompatActivity() {
         }
 
         // campo temperatura tanque 1
-        tempTanq1.isEnabled = false
+        tempTanq1.isEnabled = true
         tempTanq1.setOnFocusChangeListener { _, hasFocus ->
             if(!hasFocus){
                 val value = tempTanq1.text.toString().toDoubleOrNull()
@@ -235,8 +235,8 @@ class FormAgCa : AppCompatActivity() {
         }
 
         //campo presion gas lp 2
-        preGasLp2.isEnabled = false
-        spinnerFunCaldera2.isEnabled = false
+        preGasLp2.isEnabled = true
+        spinnerFunCaldera2.isEnabled = true
         val qrLauncher3 = registerForActivityResult(ScanContract()){result ->
             if (result.contents != null ){
                 qrCodeText44 = result.contents
@@ -273,7 +273,7 @@ class FormAgCa : AppCompatActivity() {
         }
 
 //campo funcion caldera 2
-        spinnerFunCaldera2.isEnabled= false
+        spinnerFunCaldera2.isEnabled= true
         spinnerFunCaldera2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
@@ -287,7 +287,7 @@ class FormAgCa : AppCompatActivity() {
         }
 
         //campo presion tanque 2 agua caliente
-        preTanq2.isEnabled = false
+        preTanq2.isEnabled = true
         val qrLauncher4 = registerForActivityResult(ScanContract()){result ->
             if (result.contents != null ){
                 qrCodeText55 = result.contents
@@ -325,7 +325,7 @@ class FormAgCa : AppCompatActivity() {
         }
 
         //campo tamperatura tanque 2
-        tempTanq2.isEnabled = false
+        tempTanq2.isEnabled = true
         tempTanq2.setOnFocusChangeListener { _, hasFocus ->
             if(!hasFocus){
                 val value = tempTanq2.text.toString().toDoubleOrNull()
@@ -341,8 +341,8 @@ class FormAgCa : AppCompatActivity() {
         }
 
         //funcionamiento bomba flujo 1 y 2
-        spinnerFunbomba1.isEnabled=false
-        spinnerFunbomba2.isEnabled=false
+        spinnerFunbomba1.isEnabled=true
+        spinnerFunbomba2.isEnabled=true
 
         val qrLauncher6 = registerForActivityResult(ScanContract()){result ->
             if (result.contents != null ){
@@ -390,7 +390,7 @@ class FormAgCa : AppCompatActivity() {
         }
 
         //fumcionamiento bomba rac
-        spinnerFunRAC.isEnabled = false
+        spinnerFunRAC.isEnabled = true
         val qrLauncher7 = registerForActivityResult(ScanContract()){result ->
             if (result.contents != null ){
                 qrCodeText88 = result.contents

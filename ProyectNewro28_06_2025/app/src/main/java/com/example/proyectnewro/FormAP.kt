@@ -301,7 +301,7 @@ class FormAP : AppCompatActivity() {
         }
 
 // campo nivel carcamo agua cruda
-        porCarAC.isEnabled = false
+        porCarAC.isEnabled = true
         //
         val qrLauncher3 = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {
@@ -339,7 +339,7 @@ class FormAP : AppCompatActivity() {
             }
         }
 // CRL de agua cruda (ppm)
-        cRLAgua.isEnabled = false
+        cRLAgua.isEnabled = true
         // utiliza el QR de carcamo de agua
         cRLAgua.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
@@ -356,7 +356,7 @@ class FormAP : AppCompatActivity() {
             }
         }
 // nivel agua de osmosis
-        porAOs.isEnabled = false
+        porAOs.isEnabled = true
         //
         val qrLauncher4 = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {
@@ -394,7 +394,7 @@ class FormAP : AppCompatActivity() {
             }
         }
 // presion de linea de osmosis
-        preAOs.isEnabled = false
+        preAOs.isEnabled = true
         //
         val qrLauncher5 = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {
@@ -435,7 +435,7 @@ class FormAP : AppCompatActivity() {
 
 //funcionamiento bomba 1 linea osmosis
         // Configurar validaciones para Spinner de Bomba 1
-        spinnerBomba1Osmosis.isEnabled = false
+        spinnerBomba1Osmosis.isEnabled = true
         spinnerBomba1Osmosis.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -456,7 +456,7 @@ class FormAP : AppCompatActivity() {
 
 //funcionamiento bomba 2 linea osmosis
         // Configurar validaciones para Spinner de Bomba 2
-        spinnerBomba2Osmosis.isEnabled = false
+        spinnerBomba2Osmosis.isEnabled = true
         spinnerBomba2Osmosis.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -477,7 +477,7 @@ class FormAP : AppCompatActivity() {
 
 
 // nivel cisterna agua filtrada
-        porSisAF.isEnabled = false
+        porSisAF.isEnabled = true
         //
         val qrLauncher6 = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {
@@ -514,7 +514,7 @@ class FormAP : AppCompatActivity() {
             }
         }
 //presion linea agua filtrada
-        preLinAF.isEnabled = false
+        preLinAF.isEnabled = true
         //
         val qrLauncher7 = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {
@@ -555,7 +555,7 @@ class FormAP : AppCompatActivity() {
         }
 
 //funconamiento bomba 1 agua filtrada
-        spinnerBomba1AF.isEnabled = false
+        spinnerBomba1AF.isEnabled = true
         spinnerBomba1AF.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -575,7 +575,7 @@ class FormAP : AppCompatActivity() {
         }
 //funconamiento bomba 2 agua filtrada
         // Configurar validaciones para Spinner de Bomba 2 de Agua Filtrada
-        spinnerBomba2AF.isEnabled = false
+        spinnerBomba2AF.isEnabled = true
         spinnerBomba2AF.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -595,7 +595,7 @@ class FormAP : AppCompatActivity() {
         }
 
 //pH agua filtrada
-        pH.isEnabled = false
+        pH.isEnabled = true
         //
         val qrLauncher8 = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {
@@ -631,7 +631,7 @@ class FormAP : AppCompatActivity() {
             }
         }
 // presion agua potable
-        preAP.isEnabled = false
+        preAP.isEnabled = true
         //
         val qrLauncher9 = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {
@@ -673,7 +673,7 @@ class FormAP : AppCompatActivity() {
 
 //funcionamiento bomba 1 agua potable
         // Configurar validaciones para Spinner de Bomba 1 de Agua Potable
-        spinnerBomba1AP.isEnabled = false
+        spinnerBomba1AP.isEnabled = true
         spinnerBomba1AP.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,
@@ -693,7 +693,7 @@ class FormAP : AppCompatActivity() {
         }
 //funcionamiento bomba 2 agua potable
         // Configurar validaciones para Spinner de Bomba 2 de Agua Potable
-        spinnerBomba2AP.isEnabled = false
+        spinnerBomba2AP.isEnabled = true
         spinnerBomba2AP.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>,

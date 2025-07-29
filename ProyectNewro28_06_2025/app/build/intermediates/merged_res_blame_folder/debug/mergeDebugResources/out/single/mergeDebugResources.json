@@ -8,24 +8,24 @@
         "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\drawable\\bg_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\layout_activity_form_contra_incen.xml.flat",
-        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_contra_incen.xml"
-    },
-    {
         "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\layout_activity_form_contra_incen.xml.flat",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_contra_incen.xml"
     },
     {
         "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\layout_activity_form_aire_acondi.xml.flat",
-        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_aire_acondi.xml"
-    },
-    {
         "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\drawable_agua_icon.png.flat",
         "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\drawable\\agua_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\layout_activity_form_aire_acondi.xml.flat",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_aire_acondi.xml"
     },
     {
         "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\drawable_con_observaciones_icon.png.flat",
@@ -42,6 +42,10 @@
     {
         "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.proyectnewro.app-debug-32:/layout_activity_form_ag_ca.xml.flat",
+        "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_ag_ca.xml"
     },
     {
         "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\drawable_bg_boton_redondeado.xml.flat",
@@ -92,16 +96,20 @@
         "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_aire_acondi.xml"
     },
     {
-        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\drawable_circle_background.xml.flat",
-        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\drawable\\circle_background.xml"
-    },
-    {
         "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\layout_activity_form_eletrico.xml.flat",
         "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_eletrico.xml"
     },
     {
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\drawable_circle_background.xml.flat",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\drawable\\circle_background.xml"
+    },
+    {
         "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\layout_activity_form_ag_ca.xml.flat",
         "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_ag_ca.xml"
+    },
+    {
+        "merged": "com.example.proyectnewro.app-debug-32:/layout_activity_form_ap.xml.flat",
+        "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_ap.xml"
     },
     {
         "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\drawable_incendios_icon.png.flat",
@@ -114,6 +122,10 @@
     {
         "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.proyectnewro.app-debug-32:/layout_activity_form_contra_incen.xml.flat",
+        "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_contra_incen.xml"
     },
     {
         "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\mipmap-hdpi_ic_launcher.webp.flat",
@@ -168,8 +180,16 @@
         "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
+        "merged": "com.example.proyectnewro.app-debug-32:/layout_activity_form_eletrico.xml.flat",
+        "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_eletrico.xml"
+    },
+    {
         "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\layout_alerta_error.xml.flat",
         "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\alerta_error.xml"
+    },
+    {
+        "merged": "com.example.proyectnewro.app-debug-32:/layout_activity_form_gas_med.xml.flat",
+        "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_gas_med.xml"
     },
     {
         "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-debug-32:\\mipmap-mdpi_ic_launcher.webp.flat",

@@ -167,8 +167,8 @@ class FormEletrico : AppCompatActivity() {
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, opciones)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 //campo planta de emergencia ostia tio
-        spPlantaEmergencia.isEnabled = false
-        FallasEncon.isEnabled = false
+        spPlantaEmergencia.isEnabled = true
+        FallasEncon.isEnabled = true
         //validaciones spinner planta de emergencia
         spPlantaEmergencia.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
@@ -207,7 +207,7 @@ class FormEletrico : AppCompatActivity() {
         }
 
 //campo tab gn2
-        spiTab_gn2.isEnabled = false
+        spiTab_gn2.isEnabled = true
         //validaciones spinner planta de emergencia
         spiTab_gn2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
@@ -268,8 +268,8 @@ class FormEletrico : AppCompatActivity() {
         }
 
 //campo tab gn1 y Tab gsv
-        spiTab_gn1.isEnabled = false
-        spiTab_gsv.isEnabled = false
+        spiTab_gn1.isEnabled = true
+        spiTab_gsv.isEnabled = true
         spiTab_gn1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
@@ -294,9 +294,9 @@ class FormEletrico : AppCompatActivity() {
         }
 
 //campo Tab gcr Tab gse y Tab psn
-        spiTab_gcr.isEnabled = false
-        spiTab_gse.isEnabled = false
-        spiTab_psn.isEnabled = false
+        spiTab_gcr.isEnabled = true
+        spiTab_gse.isEnabled = true
+        spiTab_psn.isEnabled = true
         spiTab_gcr.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
@@ -332,9 +332,9 @@ class FormEletrico : AppCompatActivity() {
         }
 
 //campo tab ps sv , tab pb r, tam pb sv
-        spiTab_ps_sv.isEnabled = false
-        spiTab_pb_r.isEnabled = false
-        spiTab_pb_sv.isEnabled =  false
+        spiTab_ps_sv.isEnabled = true
+        spiTab_pb_r.isEnabled = true
+        spiTab_pb_sv.isEnabled =  true
         spiTab_ps_sv.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
@@ -370,9 +370,9 @@ class FormEletrico : AppCompatActivity() {
         }
 
 //campo Tab_pb_cr , Tab_pbn , Tab_cc_p1_r
-        spiTab_pb_cr.isEnabled = false
-        spiTab_pbn.isEnabled = false
-        spiTab_cc_p1_r.isEnabled = false
+        spiTab_pb_cr.isEnabled = true
+        spiTab_pbn.isEnabled = true
+        spiTab_cc_p1_r.isEnabled = true
         spiTab_pb_cr.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
@@ -408,10 +408,10 @@ class FormEletrico : AppCompatActivity() {
         }
 
 //campo Tab p1 sv,  Tab p1n, Tab p2 r y tab p2 sv
-        spiTab_p1_sv.isEnabled = false
-        spiTab_p1n.isEnabled = false
-        spiTab_p2_r.isEnabled = false
-        spiTab_p2_sv.isEnabled = false
+        spiTab_p1_sv.isEnabled = true
+        spiTab_p1n.isEnabled = true
+        spiTab_p2_r.isEnabled = true
+        spiTab_p2_sv.isEnabled = true
         spiTab_p1_sv.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
@@ -458,10 +458,10 @@ class FormEletrico : AppCompatActivity() {
         }
 
 //campo tab p2 cr, tab p2n, tab p3 r, tab p3 sv
-        spiTab_p2_cr.isEnabled = false
-        spiTab_p2n.isEnabled = false
-        spiTab_p3_r.isEnabled = false
-        spiTab_p3_sv.isEnabled = false
+        spiTab_p2_cr.isEnabled = true
+        spiTab_p2n.isEnabled = true
+        spiTab_p3_r.isEnabled = true
+        spiTab_p3_sv.isEnabled = true
         spiTab_p2_cr.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
@@ -509,11 +509,11 @@ class FormEletrico : AppCompatActivity() {
 
 
 // campo tab p3 cr, tab p3n1, tab p3n2, tab p4 r, tab p4 sv
-        spiTab_p3_cr.isEnabled = false
-        spiTab_p3_n1.isEnabled = false
-        spiTab_p3_n2.isEnabled = false
-        spiTab_p4_r.isEnabled = false
-        spiTab_p4_sv.isEnabled = false
+        spiTab_p3_cr.isEnabled = true
+        spiTab_p3_n1.isEnabled = true
+        spiTab_p3_n2.isEnabled = true
+        spiTab_p4_r.isEnabled = true
+        spiTab_p4_sv.isEnabled = true
         spiTab_p3_cr.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
@@ -572,12 +572,12 @@ class FormEletrico : AppCompatActivity() {
 
 //campo tab p4 cr, cc p4n, tab pan3, tab pan 2, tab pan1
 
-        spiTab_p4_cr.isEnabled = false
-        spiTab_cc_p4n.isEnabled = false
-        spiTab_p4n.isEnabled = false
-        spiTab_pan3.isEnabled = false
-        spiTab_pan2.isEnabled = false
-        spiTab_pan1.isEnabled = false
+        spiTab_p4_cr.isEnabled = true
+        spiTab_cc_p4n.isEnabled = true
+        spiTab_p4n.isEnabled = true
+        spiTab_pan3.isEnabled = true
+        spiTab_pan2.isEnabled = true
+        spiTab_pan1.isEnabled = true
         spiTab_p4_cr.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>,view: View?,position: Int,id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
@@ -646,7 +646,7 @@ class FormEletrico : AppCompatActivity() {
         }
 
 // campo spTab_pa_se
-        spiTab_pa_se.isEnabled = false
+        spiTab_pa_se.isEnabled = true
         val qrlauncher11 = registerForActivityResult(ScanContract()){result ->
             if(result.contents != null){
                 qrCodeText11 = result.contents

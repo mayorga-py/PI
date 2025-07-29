@@ -1,4 +1,4 @@
-#Tue Jul 29 09:32:33 CST 2025
+#Tue Jul 29 12:03:25 CST 2025
 base.0=C\:\\Users\\lilys\\StudioProjects\\PI\\ProyectNewro28_06_2025\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\lilys\\StudioProjects\\PI\\ProyectNewro28_06_2025\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\lilys\\StudioProjects\\PI\\ProyectNewro28_06_2025\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex

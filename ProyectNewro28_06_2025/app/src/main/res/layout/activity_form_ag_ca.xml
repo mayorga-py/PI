@@ -110,7 +110,7 @@
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#5C313D8E"/>
+                    android:popupBackground="#7C94FF"/>
             </LinearLayout>
 
 
@@ -248,7 +248,7 @@
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#5C313D8E"/>
+                    android:popupBackground="#7C94FF"/>
             </LinearLayout>
 
             <TextView
@@ -334,7 +334,7 @@
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#5C313D8E"/>
+                    android:popupBackground="#7C94FF"/>
 
                 <Button
                     android:id="@+id/btnQRfunBomFlu1_2"
@@ -365,7 +365,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/nomActFunBombRAC"
@@ -391,7 +391,7 @@
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#5C313D8E"/>
+                    android:popupBackground="#7C94FF"/>
 
                 <Button
                     android:id="@+id/btnQRfunBomRAC"

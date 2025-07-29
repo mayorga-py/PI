@@ -87,8 +87,8 @@ class FormContraIncen : AppCompatActivity() {
         val enviarExcelCI = findViewById<Button>(R.id.btsendCI)
 
         var qrCodeTextCI1 : String ?
-        etCI.isEnabled = false
-        spirevpanCI.isEnabled = false
+        etCI.isEnabled = true
+        spirevpanCI.isEnabled = true
         spirevpanCI.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val seleccion = parent.getItemAtPosition(position).toString()
@@ -116,7 +116,7 @@ class FormContraIncen : AppCompatActivity() {
                 Toast.makeText(this, "No se escaneó ningún código QR", Toast.LENGTH_SHORT).show()
             }
         }
-        spirevtabCI.isEnabled = false
+        spirevtabCI.isEnabled = true
         btnrevpanCI.setOnClickListener {
             val options1 = ScanOptions()
             options1.setPrompt("Escanea el codigo QR")

@@ -63,7 +63,7 @@
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#5C313D8E"/>
+                    android:popupBackground="#7C94FF"/>
 
                 <Button
                     android:id="@+id/btPlanta_emerg"
@@ -130,7 +130,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <Button
                 android:id="@+id/btspTab_gn2"
@@ -181,7 +181,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -198,7 +198,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E" />
+                android:popupBackground="#7C94FF" />
 
             <TextView
                 android:id="@+id/textView57"
@@ -216,7 +216,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView58"
@@ -234,7 +234,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView59"
@@ -253,7 +253,7 @@
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#5C313D8E"/>
+                    android:popupBackground="#7C94FF"/>
 
 
 
@@ -273,7 +273,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView61"
@@ -291,7 +291,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView62"
@@ -310,7 +310,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E" />
+                android:popupBackground="#7C94FF" />
 
             <TextView
                 android:id="@+id/textView63"
@@ -328,7 +328,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView64"
@@ -346,7 +346,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView65"
@@ -366,7 +366,7 @@
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#5C313D8E"/>
+                    android:popupBackground="#7C94FF"/>
 
 
 
@@ -386,7 +386,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView67"
@@ -404,7 +404,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -421,7 +421,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView69"
@@ -439,7 +439,7 @@
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#5C313D8E"/>
+                    android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView70"
@@ -457,7 +457,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView71"
@@ -475,7 +475,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView72"
@@ -493,7 +493,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView73"
@@ -511,7 +511,7 @@
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#5C313D8E"/>
+                    android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView74"
@@ -529,7 +529,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView75"
@@ -547,7 +547,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView76"
@@ -565,7 +565,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView77"
@@ -583,7 +583,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView78"
@@ -603,7 +603,7 @@
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#5C313D8E"/>
+                    android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView79"
@@ -621,7 +621,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView80"
@@ -639,7 +639,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView81"
@@ -657,7 +657,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView82"
@@ -675,7 +675,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView83"
@@ -693,7 +693,7 @@
                 android:background="#5C313D8E"
                 android:backgroundTint="#5C313D8E"
                 android:entries="@array/opciones_bomba"
-                android:popupBackground="#5C313D8E"/>
+                android:popupBackground="#7C94FF"/>
 
             <TextView
                 android:id="@+id/textView56"
@@ -716,7 +716,7 @@
                     android:background="#5C313D8E"
                     android:backgroundTint="#5C313D8E"
                     android:entries="@array/opciones_bomba"
-                    android:popupBackground="#5C313D8E"/>
+                    android:popupBackground="#7C94FF"/>
 
                 <Button
                     android:id="@+id/btTan_pa_se"
