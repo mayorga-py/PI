@@ -2970,6 +2970,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable background_blur
 drawable bg_boton_redondeado
+drawable bg_dialog
 drawable bgnewro1
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3234,6 +3235,8 @@ id btSend
 id btTan_pa_se
 id btTempSalChiller
 id btUMA7
+id btnAceptar
+id btnAceptarExito
 id btnQRfunBomFlu1_2
 id btnQRfunBomRAC
 id btnQRpreGas1
@@ -3354,6 +3357,7 @@ id etPorGaslpcalderas
 id etPorGaslpcocina
 id etPreBombChill
 id etTempSalChiller
+id etalertasp
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3452,6 +3456,7 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id mensajeExito
 id message
 id middle
 id mini
@@ -4072,6 +4077,8 @@ layout activity_form_gas_med
 layout activity_main
 layout activity_nueva_actividad
 layout activity_recodiario
+layout alerta_error
+layout alerta_exito
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

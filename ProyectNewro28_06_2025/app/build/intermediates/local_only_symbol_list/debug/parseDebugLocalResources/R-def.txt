@@ -11,6 +11,7 @@ drawable aire_icon
 drawable avatar_usuario
 drawable background_blur
 drawable bg_boton_redondeado
+drawable bg_dialog
 drawable bgnewro1
 drawable circle_background
 drawable con_observaciones_icon
@@ -71,6 +72,8 @@ id btSend
 id btTan_pa_se
 id btTempSalChiller
 id btUMA7
+id btnAceptar
+id btnAceptarExito
 id btnQRfunBomFlu1_2
 id btnQRfunBomRAC
 id btnQRpreGas1
@@ -111,6 +114,7 @@ id etPorGaslpcalderas
 id etPorGaslpcocina
 id etPreBombChill
 id etTempSalChiller
+id etalertasp
 id iconoAA
 id iconoAgCa
 id iconoAgua
@@ -123,6 +127,7 @@ id layoutRevisionFugas
 id linearLayout6
 id loginButton
 id main
+id mensajeExito
 id nomActFunBombFLu1
 id nomActFunBombFLu2
 id nomActFunBombRAC
@@ -386,6 +391,8 @@ layout activity_form_gas_med
 layout activity_main
 layout activity_nueva_actividad
 layout activity_recodiario
+layout alerta_error
+layout alerta_exito
 layout login
 layout spinner_dropdown_item
 layout spinner_item

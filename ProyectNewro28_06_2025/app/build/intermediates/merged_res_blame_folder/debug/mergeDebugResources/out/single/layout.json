@@ -1,82 +1,62 @@
 [
     {
-        "merged": "com.example.proyectnewro.app-mergeDebugResources-31:/layout/activity_form_ap.xml",
-        "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_ap.xml"
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_form_contra_incen.xml",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_contra_incen.xml"
     },
     {
-        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_form_contra_incen.xml",
-        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_contra_incen.xml"
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\vista_admin.xml",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\vista_admin.xml"
     },
     {
-        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\login.xml",
-        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\login.xml"
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_form_aire_acondi.xml",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_aire_acondi.xml"
     },
     {
-        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_form_ap.xml",
-        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_ap.xml"
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\login.xml",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\login.xml"
     },
     {
-        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_recodiario.xml",
-        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_recodiario.xml"
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\alerta_error.xml",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\alerta_error.xml"
     },
     {
-        "merged": "com.example.proyectnewro.app-mergeDebugResources-31:/layout/activity_form_contra_incen.xml",
-        "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_contra_incen.xml"
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_form_ag_ca.xml",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_ag_ca.xml"
     },
     {
-        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\spinner_item.xml",
-        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\spinner_item.xml"
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\spinner_dropdown_item.xml",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\spinner_dropdown_item.xml"
     },
     {
-        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\vista_admin.xml",
-        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\vista_admin.xml"
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.proyectnewro.app-mergeDebugResources-31:/layout/activity_form_eletrico.xml",
-        "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_eletrico.xml"
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_form_ap.xml",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_ap.xml"
     },
     {
-        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\spinner_item.xml",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\spinner_item.xml"
     },
     {
-        "merged": "com.example.proyectnewro.app-mergeDebugResources-31:/layout/activity_form_ag_ca.xml",
-        "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_ag_ca.xml"
+        "merged": "com.example.proyectnewro.app-mergeDebugResources-31:/layout/alerta_exito.xml",
+        "source": "com.example.proyectnewro.app-main-34:/layout/alerta_exito.xml"
     },
     {
-        "merged": "com.example.proyectnewro.app-mergeDebugResources-31:/layout/activity_recodiario.xml",
-        "source": "com.example.proyectnewro.app-main-34:/layout/activity_recodiario.xml"
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_nueva_actividad.xml",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_nueva_actividad.xml"
     },
     {
-        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_form_gas_med.xml",
-        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_gas_med.xml"
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_recodiario.xml",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_recodiario.xml"
     },
     {
-        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_form_aire_acondi.xml",
-        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_aire_acondi.xml"
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_form_eletrico.xml",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_eletrico.xml"
     },
     {
-        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_form_ag_ca.xml",
-        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_ag_ca.xml"
-    },
-    {
-        "merged": "com.example.proyectnewro.app-mergeDebugResources-31:/layout/activity_form_aire_acondi.xml",
-        "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_aire_acondi.xml"
-    },
-    {
-        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\spinner_dropdown_item.xml",
-        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\spinner_dropdown_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_nueva_actividad.xml",
-        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_nueva_actividad.xml"
-    },
-    {
-        "merged": "com.example.proyectnewro.app-mergeDebugResources-31:/layout/activity_form_gas_med.xml",
-        "source": "com.example.proyectnewro.app-main-34:/layout/activity_form_gas_med.xml"
-    },
-    {
-        "merged": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_form_eletrico.xml",
-        "source": "C:\\Users\\Mauricio\\Documents\\pi\\PI\\ProyectNewro28_06_2025\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_eletrico.xml"
+        "merged": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-mergeDebugResources-31:\\layout\\activity_form_gas_med.xml",
+        "source": "C:\\Users\\lilys\\.gradle\\daemon\\8.7\\com.example.proyectnewro.app-main-34:\\layout\\activity_form_gas_med.xml"
     }
 ]

@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.TextView
 import android.widget.EditText
 import android.widget.Spinner
 import android.widget.Toast
@@ -31,6 +32,47 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class FormAP : AppCompatActivity() {
+
+    private fun mostrarAlertaPersonalizada(mensaje: String) {
+        val dialogView = layoutInflater.inflate(R.layout.alerta_error, null)
+        val alertDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val txtMensaje = dialogView.findViewById<TextView>(R.id.etalertasp)
+        val btnAceptar = dialogView.findViewById<Button>(R.id.btnAceptar)
+
+        txtMensaje.text = mensaje
+
+        btnAceptar.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        alertDialog.show()
+    }
+
+    private fun mostrarAlertaExito(mensaje: String) {
+        val dialogView = layoutInflater.inflate(R.layout.alerta_exito, null)
+        val alertDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val txtMensaje = dialogView.findViewById<TextView>(R.id.mensajeExito)
+        val btnAceptar = dialogView.findViewById<Button>(R.id.btnAceptarExito)
+
+        txtMensaje.text = mensaje
+
+        btnAceptar.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        alertDialog.show()
+    }
+
     private lateinit var binding: ActivityMainBinding
     private lateinit var spinnerBomba1: Spinner
     private lateinit var spinnerBomba2: Spinner
@@ -95,7 +137,7 @@ class FormAP : AppCompatActivity() {
         var qrCodeText10: String?
 
 // campo de porcentaje de wc
-        porWC.isEnabled = false // Deshabilitar el campo por defecto
+        porWC.isEnabled = true // Deshabilitar el campo por defecto
 // Iniciar el escáner y obtener el resultado
         val qrLauncher = registerForActivityResult(ScanContract()) { result ->
             if (result.contents != null) {
@@ -124,18 +166,10 @@ class FormAP : AppCompatActivity() {
                 val value = porWC.text.toString().toDoubleOrNull()
                 if (value != null) {
                     if (value < 50 || value > 100) {
-                        // Mostrar advertencia si el valor está fuera del rango
-                        val alertDialog = AlertDialog.Builder(this@FormAP)
-                            .setTitle("Advertencia de nivel de agua")
-                            .setMessage(
-                                "El porcentaje de agua está por fuera del rango. Realiza lo siguiente:\n\n" +
-                                        "ABRIR LLAVE DE LLENADO DE CISTERNA Ó \nREALIZAR TRASVASE DE AGUA PLUVIAL."
-                            )
-                            .setPositiveButton("Aceptar") { dialog, _ ->
-                                dialog.dismiss()
-                            }
-                            .create()
-                        alertDialog.show()
+                        mostrarAlertaPersonalizada(
+                            "El porcentaje de agua está por fuera del rango. Realiza lo siguiente:\n\n" +
+                                    "ABRIR LLAVE DE LLENADO DE CISTERNA Ó\nREALIZAR TRASVASE DE AGUA PLUVIAL."
+                        )
                     }
                 }
             }
@@ -839,11 +873,14 @@ class FormAP : AppCompatActivity() {
                 }
 
                 workbook.close()
+                // ALERTA DE ÉXITO
+                mostrarAlertaExito("Datos guardados correctamente en:\n\n${file.absolutePath}")
 
-                Toast.makeText(context, "Datos guardados en: ${file.absolutePath}", Toast.LENGTH_LONG).show()
             } catch (e: Exception) {
                 e.printStackTrace()
-                Toast.makeText(context, "Error al guardar los datos: ${e.message}", Toast.LENGTH_LONG).show()
+
+                // ALERTA DE ERROR
+                mostrarAlertaPersonalizada("Error al guardar los datos:\n\n${e.message}")
             }
         }
 // Llamar la función dentro del listener
